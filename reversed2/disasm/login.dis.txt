@@ -1,0 +1,3541 @@
+### MODULE: login
+# co_names: ('os', 'json', 'datetime', 'timedelta', 'PySide6.QtWidgets', 'QWidget', 'QVBoxLayout', 'QLabel', 'QLineEdit', 'QCheckBox', 'QSpacerItem', 'QSizePolicy', 'QApplication', 'QHBoxLayout', 'QPushButton', 'PySide6.QtGui', 'QFont', 'PySide6.QtCore', 'Qt', 'requests', 'ws_client', 'WSClient', 'utils', 'WEBSITE_URL', 'get_system_uuid', 'get_location', 'Tool_Name', 'Tool_Version', 'set_current_user', 'load_login', 'save_login', 'get_current_time', 'resource_path', 'account_manager', 'AccountStatusManager', 'setup_graceful_shutdown', 'QPixmap', 'certifi', 'where', 'environ', 'LoginPage')
+# co_consts (top-level strings): 
+#   STR: 'SSL_CERT_FILE'
+#   STR: 'REQUESTS_CA_BUNDLE'
+#   STR: 'LoginPage'
+
+========== FULL DISASSEMBLY (recursive) ==========
+
+----- code: <module> (argcount=0, vars=()) -----
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (os)
+              STORE_NAME               0 (os)
+
+  2           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              1 (json)
+              STORE_NAME               1 (json)
+
+  3           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (('datetime', 'timedelta'))
+              IMPORT_NAME              2 (datetime)
+              IMPORT_FROM              2 (datetime)
+              STORE_NAME               2 (datetime)
+              IMPORT_FROM              3 (timedelta)
+              STORE_NAME               3 (timedelta)
+              POP_TOP
+
+  4           LOAD_CONST               0 (0)
+              LOAD_CONST               3 (('QWidget', 'QVBoxLayout', 'QLabel', 'QLineEdit', 'QCheckBox', 'QSpacerItem', 'QSizePolicy', 'QApplication', 'QHBoxLayout', 'QPushButton'))
+              IMPORT_NAME              4 (PySide6.QtWidgets)
+              IMPORT_FROM              5 (QWidget)
+              STORE_NAME               5 (QWidget)
+              IMPORT_FROM              6 (QVBoxLayout)
+              STORE_NAME               6 (QVBoxLayout)
+              IMPORT_FROM              7 (QLabel)
+              STORE_NAME               7 (QLabel)
+              IMPORT_FROM              8 (QLineEdit)
+              STORE_NAME               8 (QLineEdit)
+              IMPORT_FROM              9 (QCheckBox)
+              STORE_NAME               9 (QCheckBox)
+              IMPORT_FROM             10 (QSpacerItem)
+              STORE_NAME              10 (QSpacerItem)
+              IMPORT_FROM             11 (QSizePolicy)
+              STORE_NAME              11 (QSizePolicy)
+              IMPORT_FROM             12 (QApplication)
+              STORE_NAME              12 (QApplication)
+              IMPORT_FROM             13 (QHBoxLayout)
+              STORE_NAME              13 (QHBoxLayout)
+              IMPORT_FROM             14 (QPushButton)
+              STORE_NAME              14 (QPushButton)
+              POP_TOP
+
+  8           LOAD_CONST               0 (0)
+              LOAD_CONST               4 (('QFont',))
+              IMPORT_NAME             15 (PySide6.QtGui)
+              IMPORT_FROM             16 (QFont)
+              STORE_NAME              16 (QFont)
+              POP_TOP
+
+  9           LOAD_CONST               0 (0)
+              LOAD_CONST               5 (('Qt',))
+              IMPORT_NAME             17 (PySide6.QtCore)
+              IMPORT_FROM             18 (Qt)
+              STORE_NAME              18 (Qt)
+              POP_TOP
+
+ 10           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME             19 (requests)
+              STORE_NAME              19 (requests)
+
+ 11           LOAD_CONST               0 (0)
+              LOAD_CONST               6 (('WSClient',))
+              IMPORT_NAME             20 (ws_client)
+              IMPORT_FROM             21 (WSClient)
+              STORE_NAME              21 (WSClient)
+              POP_TOP
+
+ 13           LOAD_CONST               0 (0)
+              LOAD_CONST               7 (('WEBSITE_URL', 'get_system_uuid', 'get_location', 'Tool_Name', 'Tool_Version', 'set_current_user', 'load_login', 'save_login', 'get_current_time', 'resource_path'))
+              IMPORT_NAME             22 (utils)
+              IMPORT_FROM             23 (WEBSITE_URL)
+              STORE_NAME              23 (WEBSITE_URL)
+              IMPORT_FROM             24 (get_system_uuid)
+              STORE_NAME              24 (get_system_uuid)
+              IMPORT_FROM             25 (get_location)
+              STORE_NAME              25 (get_location)
+              IMPORT_FROM             26 (Tool_Name)
+              STORE_NAME              26 (Tool_Name)
+              IMPORT_FROM             27 (Tool_Version)
+              STORE_NAME              27 (Tool_Version)
+              IMPORT_FROM             28 (set_current_user)
+              STORE_NAME              28 (set_current_user)
+              IMPORT_FROM             29 (load_login)
+              STORE_NAME              29 (load_login)
+              IMPORT_FROM             30 (save_login)
+              STORE_NAME              30 (save_login)
+              IMPORT_FROM             31 (get_current_time)
+              STORE_NAME              31 (get_current_time)
+              IMPORT_FROM             32 (resource_path)
+              STORE_NAME              32 (resource_path)
+              POP_TOP
+
+ 20           LOAD_CONST               0 (0)
+              LOAD_CONST               8 (('AccountStatusManager', 'setup_graceful_shutdown'))
+              IMPORT_NAME             33 (account_manager)
+              IMPORT_FROM             34 (AccountStatusManager)
+              STORE_NAME              34 (AccountStatusManager)
+              IMPORT_FROM             35 (setup_graceful_shutdown)
+              STORE_NAME              35 (setup_graceful_shutdown)
+              POP_TOP
+
+ 21           LOAD_CONST               0 (0)
+              LOAD_CONST               9 (('QPixmap',))
+              IMPORT_NAME             15 (PySide6.QtGui)
+              IMPORT_FROM             36 (QPixmap)
+              STORE_NAME              36 (QPixmap)
+              POP_TOP
+
+ 23           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME             37 (certifi)
+              STORE_NAME              37 (certifi)
+
+ 25           LOAD_NAME               37 (certifi)
+              LOAD_ATTR               76 (where)
+              PUSH_NULL
+              CALL                     0
+              LOAD_NAME                0 (os)
+              LOAD_ATTR               78 (environ)
+              LOAD_CONST              10 ('SSL_CERT_FILE')
+              STORE_SUBSCR
+
+ 26           LOAD_NAME               37 (certifi)
+              LOAD_ATTR               76 (where)
+              PUSH_NULL
+              CALL                     0
+              LOAD_NAME                0 (os)
+              LOAD_ATTR               78 (environ)
+              LOAD_CONST              11 ('REQUESTS_CA_BUNDLE')
+              STORE_SUBSCR
+
+ 28           LOAD_BUILD_CLASS
+              PUSH_NULL
+              LOAD_CONST              12 (<code object LoginPage at 0x7f0bbb721e90, file "login.py", line 28>)
+              MAKE_FUNCTION
+              LOAD_CONST              13 ('LoginPage')
+              LOAD_NAME                5 (QWidget)
+              CALL                     3
+              STORE_NAME              40 (LoginPage)
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object LoginPage at 0x7f0bbb721e90, file "login.py", line 28>:
+  --           MAKE_CELL                0 (__class__)
+
+  28           RESUME                   0
+               LOAD_NAME                0 (__name__)
+               STORE_NAME               1 (__module__)
+               LOAD_CONST               0 ('LoginPage')
+               STORE_NAME               2 (__qualname__)
+               LOAD_CONST               1 (28)
+               STORE_NAME               3 (__firstlineno__)
+
+  29           LOAD_FAST                0 (__class__)
+               BUILD_TUPLE              1
+               LOAD_CONST               2 (<code object __init__ at 0x56067ddb7c90, file "login.py", line 29>)
+               MAKE_FUNCTION
+               SET_FUNCTION_ATTRIBUTE   8 (closure)
+               STORE_NAME               4 (__init__)
+
+ 153           LOAD_CONST               3 (<code object keyPressEvent at 0x7f0bbb5990b0, file "login.py", line 153>)
+               MAKE_FUNCTION
+               STORE_NAME               5 (keyPressEvent)
+
+ 157           LOAD_CONST               4 (<code object toggle_password at 0x7f0bbb58c8a0, file "login.py", line 157>)
+               MAKE_FUNCTION
+               STORE_NAME               6 (toggle_password)
+
+ 165           LOAD_CONST               5 (<code object input_style at 0x7f0bbb711550, file "login.py", line 165>)
+               MAKE_FUNCTION
+               STORE_NAME               7 (input_style)
+
+ 175           LOAD_CONST               6 (<code object go_to_register at 0x7f0bbb74b550, file "login.py", line 175>)
+               MAKE_FUNCTION
+               STORE_NAME               8 (go_to_register)
+
+ 180           LOAD_CONST               7 ('tool_data')
+               LOAD_NAME                9 (str)
+               BUILD_TUPLE              2
+               LOAD_CONST               8 (<code object process_tool_data at 0x7f0bbb6d3210, file "login.py", line 180>)
+               MAKE_FUNCTION
+               SET_FUNCTION_ATTRIBUTE   4 (annotations)
+               STORE_NAME              10 (process_tool_data)
+
+ 204           LOAD_CONST               9 (<code object handle_login at 0x56067ddb94c0, file "login.py", line 204>)
+               MAKE_FUNCTION
+               STORE_NAME              11 (handle_login)
+               LOAD_CONST              10 (('account_manager', 'discord_contact', 'label_title', 'login_button', 'main_app', 'message_label', 'now', 'password', 'remember_me', 'show_password', 'stacked_widget', 'username', 'website_label', 'ws'))
+               STORE_NAME              12 (__static_attributes__)
+               LOAD_FAST                0 (__class__)
+               COPY                     1
+               STORE_NAME              13 (__classcell__)
+               RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x56067ddb7c90, file "login.py", line 29>:
+  --           COPY_FREE_VARS           1
+
+  29           RESUME                   0
+
+  30           LOAD_GLOBAL              0 (super)
+               LOAD_DEREF              13 (__class__)
+               LOAD_FAST                0 (self)
+               LOAD_SUPER_ATTR          5 (__init__ + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  33           LOAD_GLOBAL              5 (get_current_time + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR               3 (now)
+
+  34           LOAD_FAST_LOAD_FAST     16 (main_app, self)
+               STORE_ATTR               4 (main_app)
+
+  35           LOAD_FAST_LOAD_FAST     32 (stacked_widget, self)
+               STORE_ATTR               5 (stacked_widget)
+
+  36           LOAD_GLOBAL             13 (QVBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               3 (layout)
+
+  37           LOAD_FAST                0 (self)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               1 ('background-color: #1e1e1e; border-radius: 15px;')
+               CALL                     1
+               POP_TOP
+
+  39           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST               2 ('Đăng nhập')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR               9 (label_title)
+
+  40           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               21 (setFont + NULL|self)
+               LOAD_GLOBAL             23 (QFont + NULL)
+               LOAD_CONST               3 ('Arial')
+               LOAD_CONST               4 (22)
+               LOAD_GLOBAL             22 (QFont)
+               LOAD_ATTR               24 (Bold)
+               CALL                     3
+               CALL                     1
+               POP_TOP
+
+  41           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               5 ('color: #ffffff;')
+               CALL                     1
+               POP_TOP
+
+  42           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+  44           LOAD_GLOBAL             33 (QLineEdit + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              17 (username)
+
+  45           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               37 (setPlaceholderText + NULL|self)
+               LOAD_CONST               6 ('Tên đăng nhập')
+               CALL                     1
+               POP_TOP
+
+  46           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               39 (input_style + NULL|self)
+               CALL                     0
+               CALL                     1
+               POP_TOP
+
+  49           LOAD_GLOBAL             33 (QLineEdit + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              20 (password)
+
+  50           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               37 (setPlaceholderText + NULL|self)
+               LOAD_CONST               7 ('Mật khẩu')
+               CALL                     1
+               POP_TOP
+
+  51           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               43 (setEchoMode + NULL|self)
+               LOAD_GLOBAL             32 (QLineEdit)
+               LOAD_ATTR               44 (Password)
+               CALL                     1
+               POP_TOP
+
+  52           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               39 (input_style + NULL|self)
+               CALL                     0
+               CALL                     1
+               POP_TOP
+
+  56           LOAD_GLOBAL             47 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               4 (checkbox_layout)
+
+  57           LOAD_GLOBAL             49 (QCheckBox + NULL)
+               LOAD_CONST               8 ('Lưu mật khẩu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              25 (remember_me)
+
+  58           LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               9 ('color: white; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+  60           LOAD_GLOBAL             49 (QCheckBox + NULL)
+               LOAD_CONST              10 ('Hiện mật khẩu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              26 (show_password)
+
+  61           LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               9 ('color: white; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+  62           LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_ATTR               54 (stateChanged)
+               LOAD_ATTR               57 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (toggle_password)
+               CALL                     1
+               POP_TOP
+
+  64           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               CALL                     1
+               POP_TOP
+
+  65           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               63 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  66           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               64 (AlignRight)
+               LOAD_CONST              11 (('alignment',))
+               CALL_KW                  2
+               POP_TOP
+
+  69           LOAD_GLOBAL             67 (load_login + NULL)
+               CALL                     0
+               UNPACK_SEQUENCE          3
+               STORE_FAST_STORE_FAST   86 (saved_username, saved_password)
+               STORE_FAST               7 (remember)
+
+  70           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               69 (setText + NULL|self)
+               LOAD_FAST                5 (saved_username)
+               CALL                     1
+               POP_TOP
+
+  71           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               69 (setText + NULL|self)
+               LOAD_FAST                6 (saved_password)
+               CALL                     1
+               POP_TOP
+
+  72           LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               LOAD_ATTR               71 (setChecked + NULL|self)
+               LOAD_FAST                7 (remember)
+               CALL                     1
+               POP_TOP
+
+  74           LOAD_GLOBAL             73 (QPushButton + NULL)
+               LOAD_CONST               2 ('Đăng nhập')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              37 (login_button)
+
+  75           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               77 (setCursor + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               78 (PointingHandCursor)
+               CALL                     1
+               POP_TOP
+
+  76           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              12 ('background-color: #4CAF50; color: white; font-size: 16px; padding: 10px; border-radius: 5px;')
+               CALL                     1
+               POP_TOP
+
+  77           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               80 (clicked)
+               LOAD_ATTR               57 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               82 (handle_login)
+               CALL                     1
+               POP_TOP
+
+  80           LOAD_GLOBAL             17 (QLabel + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              42 (discord_contact)
+
+  81           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+  82           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               87 (setTextFormat + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               88 (RichText)
+               CALL                     1
+               POP_TOP
+
+  83           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               91 (setOpenExternalLinks + NULL|self)
+               LOAD_CONST              13 (False)
+               CALL                     1
+               POP_TOP
+
+  86           LOAD_GLOBAL             93 (resource_path + NULL)
+               LOAD_CONST              14 ('resources\\discord.png')
+               CALL                     1
+               STORE_FAST               8 (discord_logo_path)
+
+  87           LOAD_FAST                8 (discord_logo_path)
+               TO_BOOL
+               POP_JUMP_IF_FALSE      118 (to L1)
+
+  88           LOAD_GLOBAL             95 (QPixmap + NULL)
+               LOAD_FAST                8 (discord_logo_path)
+               CALL                     1
+               STORE_FAST               9 (pixmap)
+
+  89           LOAD_FAST                9 (pixmap)
+               LOAD_ATTR               97 (scaled + NULL|self)
+               LOAD_CONST              15 (20)
+               LOAD_CONST              15 (20)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               98 (KeepAspectRatio)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR              100 (SmoothTransformation)
+               CALL                     4
+               STORE_FAST               9 (pixmap)
+
+  90           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR              103 (setPixmap + NULL|self)
+               LOAD_FAST                9 (pixmap)
+               CALL                     1
+               POP_TOP
+
+  92           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+  93           LOAD_CONST              16 ('<a href="discord"><img src="')
+               LOAD_FAST                8 (discord_logo_path)
+               FORMAT_SIMPLE
+               LOAD_CONST              17 ('" width="21" height="21" style="vertical-align:middle;"> <span style="color:#03A9F4; font-size:16px; text-decoration:none;">Discord</span></a>')
+               BUILD_STRING             3
+
+  92           CALL                     1
+               POP_TOP
+               JUMP_FORWARD            27 (to L2)
+
+  98   L1:     LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+  99           LOAD_CONST              18 ('<a href="discord"><span style="color:#03A9F4; font-size:16px; text-decoration:none;">Discord</span></a>')
+
+  98           CALL                     1
+               POP_TOP
+
+ 102   L2:     LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR              104 (linkActivated)
+               LOAD_ATTR               57 (connect + NULL|self)
+
+ 103           LOAD_CONST              19 (<code object <lambda> at 0x7f0bbb74a890, file "login.py", line 103>)
+               MAKE_FUNCTION
+
+ 102           CALL                     1
+               POP_TOP
+
+ 106           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST              20 ('')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              53 (message_label)
+
+ 107           LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              21 ('color: red; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+ 108           LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 111           LOAD_GLOBAL             17 (QLabel + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              54 (website_label)
+
+ 112           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               87 (setTextFormat + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               88 (RichText)
+               CALL                     1
+               POP_TOP
+
+ 113           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 114           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR              111 (setTextInteractionFlags + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR              112 (TextBrowserInteraction)
+               CALL                     1
+               POP_TOP
+
+ 115           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               91 (setOpenExternalLinks + NULL|self)
+               LOAD_CONST              22 (True)
+               CALL                     1
+               POP_TOP
+
+ 116           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               77 (setCursor + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               78 (PointingHandCursor)
+               CALL                     1
+               POP_TOP
+
+ 119           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+ 120           LOAD_CONST              23 ('<html><head><style>a{ text-decoration:none; color:#3498db; font-weight:600; font-size:14px;}a:hover{ color:#e74c3c; }</style></head><body><p>Đăng ký sử dụng <a href="')
+
+ 125           LOAD_GLOBAL            114 (WEBSITE_URL)
+
+ 120           BINARY_OP                0 (+)
+
+ 125           LOAD_CONST              24 ('">tại đây</a></p></body></html>')
+
+ 120           BINARY_OP                0 (+)
+
+ 119           CALL                     1
+               POP_TOP
+
+ 130           LOAD_GLOBAL             47 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST              10 (version_layout)
+
+ 131           LOAD_FAST               10 (version_layout)
+               LOAD_ATTR               63 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 132           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST              25 ('Phiên bản hiện tại: ')
+               LOAD_GLOBAL            116 (Tool_Version)
+               FORMAT_SIMPLE
+               BUILD_STRING             2
+               CALL                     1
+               STORE_FAST              11 (version_label)
+
+ 133           LOAD_FAST               11 (version_label)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              26 ('color: #888888; font-size: 10px;')
+               CALL                     1
+               POP_TOP
+
+ 134           LOAD_FAST               11 (version_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 135           LOAD_FAST               10 (version_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST               11 (version_label)
+               CALL                     1
+               POP_TOP
+
+ 137           LOAD_GLOBAL            119 (QSpacerItem + NULL)
+               LOAD_CONST              15 (20)
+               LOAD_CONST              15 (20)
+               LOAD_GLOBAL            120 (QSizePolicy)
+               LOAD_ATTR              122 (Minimum)
+               LOAD_GLOBAL            120 (QSizePolicy)
+               LOAD_ATTR              124 (Fixed)
+               CALL                     4
+               STORE_FAST              12 (spacer)
+
+ 140           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               CALL                     1
+               POP_TOP
+
+ 141           LOAD_FAST                3 (layout)
+               LOAD_ATTR              127 (addItem + NULL|self)
+               LOAD_FAST               12 (spacer)
+               CALL                     1
+               POP_TOP
+
+ 142           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               CALL                     1
+               POP_TOP
+
+ 143           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               CALL                     1
+               POP_TOP
+
+ 144           LOAD_FAST                3 (layout)
+               LOAD_ATTR              129 (addLayout + NULL|self)
+               LOAD_FAST                4 (checkbox_layout)
+               CALL                     1
+               POP_TOP
+
+ 145           LOAD_FAST                3 (layout)
+               LOAD_ATTR              127 (addItem + NULL|self)
+               LOAD_FAST               12 (spacer)
+               CALL                     1
+               POP_TOP
+
+ 146           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               CALL                     1
+               POP_TOP
+
+ 147           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               CALL                     1
+               POP_TOP
+
+ 148           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               CALL                     1
+               POP_TOP
+
+ 149           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               CALL                     1
+               POP_TOP
+
+ 151           LOAD_FAST                0 (self)
+               LOAD_ATTR              131 (setLayout + NULL|self)
+               LOAD_FAST                3 (layout)
+               CALL                     1
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+Disassembly of <code object <lambda> at 0x7f0bbb74a890, file "login.py", line 103>:
+103           RESUME                   0
+              LOAD_FAST                0 (link)
+              LOAD_CONST               1 ('discord')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       22 (to L1)
+              LOAD_GLOBAL              0 (os)
+              LOAD_ATTR                2 (startfile)
+              PUSH_NULL
+              LOAD_CONST               2 ('https://discord.gg/6CJTEPaB4s')
+              CALL                     1
+              RETURN_VALUE
+      L1:     LOAD_CONST               0 (None)
+              RETURN_VALUE
+
+Disassembly of <code object keyPressEvent at 0x7f0bbb5990b0, file "login.py", line 153>:
+153           RESUME                   0
+
+154           LOAD_FAST                1 (event)
+              LOAD_ATTR                1 (key + NULL|self)
+              CALL                     0
+              LOAD_GLOBAL              2 (Qt)
+              LOAD_ATTR                4 (Key_Return)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_TRUE        34 (to L1)
+              LOAD_FAST                1 (event)
+              LOAD_ATTR                1 (key + NULL|self)
+              CALL                     0
+              LOAD_GLOBAL              2 (Qt)
+              LOAD_ATTR                6 (Key_Enter)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       17 (to L2)
+
+155   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                9 (handle_login + NULL|self)
+              CALL                     0
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+154   L2:     RETURN_CONST             0 (None)
+
+Disassembly of <code object toggle_password at 0x7f0bbb58c8a0, file "login.py", line 157>:
+157           RESUME                   0
+
+159           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (show_password)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE       42 (to L1)
+
+160           LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (password)
+              LOAD_ATTR                7 (setEchoMode + NULL|self)
+              LOAD_GLOBAL              8 (QLineEdit)
+              LOAD_ATTR               10 (Normal)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+162   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (password)
+              LOAD_ATTR                7 (setEchoMode + NULL|self)
+              LOAD_GLOBAL              8 (QLineEdit)
+              LOAD_ATTR               12 (Password)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object input_style at 0x7f0bbb711550, file "login.py", line 165>:
+165           RESUME                   0
+
+166           RETURN_CONST             1 ('\n        background-color: #2c2f33;\n        color: white;\n        border-radius: 10px;\n        padding: 12px;\n        font-size: 16px;\n        border: 1px solid #4CAF50;\n        ')
+
+Disassembly of <code object go_to_register at 0x7f0bbb74b550, file "login.py", line 175>:
+175           RESUME                   0
+
+176           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (stacked_widget)
+              LOAD_ATTR                3 (setCurrentIndex + NULL|self)
+              LOAD_CONST               1 (1)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+Disassembly of <code object process_tool_data at 0x7f0bbb6d3210, file "login.py", line 180>:
+ 180           RESUME                   0
+
+ 196           LOAD_FAST                1 (tool_data)
+               TO_BOOL
+               POP_JUMP_IF_TRUE         2 (to L1)
+
+ 197           BUILD_LIST               0
+               RETURN_VALUE
+
+ 200   L1:     LOAD_FAST                1 (tool_data)
+               LOAD_ATTR                1 (split + NULL|self)
+               LOAD_CONST               1 (',')
+               CALL                     1
+               GET_ITER
+               LOAD_FAST_AND_CLEAR      2 (tool)
+               SWAP                     2
+       L2:     BUILD_LIST               0
+               SWAP                     2
+               GET_ITER
+       L3:     FOR_ITER                18 (to L4)
+               STORE_FAST_LOAD_FAST    34 (tool, tool)
+               LOAD_ATTR                3 (strip + NULL|self)
+               CALL                     0
+               LIST_APPEND              2
+               JUMP_BACKWARD           20 (to L3)
+       L4:     END_FOR
+               POP_TOP
+       L5:     STORE_FAST               3 (tool_list)
+               STORE_FAST               2 (tool)
+
+ 202           LOAD_FAST                3 (tool_list)
+               RETURN_VALUE
+
+  --   L6:     SWAP                     2
+               POP_TOP
+
+ 200           SWAP                     2
+               STORE_FAST               2 (tool)
+               RERAISE                  0
+ExceptionTable:
+  L2 to L5 -> L6 [2]
+
+Disassembly of <code object handle_login at 0x56067ddb94c0, file "login.py", line 204>:
+ 204            RESUME                   0
+
+ 205            NOP
+
+ 206    L1:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               1 ('[LOGIN] Bắt đầu đăng nhập...')
+                CALL                     1
+                POP_TOP
+
+ 208            LOAD_FAST                0 (self)
+                LOAD_ATTR                2 (username)
+                LOAD_ATTR                5 (text + NULL|self)
+                CALL                     0
+                STORE_FAST               1 (username)
+
+ 209            LOAD_FAST                0 (self)
+                LOAD_ATTR                6 (password)
+                LOAD_ATTR                5 (text + NULL|self)
+                CALL                     0
+                STORE_FAST               2 (password)
+
+ 210            LOAD_FAST                0 (self)
+                LOAD_ATTR                8 (remember_me)
+                LOAD_ATTR               11 (isChecked + NULL|self)
+                CALL                     0
+                STORE_FAST               3 (remember)
+
+ 211            LOAD_GLOBAL             13 (get_system_uuid + NULL)
+                CALL                     0
+                STORE_FAST               4 (hwid)
+
+ 212            LOAD_GLOBAL             15 (get_location + NULL)
+                CALL                     0
+                STORE_FAST               5 (ip)
+
+ 215            LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST               2 ('Đang đăng nhập...')
+                CALL                     1
+                POP_TOP
+
+ 216            LOAD_GLOBAL             20 (QApplication)
+                LOAD_ATTR               22 (processEvents)
+                PUSH_NULL
+                CALL                     0
+                POP_TOP
+
+ 217            LOAD_FAST                1 (username)
+                TO_BOOL
+                POP_JUMP_IF_FALSE        7 (to L2)
+                LOAD_FAST                2 (password)
+                TO_BOOL
+                POP_JUMP_IF_TRUE        39 (to L4)
+
+ 218    L2:     LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST               3 ('Vui lòng nhập tên đăng nhập!')
+                CALL                     1
+                POP_TOP
+
+ 219            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               4 ('[LOGIN] ❌ Thiếu username hoặc password')
+                CALL                     1
+                POP_TOP
+
+ 220    L3:     RETURN_CONST             0 (None)
+
+ 222    L4:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               5 ('[LOGIN] Gửi request API login...')
+                CALL                     1
+                POP_TOP
+
+ 224            LOAD_FAST                1 (username)
+
+ 225            LOAD_FAST                2 (password)
+
+ 226            LOAD_GLOBAL             26 (Tool_Name)
+
+ 227            LOAD_FAST                4 (hwid)
+
+ 228            LOAD_CONST               6 ('login')
+
+ 229            LOAD_FAST                5 (ip)
+
+ 223            LOAD_CONST               7 (('username', 'password', 'toolname', 'hwid', 'type', 'ip'))
+                BUILD_CONST_KEY_MAP      6
+                STORE_FAST               6 (payload)
+
+ 232            LOAD_GLOBAL             28 (requests)
+                LOAD_ATTR               30 (post)
+                PUSH_NULL
+                LOAD_GLOBAL             32 (WEBSITE_URL)
+                FORMAT_SIMPLE
+                LOAD_CONST               8 ('/api/tool/ping')
+                BUILD_STRING             2
+                LOAD_FAST                6 (payload)
+                LOAD_CONST               9 (('json',))
+                CALL_KW                  2
+                LOAD_ATTR               35 (json + NULL|self)
+                CALL                     0
+                STORE_FAST               7 (response)
+
+ 233            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              10 ('[LOGIN] Phản hồi API:')
+                LOAD_FAST                7 (response)
+                CALL                     2
+                POP_TOP
+
+ 235            LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              11 ('success')
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        97 (to L6)
+
+ 236            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              12 ('[LOGIN] ❌ Login thất bại:')
+                LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              13 ('message')
+                CALL                     1
+                CALL                     2
+                POP_TOP
+
+ 237            LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              13 ('message')
+                CALL                     1
+                CALL                     1
+                POP_TOP
+
+ 238            LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              14 ('Đăng nhập')
+                CALL                     1
+                POP_TOP
+
+ 239    L5:     RETURN_CONST             0 (None)
+
+ 242    L6:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              15 ('[LOGIN] ✅ Login thành công')
+                CALL                     1
+                POP_TOP
+
+ 243            LOAD_FAST                3 (remember)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       13 (to L7)
+
+ 244            LOAD_GLOBAL             39 (save_login + NULL)
+                LOAD_FAST_LOAD_FAST     18 (username, password)
+                LOAD_CONST              16 (True)
+                CALL                     3
+                POP_TOP
+                JUMP_FORWARD            13 (to L8)
+
+ 246    L7:     LOAD_GLOBAL             39 (save_login + NULL)
+                LOAD_CONST              17 ('')
+                LOAD_CONST              17 ('')
+                LOAD_CONST              18 (False)
+                CALL                     3
+                POP_TOP
+
+ 249    L8:     LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              19 ('wsUrl')
+                CALL                     1
+                STORE_FAST               8 (ws_url)
+
+ 250            LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              20 ('wsToken')
+                CALL                     1
+                STORE_FAST               9 (ws_token)
+
+ 253            LOAD_FAST                9 (ws_token)
+                TO_BOOL
+                POP_JUMP_IF_TRUE        33 (to L9)
+                LOAD_FAST                8 (ws_url)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       26 (to L9)
+                LOAD_CONST              21 ('licenseId=')
+                LOAD_FAST                8 (ws_url)
+                CONTAINS_OP              0
+                POP_JUMP_IF_FALSE       20 (to L9)
+
+ 254            LOAD_FAST                8 (ws_url)
+                LOAD_ATTR               41 (split + NULL|self)
+                LOAD_CONST              21 ('licenseId=')
+                CALL                     1
+                LOAD_CONST              22 (-1)
+                BINARY_SUBSCR
+                STORE_FAST               9 (ws_token)
+
+ 256    L9:     LOAD_FAST                8 (ws_url)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       69 (to L13)
+
+ 257            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              23 ('[WS] ✅ Nhận wsUrl từ server: ')
+                LOAD_FAST                8 (ws_url)
+                FORMAT_SIMPLE
+                BUILD_STRING             2
+                CALL                     1
+                POP_TOP
+
+ 258            LOAD_GLOBAL             43 (WSClient + NULL)
+                LOAD_FAST_LOAD_FAST    137 (ws_url, ws_token)
+                CALL                     2
+                LOAD_FAST                0 (self)
+                STORE_ATTR              22 (ws)
+
+ 259   L10:     NOP
+
+ 260   L11:     LOAD_FAST                0 (self)
+                LOAD_ATTR               44 (ws)
+                LOAD_ATTR               47 (connect + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 261            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              24 ('[WS] ✅ Kết nối WebSocket thành công')
+                CALL                     1
+                POP_TOP
+       L12:     JUMP_FORWARD            11 (to L14)
+
+ 266   L13:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              27 ('[WS] ❌ Không có wsUrl, dùng ping API cũ')
+                CALL                     1
+                POP_TOP
+
+ 271   L14:     LOAD_GLOBAL             51 (AccountStatusManager + NULL)
+                LOAD_FAST                1 (username)
+                LOAD_GLOBAL             26 (Tool_Name)
+                LOAD_FAST                2 (password)
+                CALL                     3
+                LOAD_FAST                0 (self)
+                STORE_ATTR              26 (account_manager)
+
+ 274            LOAD_FAST                0 (self)
+                LOAD_ATTR               54 (main_app)
+                LOAD_ATTR               56 (main_page)
+                LOAD_ATTR               59 (update_version_info + NULL|self)
+                LOAD_FAST                7 (response)
+                CALL                     1
+                POP_TOP
+
+ 276            LOAD_CONST              16 (True)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               54 (main_app)
+                LOAD_ATTR               56 (main_page)
+                STORE_ATTR              30 (logined)
+
+ 277            LOAD_FAST                0 (self)
+                LOAD_ATTR               52 (account_manager)
+                LOAD_ATTR               63 (start_ping_service + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 278            LOAD_GLOBAL             65 (setup_graceful_shutdown + NULL)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               52 (account_manager)
+                CALL                     1
+                POP_TOP
+
+ 280            LOAD_FAST                0 (self)
+                LOAD_ATTR               67 (parent + NULL|self)
+                CALL                     0
+                LOAD_ATTR               69 (setCurrentIndex + NULL|self)
+                LOAD_CONST              28 (1)
+                CALL                     1
+                POP_TOP
+
+ 281            LOAD_FAST                0 (self)
+                LOAD_ATTR               71 (parentWidget + NULL|self)
+                CALL                     0
+                LOAD_ATTR               71 (parentWidget + NULL|self)
+                CALL                     0
+                LOAD_ATTR               73 (setFixedSize + NULL|self)
+                LOAD_CONST              29 (350)
+                LOAD_CONST              30 (400)
+                CALL                     2
+                POP_TOP
+       L15:     RETURN_CONST             0 (None)
+
+  --   L16:     PUSH_EXC_INFO
+
+ 262            LOAD_GLOBAL             48 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE       33 (to L20)
+                STORE_FAST              10 (e)
+
+ 263   L17:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              25 ('[WS] ❌ Lỗi khi kết nối WebSocket:')
+                LOAD_FAST               10 (e)
+                CALL                     2
+                POP_TOP
+
+ 264            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              26 ('[WS] Sẽ fallback dùng ping API cũ')
+                CALL                     1
+                POP_TOP
+       L18:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                JUMP_BACKWARD_NO_INTERRUPT 249 (to L14)
+
+  --   L19:     LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RERAISE                  1
+
+ 262   L20:     RERAISE                  0
+
+  --   L21:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+       L22:     PUSH_EXC_INFO
+
+ 283            LOAD_GLOBAL             48 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE      157 (to L33)
+                STORE_FAST              10 (e)
+
+ 284   L23:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              31 ('[LOGIN] Lỗi hệ thống:')
+                LOAD_FAST               10 (e)
+                CALL                     2
+                POP_TOP
+
+ 285            LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              32 ('Lỗi khi đăng nhập, vui lòng liên hệ admin')
+                CALL                     1
+                POP_TOP
+
+ 286            LOAD_GLOBAL             75 (open + NULL)
+                LOAD_CONST              33 ('error_log.txt')
+                LOAD_CONST              34 ('a')
+                LOAD_CONST              35 ('utf-8')
+                LOAD_CONST              36 (('encoding',))
+                CALL_KW                  3
+                BEFORE_WITH
+       L24:     STORE_FAST              11 (f)
+
+ 287            LOAD_FAST               11 (f)
+                LOAD_ATTR               77 (write + NULL|self)
+                LOAD_CONST              37 ('[')
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               78 (now)
+                FORMAT_SIMPLE
+                LOAD_CONST              38 ('] ')
+                LOAD_GLOBAL             81 (str + NULL)
+                LOAD_FAST               10 (e)
+                CALL                     1
+                FORMAT_SIMPLE
+                LOAD_CONST              39 ('\n')
+                BUILD_STRING             5
+                CALL                     1
+                POP_TOP
+
+ 286   L25:     LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                CALL                     2
+                POP_TOP
+                JUMP_FORWARD            17 (to L30)
+       L26:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L27)
+                RERAISE                  2
+       L27:     POP_TOP
+       L28:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+                JUMP_FORWARD             3 (to L30)
+
+  --   L29:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+
+ 288   L30:     LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              14 ('Đăng nhập')
+                CALL                     1
+                POP_TOP
+       L31:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RETURN_CONST             0 (None)
+
+  --   L32:     LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RERAISE                  1
+
+ 283   L33:     RERAISE                  0
+
+  --   L34:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L1 to L3 -> L22 [0]
+  L4 to L5 -> L22 [0]
+  L6 to L10 -> L22 [0]
+  L11 to L12 -> L16 [0]
+  L12 to L15 -> L22 [0]
+  L16 to L17 -> L21 [1] lasti
+  L17 to L18 -> L19 [1] lasti
+  L18 to L19 -> L22 [0]
+  L19 to L21 -> L21 [1] lasti
+  L21 to L22 -> L22 [0]
+  L22 to L23 -> L34 [1] lasti
+  L23 to L24 -> L32 [1] lasti
+  L24 to L25 -> L26 [2] lasti
+  L25 to L26 -> L32 [1] lasti
+  L26 to L28 -> L29 [4] lasti
+  L28 to L31 -> L32 [1] lasti
+  L32 to L34 -> L34 [1] lasti
+
+----- code: LoginPage (argcount=0, vars=()) -----
+  --           MAKE_CELL                0 (__class__)
+
+  28           RESUME                   0
+               LOAD_NAME                0 (__name__)
+               STORE_NAME               1 (__module__)
+               LOAD_CONST               0 ('LoginPage')
+               STORE_NAME               2 (__qualname__)
+               LOAD_CONST               1 (28)
+               STORE_NAME               3 (__firstlineno__)
+
+  29           LOAD_FAST                0 (__class__)
+               BUILD_TUPLE              1
+               LOAD_CONST               2 (<code object __init__ at 0x56067ddb7c90, file "login.py", line 29>)
+               MAKE_FUNCTION
+               SET_FUNCTION_ATTRIBUTE   8 (closure)
+               STORE_NAME               4 (__init__)
+
+ 153           LOAD_CONST               3 (<code object keyPressEvent at 0x7f0bbb5990b0, file "login.py", line 153>)
+               MAKE_FUNCTION
+               STORE_NAME               5 (keyPressEvent)
+
+ 157           LOAD_CONST               4 (<code object toggle_password at 0x7f0bbb58c8a0, file "login.py", line 157>)
+               MAKE_FUNCTION
+               STORE_NAME               6 (toggle_password)
+
+ 165           LOAD_CONST               5 (<code object input_style at 0x7f0bbb711550, file "login.py", line 165>)
+               MAKE_FUNCTION
+               STORE_NAME               7 (input_style)
+
+ 175           LOAD_CONST               6 (<code object go_to_register at 0x7f0bbb74b550, file "login.py", line 175>)
+               MAKE_FUNCTION
+               STORE_NAME               8 (go_to_register)
+
+ 180           LOAD_CONST               7 ('tool_data')
+               LOAD_NAME                9 (str)
+               BUILD_TUPLE              2
+               LOAD_CONST               8 (<code object process_tool_data at 0x7f0bbb6d3210, file "login.py", line 180>)
+               MAKE_FUNCTION
+               SET_FUNCTION_ATTRIBUTE   4 (annotations)
+               STORE_NAME              10 (process_tool_data)
+
+ 204           LOAD_CONST               9 (<code object handle_login at 0x56067ddb94c0, file "login.py", line 204>)
+               MAKE_FUNCTION
+               STORE_NAME              11 (handle_login)
+               LOAD_CONST              10 (('account_manager', 'discord_contact', 'label_title', 'login_button', 'main_app', 'message_label', 'now', 'password', 'remember_me', 'show_password', 'stacked_widget', 'username', 'website_label', 'ws'))
+               STORE_NAME              12 (__static_attributes__)
+               LOAD_FAST                0 (__class__)
+               COPY                     1
+               STORE_NAME              13 (__classcell__)
+               RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x56067ddb7c90, file "login.py", line 29>:
+  --           COPY_FREE_VARS           1
+
+  29           RESUME                   0
+
+  30           LOAD_GLOBAL              0 (super)
+               LOAD_DEREF              13 (__class__)
+               LOAD_FAST                0 (self)
+               LOAD_SUPER_ATTR          5 (__init__ + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  33           LOAD_GLOBAL              5 (get_current_time + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR               3 (now)
+
+  34           LOAD_FAST_LOAD_FAST     16 (main_app, self)
+               STORE_ATTR               4 (main_app)
+
+  35           LOAD_FAST_LOAD_FAST     32 (stacked_widget, self)
+               STORE_ATTR               5 (stacked_widget)
+
+  36           LOAD_GLOBAL             13 (QVBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               3 (layout)
+
+  37           LOAD_FAST                0 (self)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               1 ('background-color: #1e1e1e; border-radius: 15px;')
+               CALL                     1
+               POP_TOP
+
+  39           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST               2 ('Đăng nhập')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR               9 (label_title)
+
+  40           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               21 (setFont + NULL|self)
+               LOAD_GLOBAL             23 (QFont + NULL)
+               LOAD_CONST               3 ('Arial')
+               LOAD_CONST               4 (22)
+               LOAD_GLOBAL             22 (QFont)
+               LOAD_ATTR               24 (Bold)
+               CALL                     3
+               CALL                     1
+               POP_TOP
+
+  41           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               5 ('color: #ffffff;')
+               CALL                     1
+               POP_TOP
+
+  42           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+  44           LOAD_GLOBAL             33 (QLineEdit + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              17 (username)
+
+  45           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               37 (setPlaceholderText + NULL|self)
+               LOAD_CONST               6 ('Tên đăng nhập')
+               CALL                     1
+               POP_TOP
+
+  46           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               39 (input_style + NULL|self)
+               CALL                     0
+               CALL                     1
+               POP_TOP
+
+  49           LOAD_GLOBAL             33 (QLineEdit + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              20 (password)
+
+  50           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               37 (setPlaceholderText + NULL|self)
+               LOAD_CONST               7 ('Mật khẩu')
+               CALL                     1
+               POP_TOP
+
+  51           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               43 (setEchoMode + NULL|self)
+               LOAD_GLOBAL             32 (QLineEdit)
+               LOAD_ATTR               44 (Password)
+               CALL                     1
+               POP_TOP
+
+  52           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               39 (input_style + NULL|self)
+               CALL                     0
+               CALL                     1
+               POP_TOP
+
+  56           LOAD_GLOBAL             47 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               4 (checkbox_layout)
+
+  57           LOAD_GLOBAL             49 (QCheckBox + NULL)
+               LOAD_CONST               8 ('Lưu mật khẩu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              25 (remember_me)
+
+  58           LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               9 ('color: white; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+  60           LOAD_GLOBAL             49 (QCheckBox + NULL)
+               LOAD_CONST              10 ('Hiện mật khẩu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              26 (show_password)
+
+  61           LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               9 ('color: white; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+  62           LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_ATTR               54 (stateChanged)
+               LOAD_ATTR               57 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (toggle_password)
+               CALL                     1
+               POP_TOP
+
+  64           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               CALL                     1
+               POP_TOP
+
+  65           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               63 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  66           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               64 (AlignRight)
+               LOAD_CONST              11 (('alignment',))
+               CALL_KW                  2
+               POP_TOP
+
+  69           LOAD_GLOBAL             67 (load_login + NULL)
+               CALL                     0
+               UNPACK_SEQUENCE          3
+               STORE_FAST_STORE_FAST   86 (saved_username, saved_password)
+               STORE_FAST               7 (remember)
+
+  70           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               69 (setText + NULL|self)
+               LOAD_FAST                5 (saved_username)
+               CALL                     1
+               POP_TOP
+
+  71           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               69 (setText + NULL|self)
+               LOAD_FAST                6 (saved_password)
+               CALL                     1
+               POP_TOP
+
+  72           LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               LOAD_ATTR               71 (setChecked + NULL|self)
+               LOAD_FAST                7 (remember)
+               CALL                     1
+               POP_TOP
+
+  74           LOAD_GLOBAL             73 (QPushButton + NULL)
+               LOAD_CONST               2 ('Đăng nhập')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              37 (login_button)
+
+  75           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               77 (setCursor + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               78 (PointingHandCursor)
+               CALL                     1
+               POP_TOP
+
+  76           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              12 ('background-color: #4CAF50; color: white; font-size: 16px; padding: 10px; border-radius: 5px;')
+               CALL                     1
+               POP_TOP
+
+  77           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               80 (clicked)
+               LOAD_ATTR               57 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               82 (handle_login)
+               CALL                     1
+               POP_TOP
+
+  80           LOAD_GLOBAL             17 (QLabel + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              42 (discord_contact)
+
+  81           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+  82           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               87 (setTextFormat + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               88 (RichText)
+               CALL                     1
+               POP_TOP
+
+  83           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               91 (setOpenExternalLinks + NULL|self)
+               LOAD_CONST              13 (False)
+               CALL                     1
+               POP_TOP
+
+  86           LOAD_GLOBAL             93 (resource_path + NULL)
+               LOAD_CONST              14 ('resources\\discord.png')
+               CALL                     1
+               STORE_FAST               8 (discord_logo_path)
+
+  87           LOAD_FAST                8 (discord_logo_path)
+               TO_BOOL
+               POP_JUMP_IF_FALSE      118 (to L1)
+
+  88           LOAD_GLOBAL             95 (QPixmap + NULL)
+               LOAD_FAST                8 (discord_logo_path)
+               CALL                     1
+               STORE_FAST               9 (pixmap)
+
+  89           LOAD_FAST                9 (pixmap)
+               LOAD_ATTR               97 (scaled + NULL|self)
+               LOAD_CONST              15 (20)
+               LOAD_CONST              15 (20)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               98 (KeepAspectRatio)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR              100 (SmoothTransformation)
+               CALL                     4
+               STORE_FAST               9 (pixmap)
+
+  90           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR              103 (setPixmap + NULL|self)
+               LOAD_FAST                9 (pixmap)
+               CALL                     1
+               POP_TOP
+
+  92           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+  93           LOAD_CONST              16 ('<a href="discord"><img src="')
+               LOAD_FAST                8 (discord_logo_path)
+               FORMAT_SIMPLE
+               LOAD_CONST              17 ('" width="21" height="21" style="vertical-align:middle;"> <span style="color:#03A9F4; font-size:16px; text-decoration:none;">Discord</span></a>')
+               BUILD_STRING             3
+
+  92           CALL                     1
+               POP_TOP
+               JUMP_FORWARD            27 (to L2)
+
+  98   L1:     LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+  99           LOAD_CONST              18 ('<a href="discord"><span style="color:#03A9F4; font-size:16px; text-decoration:none;">Discord</span></a>')
+
+  98           CALL                     1
+               POP_TOP
+
+ 102   L2:     LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR              104 (linkActivated)
+               LOAD_ATTR               57 (connect + NULL|self)
+
+ 103           LOAD_CONST              19 (<code object <lambda> at 0x7f0bbb74a890, file "login.py", line 103>)
+               MAKE_FUNCTION
+
+ 102           CALL                     1
+               POP_TOP
+
+ 106           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST              20 ('')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              53 (message_label)
+
+ 107           LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              21 ('color: red; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+ 108           LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 111           LOAD_GLOBAL             17 (QLabel + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              54 (website_label)
+
+ 112           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               87 (setTextFormat + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               88 (RichText)
+               CALL                     1
+               POP_TOP
+
+ 113           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 114           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR              111 (setTextInteractionFlags + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR              112 (TextBrowserInteraction)
+               CALL                     1
+               POP_TOP
+
+ 115           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               91 (setOpenExternalLinks + NULL|self)
+               LOAD_CONST              22 (True)
+               CALL                     1
+               POP_TOP
+
+ 116           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               77 (setCursor + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               78 (PointingHandCursor)
+               CALL                     1
+               POP_TOP
+
+ 119           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+ 120           LOAD_CONST              23 ('<html><head><style>a{ text-decoration:none; color:#3498db; font-weight:600; font-size:14px;}a:hover{ color:#e74c3c; }</style></head><body><p>Đăng ký sử dụng <a href="')
+
+ 125           LOAD_GLOBAL            114 (WEBSITE_URL)
+
+ 120           BINARY_OP                0 (+)
+
+ 125           LOAD_CONST              24 ('">tại đây</a></p></body></html>')
+
+ 120           BINARY_OP                0 (+)
+
+ 119           CALL                     1
+               POP_TOP
+
+ 130           LOAD_GLOBAL             47 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST              10 (version_layout)
+
+ 131           LOAD_FAST               10 (version_layout)
+               LOAD_ATTR               63 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 132           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST              25 ('Phiên bản hiện tại: ')
+               LOAD_GLOBAL            116 (Tool_Version)
+               FORMAT_SIMPLE
+               BUILD_STRING             2
+               CALL                     1
+               STORE_FAST              11 (version_label)
+
+ 133           LOAD_FAST               11 (version_label)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              26 ('color: #888888; font-size: 10px;')
+               CALL                     1
+               POP_TOP
+
+ 134           LOAD_FAST               11 (version_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 135           LOAD_FAST               10 (version_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST               11 (version_label)
+               CALL                     1
+               POP_TOP
+
+ 137           LOAD_GLOBAL            119 (QSpacerItem + NULL)
+               LOAD_CONST              15 (20)
+               LOAD_CONST              15 (20)
+               LOAD_GLOBAL            120 (QSizePolicy)
+               LOAD_ATTR              122 (Minimum)
+               LOAD_GLOBAL            120 (QSizePolicy)
+               LOAD_ATTR              124 (Fixed)
+               CALL                     4
+               STORE_FAST              12 (spacer)
+
+ 140           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               CALL                     1
+               POP_TOP
+
+ 141           LOAD_FAST                3 (layout)
+               LOAD_ATTR              127 (addItem + NULL|self)
+               LOAD_FAST               12 (spacer)
+               CALL                     1
+               POP_TOP
+
+ 142           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               CALL                     1
+               POP_TOP
+
+ 143           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               CALL                     1
+               POP_TOP
+
+ 144           LOAD_FAST                3 (layout)
+               LOAD_ATTR              129 (addLayout + NULL|self)
+               LOAD_FAST                4 (checkbox_layout)
+               CALL                     1
+               POP_TOP
+
+ 145           LOAD_FAST                3 (layout)
+               LOAD_ATTR              127 (addItem + NULL|self)
+               LOAD_FAST               12 (spacer)
+               CALL                     1
+               POP_TOP
+
+ 146           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               CALL                     1
+               POP_TOP
+
+ 147           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               CALL                     1
+               POP_TOP
+
+ 148           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               CALL                     1
+               POP_TOP
+
+ 149           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               CALL                     1
+               POP_TOP
+
+ 151           LOAD_FAST                0 (self)
+               LOAD_ATTR              131 (setLayout + NULL|self)
+               LOAD_FAST                3 (layout)
+               CALL                     1
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+Disassembly of <code object <lambda> at 0x7f0bbb74a890, file "login.py", line 103>:
+103           RESUME                   0
+              LOAD_FAST                0 (link)
+              LOAD_CONST               1 ('discord')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       22 (to L1)
+              LOAD_GLOBAL              0 (os)
+              LOAD_ATTR                2 (startfile)
+              PUSH_NULL
+              LOAD_CONST               2 ('https://discord.gg/6CJTEPaB4s')
+              CALL                     1
+              RETURN_VALUE
+      L1:     LOAD_CONST               0 (None)
+              RETURN_VALUE
+
+Disassembly of <code object keyPressEvent at 0x7f0bbb5990b0, file "login.py", line 153>:
+153           RESUME                   0
+
+154           LOAD_FAST                1 (event)
+              LOAD_ATTR                1 (key + NULL|self)
+              CALL                     0
+              LOAD_GLOBAL              2 (Qt)
+              LOAD_ATTR                4 (Key_Return)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_TRUE        34 (to L1)
+              LOAD_FAST                1 (event)
+              LOAD_ATTR                1 (key + NULL|self)
+              CALL                     0
+              LOAD_GLOBAL              2 (Qt)
+              LOAD_ATTR                6 (Key_Enter)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       17 (to L2)
+
+155   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                9 (handle_login + NULL|self)
+              CALL                     0
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+154   L2:     RETURN_CONST             0 (None)
+
+Disassembly of <code object toggle_password at 0x7f0bbb58c8a0, file "login.py", line 157>:
+157           RESUME                   0
+
+159           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (show_password)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE       42 (to L1)
+
+160           LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (password)
+              LOAD_ATTR                7 (setEchoMode + NULL|self)
+              LOAD_GLOBAL              8 (QLineEdit)
+              LOAD_ATTR               10 (Normal)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+162   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (password)
+              LOAD_ATTR                7 (setEchoMode + NULL|self)
+              LOAD_GLOBAL              8 (QLineEdit)
+              LOAD_ATTR               12 (Password)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object input_style at 0x7f0bbb711550, file "login.py", line 165>:
+165           RESUME                   0
+
+166           RETURN_CONST             1 ('\n        background-color: #2c2f33;\n        color: white;\n        border-radius: 10px;\n        padding: 12px;\n        font-size: 16px;\n        border: 1px solid #4CAF50;\n        ')
+
+Disassembly of <code object go_to_register at 0x7f0bbb74b550, file "login.py", line 175>:
+175           RESUME                   0
+
+176           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (stacked_widget)
+              LOAD_ATTR                3 (setCurrentIndex + NULL|self)
+              LOAD_CONST               1 (1)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+Disassembly of <code object process_tool_data at 0x7f0bbb6d3210, file "login.py", line 180>:
+ 180           RESUME                   0
+
+ 196           LOAD_FAST                1 (tool_data)
+               TO_BOOL
+               POP_JUMP_IF_TRUE         2 (to L1)
+
+ 197           BUILD_LIST               0
+               RETURN_VALUE
+
+ 200   L1:     LOAD_FAST                1 (tool_data)
+               LOAD_ATTR                1 (split + NULL|self)
+               LOAD_CONST               1 (',')
+               CALL                     1
+               GET_ITER
+               LOAD_FAST_AND_CLEAR      2 (tool)
+               SWAP                     2
+       L2:     BUILD_LIST               0
+               SWAP                     2
+               GET_ITER
+       L3:     FOR_ITER                18 (to L4)
+               STORE_FAST_LOAD_FAST    34 (tool, tool)
+               LOAD_ATTR                3 (strip + NULL|self)
+               CALL                     0
+               LIST_APPEND              2
+               JUMP_BACKWARD           20 (to L3)
+       L4:     END_FOR
+               POP_TOP
+       L5:     STORE_FAST               3 (tool_list)
+               STORE_FAST               2 (tool)
+
+ 202           LOAD_FAST                3 (tool_list)
+               RETURN_VALUE
+
+  --   L6:     SWAP                     2
+               POP_TOP
+
+ 200           SWAP                     2
+               STORE_FAST               2 (tool)
+               RERAISE                  0
+ExceptionTable:
+  L2 to L5 -> L6 [2]
+
+Disassembly of <code object handle_login at 0x56067ddb94c0, file "login.py", line 204>:
+ 204            RESUME                   0
+
+ 205            NOP
+
+ 206    L1:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               1 ('[LOGIN] Bắt đầu đăng nhập...')
+                CALL                     1
+                POP_TOP
+
+ 208            LOAD_FAST                0 (self)
+                LOAD_ATTR                2 (username)
+                LOAD_ATTR                5 (text + NULL|self)
+                CALL                     0
+                STORE_FAST               1 (username)
+
+ 209            LOAD_FAST                0 (self)
+                LOAD_ATTR                6 (password)
+                LOAD_ATTR                5 (text + NULL|self)
+                CALL                     0
+                STORE_FAST               2 (password)
+
+ 210            LOAD_FAST                0 (self)
+                LOAD_ATTR                8 (remember_me)
+                LOAD_ATTR               11 (isChecked + NULL|self)
+                CALL                     0
+                STORE_FAST               3 (remember)
+
+ 211            LOAD_GLOBAL             13 (get_system_uuid + NULL)
+                CALL                     0
+                STORE_FAST               4 (hwid)
+
+ 212            LOAD_GLOBAL             15 (get_location + NULL)
+                CALL                     0
+                STORE_FAST               5 (ip)
+
+ 215            LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST               2 ('Đang đăng nhập...')
+                CALL                     1
+                POP_TOP
+
+ 216            LOAD_GLOBAL             20 (QApplication)
+                LOAD_ATTR               22 (processEvents)
+                PUSH_NULL
+                CALL                     0
+                POP_TOP
+
+ 217            LOAD_FAST                1 (username)
+                TO_BOOL
+                POP_JUMP_IF_FALSE        7 (to L2)
+                LOAD_FAST                2 (password)
+                TO_BOOL
+                POP_JUMP_IF_TRUE        39 (to L4)
+
+ 218    L2:     LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST               3 ('Vui lòng nhập tên đăng nhập!')
+                CALL                     1
+                POP_TOP
+
+ 219            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               4 ('[LOGIN] ❌ Thiếu username hoặc password')
+                CALL                     1
+                POP_TOP
+
+ 220    L3:     RETURN_CONST             0 (None)
+
+ 222    L4:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               5 ('[LOGIN] Gửi request API login...')
+                CALL                     1
+                POP_TOP
+
+ 224            LOAD_FAST                1 (username)
+
+ 225            LOAD_FAST                2 (password)
+
+ 226            LOAD_GLOBAL             26 (Tool_Name)
+
+ 227            LOAD_FAST                4 (hwid)
+
+ 228            LOAD_CONST               6 ('login')
+
+ 229            LOAD_FAST                5 (ip)
+
+ 223            LOAD_CONST               7 (('username', 'password', 'toolname', 'hwid', 'type', 'ip'))
+                BUILD_CONST_KEY_MAP      6
+                STORE_FAST               6 (payload)
+
+ 232            LOAD_GLOBAL             28 (requests)
+                LOAD_ATTR               30 (post)
+                PUSH_NULL
+                LOAD_GLOBAL             32 (WEBSITE_URL)
+                FORMAT_SIMPLE
+                LOAD_CONST               8 ('/api/tool/ping')
+                BUILD_STRING             2
+                LOAD_FAST                6 (payload)
+                LOAD_CONST               9 (('json',))
+                CALL_KW                  2
+                LOAD_ATTR               35 (json + NULL|self)
+                CALL                     0
+                STORE_FAST               7 (response)
+
+ 233            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              10 ('[LOGIN] Phản hồi API:')
+                LOAD_FAST                7 (response)
+                CALL                     2
+                POP_TOP
+
+ 235            LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              11 ('success')
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        97 (to L6)
+
+ 236            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              12 ('[LOGIN] ❌ Login thất bại:')
+                LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              13 ('message')
+                CALL                     1
+                CALL                     2
+                POP_TOP
+
+ 237            LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              13 ('message')
+                CALL                     1
+                CALL                     1
+                POP_TOP
+
+ 238            LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              14 ('Đăng nhập')
+                CALL                     1
+                POP_TOP
+
+ 239    L5:     RETURN_CONST             0 (None)
+
+ 242    L6:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              15 ('[LOGIN] ✅ Login thành công')
+                CALL                     1
+                POP_TOP
+
+ 243            LOAD_FAST                3 (remember)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       13 (to L7)
+
+ 244            LOAD_GLOBAL             39 (save_login + NULL)
+                LOAD_FAST_LOAD_FAST     18 (username, password)
+                LOAD_CONST              16 (True)
+                CALL                     3
+                POP_TOP
+                JUMP_FORWARD            13 (to L8)
+
+ 246    L7:     LOAD_GLOBAL             39 (save_login + NULL)
+                LOAD_CONST              17 ('')
+                LOAD_CONST              17 ('')
+                LOAD_CONST              18 (False)
+                CALL                     3
+                POP_TOP
+
+ 249    L8:     LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              19 ('wsUrl')
+                CALL                     1
+                STORE_FAST               8 (ws_url)
+
+ 250            LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              20 ('wsToken')
+                CALL                     1
+                STORE_FAST               9 (ws_token)
+
+ 253            LOAD_FAST                9 (ws_token)
+                TO_BOOL
+                POP_JUMP_IF_TRUE        33 (to L9)
+                LOAD_FAST                8 (ws_url)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       26 (to L9)
+                LOAD_CONST              21 ('licenseId=')
+                LOAD_FAST                8 (ws_url)
+                CONTAINS_OP              0
+                POP_JUMP_IF_FALSE       20 (to L9)
+
+ 254            LOAD_FAST                8 (ws_url)
+                LOAD_ATTR               41 (split + NULL|self)
+                LOAD_CONST              21 ('licenseId=')
+                CALL                     1
+                LOAD_CONST              22 (-1)
+                BINARY_SUBSCR
+                STORE_FAST               9 (ws_token)
+
+ 256    L9:     LOAD_FAST                8 (ws_url)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       69 (to L13)
+
+ 257            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              23 ('[WS] ✅ Nhận wsUrl từ server: ')
+                LOAD_FAST                8 (ws_url)
+                FORMAT_SIMPLE
+                BUILD_STRING             2
+                CALL                     1
+                POP_TOP
+
+ 258            LOAD_GLOBAL             43 (WSClient + NULL)
+                LOAD_FAST_LOAD_FAST    137 (ws_url, ws_token)
+                CALL                     2
+                LOAD_FAST                0 (self)
+                STORE_ATTR              22 (ws)
+
+ 259   L10:     NOP
+
+ 260   L11:     LOAD_FAST                0 (self)
+                LOAD_ATTR               44 (ws)
+                LOAD_ATTR               47 (connect + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 261            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              24 ('[WS] ✅ Kết nối WebSocket thành công')
+                CALL                     1
+                POP_TOP
+       L12:     JUMP_FORWARD            11 (to L14)
+
+ 266   L13:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              27 ('[WS] ❌ Không có wsUrl, dùng ping API cũ')
+                CALL                     1
+                POP_TOP
+
+ 271   L14:     LOAD_GLOBAL             51 (AccountStatusManager + NULL)
+                LOAD_FAST                1 (username)
+                LOAD_GLOBAL             26 (Tool_Name)
+                LOAD_FAST                2 (password)
+                CALL                     3
+                LOAD_FAST                0 (self)
+                STORE_ATTR              26 (account_manager)
+
+ 274            LOAD_FAST                0 (self)
+                LOAD_ATTR               54 (main_app)
+                LOAD_ATTR               56 (main_page)
+                LOAD_ATTR               59 (update_version_info + NULL|self)
+                LOAD_FAST                7 (response)
+                CALL                     1
+                POP_TOP
+
+ 276            LOAD_CONST              16 (True)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               54 (main_app)
+                LOAD_ATTR               56 (main_page)
+                STORE_ATTR              30 (logined)
+
+ 277            LOAD_FAST                0 (self)
+                LOAD_ATTR               52 (account_manager)
+                LOAD_ATTR               63 (start_ping_service + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 278            LOAD_GLOBAL             65 (setup_graceful_shutdown + NULL)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               52 (account_manager)
+                CALL                     1
+                POP_TOP
+
+ 280            LOAD_FAST                0 (self)
+                LOAD_ATTR               67 (parent + NULL|self)
+                CALL                     0
+                LOAD_ATTR               69 (setCurrentIndex + NULL|self)
+                LOAD_CONST              28 (1)
+                CALL                     1
+                POP_TOP
+
+ 281            LOAD_FAST                0 (self)
+                LOAD_ATTR               71 (parentWidget + NULL|self)
+                CALL                     0
+                LOAD_ATTR               71 (parentWidget + NULL|self)
+                CALL                     0
+                LOAD_ATTR               73 (setFixedSize + NULL|self)
+                LOAD_CONST              29 (350)
+                LOAD_CONST              30 (400)
+                CALL                     2
+                POP_TOP
+       L15:     RETURN_CONST             0 (None)
+
+  --   L16:     PUSH_EXC_INFO
+
+ 262            LOAD_GLOBAL             48 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE       33 (to L20)
+                STORE_FAST              10 (e)
+
+ 263   L17:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              25 ('[WS] ❌ Lỗi khi kết nối WebSocket:')
+                LOAD_FAST               10 (e)
+                CALL                     2
+                POP_TOP
+
+ 264            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              26 ('[WS] Sẽ fallback dùng ping API cũ')
+                CALL                     1
+                POP_TOP
+       L18:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                JUMP_BACKWARD_NO_INTERRUPT 249 (to L14)
+
+  --   L19:     LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RERAISE                  1
+
+ 262   L20:     RERAISE                  0
+
+  --   L21:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+       L22:     PUSH_EXC_INFO
+
+ 283            LOAD_GLOBAL             48 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE      157 (to L33)
+                STORE_FAST              10 (e)
+
+ 284   L23:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              31 ('[LOGIN] Lỗi hệ thống:')
+                LOAD_FAST               10 (e)
+                CALL                     2
+                POP_TOP
+
+ 285            LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              32 ('Lỗi khi đăng nhập, vui lòng liên hệ admin')
+                CALL                     1
+                POP_TOP
+
+ 286            LOAD_GLOBAL             75 (open + NULL)
+                LOAD_CONST              33 ('error_log.txt')
+                LOAD_CONST              34 ('a')
+                LOAD_CONST              35 ('utf-8')
+                LOAD_CONST              36 (('encoding',))
+                CALL_KW                  3
+                BEFORE_WITH
+       L24:     STORE_FAST              11 (f)
+
+ 287            LOAD_FAST               11 (f)
+                LOAD_ATTR               77 (write + NULL|self)
+                LOAD_CONST              37 ('[')
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               78 (now)
+                FORMAT_SIMPLE
+                LOAD_CONST              38 ('] ')
+                LOAD_GLOBAL             81 (str + NULL)
+                LOAD_FAST               10 (e)
+                CALL                     1
+                FORMAT_SIMPLE
+                LOAD_CONST              39 ('\n')
+                BUILD_STRING             5
+                CALL                     1
+                POP_TOP
+
+ 286   L25:     LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                CALL                     2
+                POP_TOP
+                JUMP_FORWARD            17 (to L30)
+       L26:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L27)
+                RERAISE                  2
+       L27:     POP_TOP
+       L28:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+                JUMP_FORWARD             3 (to L30)
+
+  --   L29:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+
+ 288   L30:     LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              14 ('Đăng nhập')
+                CALL                     1
+                POP_TOP
+       L31:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RETURN_CONST             0 (None)
+
+  --   L32:     LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RERAISE                  1
+
+ 283   L33:     RERAISE                  0
+
+  --   L34:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L1 to L3 -> L22 [0]
+  L4 to L5 -> L22 [0]
+  L6 to L10 -> L22 [0]
+  L11 to L12 -> L16 [0]
+  L12 to L15 -> L22 [0]
+  L16 to L17 -> L21 [1] lasti
+  L17 to L18 -> L19 [1] lasti
+  L18 to L19 -> L22 [0]
+  L19 to L21 -> L21 [1] lasti
+  L21 to L22 -> L22 [0]
+  L22 to L23 -> L34 [1] lasti
+  L23 to L24 -> L32 [1] lasti
+  L24 to L25 -> L26 [2] lasti
+  L25 to L26 -> L32 [1] lasti
+  L26 to L28 -> L29 [4] lasti
+  L28 to L31 -> L32 [1] lasti
+  L32 to L34 -> L34 [1] lasti
+
+----- code: __init__ (argcount=3, vars=('self', 'main_app', 'stacked_widget', 'layout', 'checkbox_layout', 'saved_username', 'saved_password', 'remember', 'discord_logo_path', 'pixmap', 'version_layout', 'version_label', 'spacer')) -----
+  --           COPY_FREE_VARS           1
+
+  29           RESUME                   0
+
+  30           LOAD_GLOBAL              0 (super)
+               LOAD_DEREF              13 (__class__)
+               LOAD_FAST                0 (self)
+               LOAD_SUPER_ATTR          5 (__init__ + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  33           LOAD_GLOBAL              5 (get_current_time + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR               3 (now)
+
+  34           LOAD_FAST_LOAD_FAST     16 (main_app, self)
+               STORE_ATTR               4 (main_app)
+
+  35           LOAD_FAST_LOAD_FAST     32 (stacked_widget, self)
+               STORE_ATTR               5 (stacked_widget)
+
+  36           LOAD_GLOBAL             13 (QVBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               3 (layout)
+
+  37           LOAD_FAST                0 (self)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               1 ('background-color: #1e1e1e; border-radius: 15px;')
+               CALL                     1
+               POP_TOP
+
+  39           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST               2 ('Đăng nhập')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR               9 (label_title)
+
+  40           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               21 (setFont + NULL|self)
+               LOAD_GLOBAL             23 (QFont + NULL)
+               LOAD_CONST               3 ('Arial')
+               LOAD_CONST               4 (22)
+               LOAD_GLOBAL             22 (QFont)
+               LOAD_ATTR               24 (Bold)
+               CALL                     3
+               CALL                     1
+               POP_TOP
+
+  41           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               5 ('color: #ffffff;')
+               CALL                     1
+               POP_TOP
+
+  42           LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+  44           LOAD_GLOBAL             33 (QLineEdit + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              17 (username)
+
+  45           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               37 (setPlaceholderText + NULL|self)
+               LOAD_CONST               6 ('Tên đăng nhập')
+               CALL                     1
+               POP_TOP
+
+  46           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               39 (input_style + NULL|self)
+               CALL                     0
+               CALL                     1
+               POP_TOP
+
+  49           LOAD_GLOBAL             33 (QLineEdit + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              20 (password)
+
+  50           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               37 (setPlaceholderText + NULL|self)
+               LOAD_CONST               7 ('Mật khẩu')
+               CALL                     1
+               POP_TOP
+
+  51           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               43 (setEchoMode + NULL|self)
+               LOAD_GLOBAL             32 (QLineEdit)
+               LOAD_ATTR               44 (Password)
+               CALL                     1
+               POP_TOP
+
+  52           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               39 (input_style + NULL|self)
+               CALL                     0
+               CALL                     1
+               POP_TOP
+
+  56           LOAD_GLOBAL             47 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               4 (checkbox_layout)
+
+  57           LOAD_GLOBAL             49 (QCheckBox + NULL)
+               LOAD_CONST               8 ('Lưu mật khẩu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              25 (remember_me)
+
+  58           LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               9 ('color: white; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+  60           LOAD_GLOBAL             49 (QCheckBox + NULL)
+               LOAD_CONST              10 ('Hiện mật khẩu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              26 (show_password)
+
+  61           LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               9 ('color: white; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+  62           LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_ATTR               54 (stateChanged)
+               LOAD_ATTR               57 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (toggle_password)
+               CALL                     1
+               POP_TOP
+
+  64           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               CALL                     1
+               POP_TOP
+
+  65           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               63 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  66           LOAD_FAST                4 (checkbox_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               52 (show_password)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               64 (AlignRight)
+               LOAD_CONST              11 (('alignment',))
+               CALL_KW                  2
+               POP_TOP
+
+  69           LOAD_GLOBAL             67 (load_login + NULL)
+               CALL                     0
+               UNPACK_SEQUENCE          3
+               STORE_FAST_STORE_FAST   86 (saved_username, saved_password)
+               STORE_FAST               7 (remember)
+
+  70           LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               LOAD_ATTR               69 (setText + NULL|self)
+               LOAD_FAST                5 (saved_username)
+               CALL                     1
+               POP_TOP
+
+  71           LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               LOAD_ATTR               69 (setText + NULL|self)
+               LOAD_FAST                6 (saved_password)
+               CALL                     1
+               POP_TOP
+
+  72           LOAD_FAST                0 (self)
+               LOAD_ATTR               50 (remember_me)
+               LOAD_ATTR               71 (setChecked + NULL|self)
+               LOAD_FAST                7 (remember)
+               CALL                     1
+               POP_TOP
+
+  74           LOAD_GLOBAL             73 (QPushButton + NULL)
+               LOAD_CONST               2 ('Đăng nhập')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              37 (login_button)
+
+  75           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               77 (setCursor + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               78 (PointingHandCursor)
+               CALL                     1
+               POP_TOP
+
+  76           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              12 ('background-color: #4CAF50; color: white; font-size: 16px; padding: 10px; border-radius: 5px;')
+               CALL                     1
+               POP_TOP
+
+  77           LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               LOAD_ATTR               80 (clicked)
+               LOAD_ATTR               57 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               82 (handle_login)
+               CALL                     1
+               POP_TOP
+
+  80           LOAD_GLOBAL             17 (QLabel + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              42 (discord_contact)
+
+  81           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+  82           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               87 (setTextFormat + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               88 (RichText)
+               CALL                     1
+               POP_TOP
+
+  83           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               91 (setOpenExternalLinks + NULL|self)
+               LOAD_CONST              13 (False)
+               CALL                     1
+               POP_TOP
+
+  86           LOAD_GLOBAL             93 (resource_path + NULL)
+               LOAD_CONST              14 ('resources\\discord.png')
+               CALL                     1
+               STORE_FAST               8 (discord_logo_path)
+
+  87           LOAD_FAST                8 (discord_logo_path)
+               TO_BOOL
+               POP_JUMP_IF_FALSE      118 (to L1)
+
+  88           LOAD_GLOBAL             95 (QPixmap + NULL)
+               LOAD_FAST                8 (discord_logo_path)
+               CALL                     1
+               STORE_FAST               9 (pixmap)
+
+  89           LOAD_FAST                9 (pixmap)
+               LOAD_ATTR               97 (scaled + NULL|self)
+               LOAD_CONST              15 (20)
+               LOAD_CONST              15 (20)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               98 (KeepAspectRatio)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR              100 (SmoothTransformation)
+               CALL                     4
+               STORE_FAST               9 (pixmap)
+
+  90           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR              103 (setPixmap + NULL|self)
+               LOAD_FAST                9 (pixmap)
+               CALL                     1
+               POP_TOP
+
+  92           LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+  93           LOAD_CONST              16 ('<a href="discord"><img src="')
+               LOAD_FAST                8 (discord_logo_path)
+               FORMAT_SIMPLE
+               LOAD_CONST              17 ('" width="21" height="21" style="vertical-align:middle;"> <span style="color:#03A9F4; font-size:16px; text-decoration:none;">Discord</span></a>')
+               BUILD_STRING             3
+
+  92           CALL                     1
+               POP_TOP
+               JUMP_FORWARD            27 (to L2)
+
+  98   L1:     LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+  99           LOAD_CONST              18 ('<a href="discord"><span style="color:#03A9F4; font-size:16px; text-decoration:none;">Discord</span></a>')
+
+  98           CALL                     1
+               POP_TOP
+
+ 102   L2:     LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               LOAD_ATTR              104 (linkActivated)
+               LOAD_ATTR               57 (connect + NULL|self)
+
+ 103           LOAD_CONST              19 (<code object <lambda> at 0x7f0bbb74a890, file "login.py", line 103>)
+               MAKE_FUNCTION
+
+ 102           CALL                     1
+               POP_TOP
+
+ 106           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST              20 ('')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              53 (message_label)
+
+ 107           LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              21 ('color: red; font-size: 14px;')
+               CALL                     1
+               POP_TOP
+
+ 108           LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 111           LOAD_GLOBAL             17 (QLabel + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              54 (website_label)
+
+ 112           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               87 (setTextFormat + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               88 (RichText)
+               CALL                     1
+               POP_TOP
+
+ 113           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 114           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR              111 (setTextInteractionFlags + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR              112 (TextBrowserInteraction)
+               CALL                     1
+               POP_TOP
+
+ 115           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               91 (setOpenExternalLinks + NULL|self)
+               LOAD_CONST              22 (True)
+               CALL                     1
+               POP_TOP
+
+ 116           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               77 (setCursor + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               78 (PointingHandCursor)
+               CALL                     1
+               POP_TOP
+
+ 119           LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               LOAD_ATTR               69 (setText + NULL|self)
+
+ 120           LOAD_CONST              23 ('<html><head><style>a{ text-decoration:none; color:#3498db; font-weight:600; font-size:14px;}a:hover{ color:#e74c3c; }</style></head><body><p>Đăng ký sử dụng <a href="')
+
+ 125           LOAD_GLOBAL            114 (WEBSITE_URL)
+
+ 120           BINARY_OP                0 (+)
+
+ 125           LOAD_CONST              24 ('">tại đây</a></p></body></html>')
+
+ 120           BINARY_OP                0 (+)
+
+ 119           CALL                     1
+               POP_TOP
+
+ 130           LOAD_GLOBAL             47 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST              10 (version_layout)
+
+ 131           LOAD_FAST               10 (version_layout)
+               LOAD_ATTR               63 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 132           LOAD_GLOBAL             17 (QLabel + NULL)
+               LOAD_CONST              25 ('Phiên bản hiện tại: ')
+               LOAD_GLOBAL            116 (Tool_Version)
+               FORMAT_SIMPLE
+               BUILD_STRING             2
+               CALL                     1
+               STORE_FAST              11 (version_label)
+
+ 133           LOAD_FAST               11 (version_label)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST              26 ('color: #888888; font-size: 10px;')
+               CALL                     1
+               POP_TOP
+
+ 134           LOAD_FAST               11 (version_label)
+               LOAD_ATTR               27 (setAlignment + NULL|self)
+               LOAD_GLOBAL             28 (Qt)
+               LOAD_ATTR               30 (AlignCenter)
+               CALL                     1
+               POP_TOP
+
+ 135           LOAD_FAST               10 (version_layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST               11 (version_label)
+               CALL                     1
+               POP_TOP
+
+ 137           LOAD_GLOBAL            119 (QSpacerItem + NULL)
+               LOAD_CONST              15 (20)
+               LOAD_CONST              15 (20)
+               LOAD_GLOBAL            120 (QSizePolicy)
+               LOAD_ATTR              122 (Minimum)
+               LOAD_GLOBAL            120 (QSizePolicy)
+               LOAD_ATTR              124 (Fixed)
+               CALL                     4
+               STORE_FAST              12 (spacer)
+
+ 140           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               18 (label_title)
+               CALL                     1
+               POP_TOP
+
+ 141           LOAD_FAST                3 (layout)
+               LOAD_ATTR              127 (addItem + NULL|self)
+               LOAD_FAST               12 (spacer)
+               CALL                     1
+               POP_TOP
+
+ 142           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               34 (username)
+               CALL                     1
+               POP_TOP
+
+ 143           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (password)
+               CALL                     1
+               POP_TOP
+
+ 144           LOAD_FAST                3 (layout)
+               LOAD_ATTR              129 (addLayout + NULL|self)
+               LOAD_FAST                4 (checkbox_layout)
+               CALL                     1
+               POP_TOP
+
+ 145           LOAD_FAST                3 (layout)
+               LOAD_ATTR              127 (addItem + NULL|self)
+               LOAD_FAST               12 (spacer)
+               CALL                     1
+               POP_TOP
+
+ 146           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (login_button)
+               CALL                     1
+               POP_TOP
+
+ 147           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               84 (discord_contact)
+               CALL                     1
+               POP_TOP
+
+ 148           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR              106 (message_label)
+               CALL                     1
+               POP_TOP
+
+ 149           LOAD_FAST                3 (layout)
+               LOAD_ATTR               61 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR              108 (website_label)
+               CALL                     1
+               POP_TOP
+
+ 151           LOAD_FAST                0 (self)
+               LOAD_ATTR              131 (setLayout + NULL|self)
+               LOAD_FAST                3 (layout)
+               CALL                     1
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+Disassembly of <code object <lambda> at 0x7f0bbb74a890, file "login.py", line 103>:
+103           RESUME                   0
+              LOAD_FAST                0 (link)
+              LOAD_CONST               1 ('discord')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       22 (to L1)
+              LOAD_GLOBAL              0 (os)
+              LOAD_ATTR                2 (startfile)
+              PUSH_NULL
+              LOAD_CONST               2 ('https://discord.gg/6CJTEPaB4s')
+              CALL                     1
+              RETURN_VALUE
+      L1:     LOAD_CONST               0 (None)
+              RETURN_VALUE
+
+----- code: <lambda> (argcount=1, vars=('link',)) -----
+103           RESUME                   0
+              LOAD_FAST                0 (link)
+              LOAD_CONST               1 ('discord')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       22 (to L1)
+              LOAD_GLOBAL              0 (os)
+              LOAD_ATTR                2 (startfile)
+              PUSH_NULL
+              LOAD_CONST               2 ('https://discord.gg/6CJTEPaB4s')
+              CALL                     1
+              RETURN_VALUE
+      L1:     LOAD_CONST               0 (None)
+              RETURN_VALUE
+
+----- code: keyPressEvent (argcount=2, vars=('self', 'event')) -----
+153           RESUME                   0
+
+154           LOAD_FAST                1 (event)
+              LOAD_ATTR                1 (key + NULL|self)
+              CALL                     0
+              LOAD_GLOBAL              2 (Qt)
+              LOAD_ATTR                4 (Key_Return)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_TRUE        34 (to L1)
+              LOAD_FAST                1 (event)
+              LOAD_ATTR                1 (key + NULL|self)
+              CALL                     0
+              LOAD_GLOBAL              2 (Qt)
+              LOAD_ATTR                6 (Key_Enter)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       17 (to L2)
+
+155   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                9 (handle_login + NULL|self)
+              CALL                     0
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+154   L2:     RETURN_CONST             0 (None)
+
+----- code: toggle_password (argcount=1, vars=('self',)) -----
+157           RESUME                   0
+
+159           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (show_password)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE       42 (to L1)
+
+160           LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (password)
+              LOAD_ATTR                7 (setEchoMode + NULL|self)
+              LOAD_GLOBAL              8 (QLineEdit)
+              LOAD_ATTR               10 (Normal)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+162   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (password)
+              LOAD_ATTR                7 (setEchoMode + NULL|self)
+              LOAD_GLOBAL              8 (QLineEdit)
+              LOAD_ATTR               12 (Password)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+----- code: input_style (argcount=1, vars=('self',)) -----
+165           RESUME                   0
+
+166           RETURN_CONST             1 ('\n        background-color: #2c2f33;\n        color: white;\n        border-radius: 10px;\n        padding: 12px;\n        font-size: 16px;\n        border: 1px solid #4CAF50;\n        ')
+
+----- code: go_to_register (argcount=1, vars=('self',)) -----
+175           RESUME                   0
+
+176           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (stacked_widget)
+              LOAD_ATTR                3 (setCurrentIndex + NULL|self)
+              LOAD_CONST               1 (1)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+----- code: process_tool_data (argcount=2, vars=('self', 'tool_data', 'tool', 'tool_list')) -----
+ 180           RESUME                   0
+
+ 196           LOAD_FAST                1 (tool_data)
+               TO_BOOL
+               POP_JUMP_IF_TRUE         2 (to L1)
+
+ 197           BUILD_LIST               0
+               RETURN_VALUE
+
+ 200   L1:     LOAD_FAST                1 (tool_data)
+               LOAD_ATTR                1 (split + NULL|self)
+               LOAD_CONST               1 (',')
+               CALL                     1
+               GET_ITER
+               LOAD_FAST_AND_CLEAR      2 (tool)
+               SWAP                     2
+       L2:     BUILD_LIST               0
+               SWAP                     2
+               GET_ITER
+       L3:     FOR_ITER                18 (to L4)
+               STORE_FAST_LOAD_FAST    34 (tool, tool)
+               LOAD_ATTR                3 (strip + NULL|self)
+               CALL                     0
+               LIST_APPEND              2
+               JUMP_BACKWARD           20 (to L3)
+       L4:     END_FOR
+               POP_TOP
+       L5:     STORE_FAST               3 (tool_list)
+               STORE_FAST               2 (tool)
+
+ 202           LOAD_FAST                3 (tool_list)
+               RETURN_VALUE
+
+  --   L6:     SWAP                     2
+               POP_TOP
+
+ 200           SWAP                     2
+               STORE_FAST               2 (tool)
+               RERAISE                  0
+ExceptionTable:
+  L2 to L5 -> L6 [2]
+
+----- code: handle_login (argcount=1, vars=('self', 'username', 'password', 'remember', 'hwid', 'ip', 'payload', 'response', 'ws_url', 'ws_token', 'e', 'f')) -----
+ 204            RESUME                   0
+
+ 205            NOP
+
+ 206    L1:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               1 ('[LOGIN] Bắt đầu đăng nhập...')
+                CALL                     1
+                POP_TOP
+
+ 208            LOAD_FAST                0 (self)
+                LOAD_ATTR                2 (username)
+                LOAD_ATTR                5 (text + NULL|self)
+                CALL                     0
+                STORE_FAST               1 (username)
+
+ 209            LOAD_FAST                0 (self)
+                LOAD_ATTR                6 (password)
+                LOAD_ATTR                5 (text + NULL|self)
+                CALL                     0
+                STORE_FAST               2 (password)
+
+ 210            LOAD_FAST                0 (self)
+                LOAD_ATTR                8 (remember_me)
+                LOAD_ATTR               11 (isChecked + NULL|self)
+                CALL                     0
+                STORE_FAST               3 (remember)
+
+ 211            LOAD_GLOBAL             13 (get_system_uuid + NULL)
+                CALL                     0
+                STORE_FAST               4 (hwid)
+
+ 212            LOAD_GLOBAL             15 (get_location + NULL)
+                CALL                     0
+                STORE_FAST               5 (ip)
+
+ 215            LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST               2 ('Đang đăng nhập...')
+                CALL                     1
+                POP_TOP
+
+ 216            LOAD_GLOBAL             20 (QApplication)
+                LOAD_ATTR               22 (processEvents)
+                PUSH_NULL
+                CALL                     0
+                POP_TOP
+
+ 217            LOAD_FAST                1 (username)
+                TO_BOOL
+                POP_JUMP_IF_FALSE        7 (to L2)
+                LOAD_FAST                2 (password)
+                TO_BOOL
+                POP_JUMP_IF_TRUE        39 (to L4)
+
+ 218    L2:     LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST               3 ('Vui lòng nhập tên đăng nhập!')
+                CALL                     1
+                POP_TOP
+
+ 219            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               4 ('[LOGIN] ❌ Thiếu username hoặc password')
+                CALL                     1
+                POP_TOP
+
+ 220    L3:     RETURN_CONST             0 (None)
+
+ 222    L4:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST               5 ('[LOGIN] Gửi request API login...')
+                CALL                     1
+                POP_TOP
+
+ 224            LOAD_FAST                1 (username)
+
+ 225            LOAD_FAST                2 (password)
+
+ 226            LOAD_GLOBAL             26 (Tool_Name)
+
+ 227            LOAD_FAST                4 (hwid)
+
+ 228            LOAD_CONST               6 ('login')
+
+ 229            LOAD_FAST                5 (ip)
+
+ 223            LOAD_CONST               7 (('username', 'password', 'toolname', 'hwid', 'type', 'ip'))
+                BUILD_CONST_KEY_MAP      6
+                STORE_FAST               6 (payload)
+
+ 232            LOAD_GLOBAL             28 (requests)
+                LOAD_ATTR               30 (post)
+                PUSH_NULL
+                LOAD_GLOBAL             32 (WEBSITE_URL)
+                FORMAT_SIMPLE
+                LOAD_CONST               8 ('/api/tool/ping')
+                BUILD_STRING             2
+                LOAD_FAST                6 (payload)
+                LOAD_CONST               9 (('json',))
+                CALL_KW                  2
+                LOAD_ATTR               35 (json + NULL|self)
+                CALL                     0
+                STORE_FAST               7 (response)
+
+ 233            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              10 ('[LOGIN] Phản hồi API:')
+                LOAD_FAST                7 (response)
+                CALL                     2
+                POP_TOP
+
+ 235            LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              11 ('success')
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        97 (to L6)
+
+ 236            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              12 ('[LOGIN] ❌ Login thất bại:')
+                LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              13 ('message')
+                CALL                     1
+                CALL                     2
+                POP_TOP
+
+ 237            LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              13 ('message')
+                CALL                     1
+                CALL                     1
+                POP_TOP
+
+ 238            LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              14 ('Đăng nhập')
+                CALL                     1
+                POP_TOP
+
+ 239    L5:     RETURN_CONST             0 (None)
+
+ 242    L6:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              15 ('[LOGIN] ✅ Login thành công')
+                CALL                     1
+                POP_TOP
+
+ 243            LOAD_FAST                3 (remember)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       13 (to L7)
+
+ 244            LOAD_GLOBAL             39 (save_login + NULL)
+                LOAD_FAST_LOAD_FAST     18 (username, password)
+                LOAD_CONST              16 (True)
+                CALL                     3
+                POP_TOP
+                JUMP_FORWARD            13 (to L8)
+
+ 246    L7:     LOAD_GLOBAL             39 (save_login + NULL)
+                LOAD_CONST              17 ('')
+                LOAD_CONST              17 ('')
+                LOAD_CONST              18 (False)
+                CALL                     3
+                POP_TOP
+
+ 249    L8:     LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              19 ('wsUrl')
+                CALL                     1
+                STORE_FAST               8 (ws_url)
+
+ 250            LOAD_FAST                7 (response)
+                LOAD_ATTR               37 (get + NULL|self)
+                LOAD_CONST              20 ('wsToken')
+                CALL                     1
+                STORE_FAST               9 (ws_token)
+
+ 253            LOAD_FAST                9 (ws_token)
+                TO_BOOL
+                POP_JUMP_IF_TRUE        33 (to L9)
+                LOAD_FAST                8 (ws_url)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       26 (to L9)
+                LOAD_CONST              21 ('licenseId=')
+                LOAD_FAST                8 (ws_url)
+                CONTAINS_OP              0
+                POP_JUMP_IF_FALSE       20 (to L9)
+
+ 254            LOAD_FAST                8 (ws_url)
+                LOAD_ATTR               41 (split + NULL|self)
+                LOAD_CONST              21 ('licenseId=')
+                CALL                     1
+                LOAD_CONST              22 (-1)
+                BINARY_SUBSCR
+                STORE_FAST               9 (ws_token)
+
+ 256    L9:     LOAD_FAST                8 (ws_url)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       69 (to L13)
+
+ 257            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              23 ('[WS] ✅ Nhận wsUrl từ server: ')
+                LOAD_FAST                8 (ws_url)
+                FORMAT_SIMPLE
+                BUILD_STRING             2
+                CALL                     1
+                POP_TOP
+
+ 258            LOAD_GLOBAL             43 (WSClient + NULL)
+                LOAD_FAST_LOAD_FAST    137 (ws_url, ws_token)
+                CALL                     2
+                LOAD_FAST                0 (self)
+                STORE_ATTR              22 (ws)
+
+ 259   L10:     NOP
+
+ 260   L11:     LOAD_FAST                0 (self)
+                LOAD_ATTR               44 (ws)
+                LOAD_ATTR               47 (connect + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 261            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              24 ('[WS] ✅ Kết nối WebSocket thành công')
+                CALL                     1
+                POP_TOP
+       L12:     JUMP_FORWARD            11 (to L14)
+
+ 266   L13:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              27 ('[WS] ❌ Không có wsUrl, dùng ping API cũ')
+                CALL                     1
+                POP_TOP
+
+ 271   L14:     LOAD_GLOBAL             51 (AccountStatusManager + NULL)
+                LOAD_FAST                1 (username)
+                LOAD_GLOBAL             26 (Tool_Name)
+                LOAD_FAST                2 (password)
+                CALL                     3
+                LOAD_FAST                0 (self)
+                STORE_ATTR              26 (account_manager)
+
+ 274            LOAD_FAST                0 (self)
+                LOAD_ATTR               54 (main_app)
+                LOAD_ATTR               56 (main_page)
+                LOAD_ATTR               59 (update_version_info + NULL|self)
+                LOAD_FAST                7 (response)
+                CALL                     1
+                POP_TOP
+
+ 276            LOAD_CONST              16 (True)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               54 (main_app)
+                LOAD_ATTR               56 (main_page)
+                STORE_ATTR              30 (logined)
+
+ 277            LOAD_FAST                0 (self)
+                LOAD_ATTR               52 (account_manager)
+                LOAD_ATTR               63 (start_ping_service + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 278            LOAD_GLOBAL             65 (setup_graceful_shutdown + NULL)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               52 (account_manager)
+                CALL                     1
+                POP_TOP
+
+ 280            LOAD_FAST                0 (self)
+                LOAD_ATTR               67 (parent + NULL|self)
+                CALL                     0
+                LOAD_ATTR               69 (setCurrentIndex + NULL|self)
+                LOAD_CONST              28 (1)
+                CALL                     1
+                POP_TOP
+
+ 281            LOAD_FAST                0 (self)
+                LOAD_ATTR               71 (parentWidget + NULL|self)
+                CALL                     0
+                LOAD_ATTR               71 (parentWidget + NULL|self)
+                CALL                     0
+                LOAD_ATTR               73 (setFixedSize + NULL|self)
+                LOAD_CONST              29 (350)
+                LOAD_CONST              30 (400)
+                CALL                     2
+                POP_TOP
+       L15:     RETURN_CONST             0 (None)
+
+  --   L16:     PUSH_EXC_INFO
+
+ 262            LOAD_GLOBAL             48 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE       33 (to L20)
+                STORE_FAST              10 (e)
+
+ 263   L17:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              25 ('[WS] ❌ Lỗi khi kết nối WebSocket:')
+                LOAD_FAST               10 (e)
+                CALL                     2
+                POP_TOP
+
+ 264            LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              26 ('[WS] Sẽ fallback dùng ping API cũ')
+                CALL                     1
+                POP_TOP
+       L18:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                JUMP_BACKWARD_NO_INTERRUPT 249 (to L14)
+
+  --   L19:     LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RERAISE                  1
+
+ 262   L20:     RERAISE                  0
+
+  --   L21:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+       L22:     PUSH_EXC_INFO
+
+ 283            LOAD_GLOBAL             48 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE      157 (to L33)
+                STORE_FAST              10 (e)
+
+ 284   L23:     LOAD_GLOBAL              1 (print + NULL)
+                LOAD_CONST              31 ('[LOGIN] Lỗi hệ thống:')
+                LOAD_FAST               10 (e)
+                CALL                     2
+                POP_TOP
+
+ 285            LOAD_FAST                0 (self)
+                LOAD_ATTR               24 (message_label)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              32 ('Lỗi khi đăng nhập, vui lòng liên hệ admin')
+                CALL                     1
+                POP_TOP
+
+ 286            LOAD_GLOBAL             75 (open + NULL)
+                LOAD_CONST              33 ('error_log.txt')
+                LOAD_CONST              34 ('a')
+                LOAD_CONST              35 ('utf-8')
+                LOAD_CONST              36 (('encoding',))
+                CALL_KW                  3
+                BEFORE_WITH
+       L24:     STORE_FAST              11 (f)
+
+ 287            LOAD_FAST               11 (f)
+                LOAD_ATTR               77 (write + NULL|self)
+                LOAD_CONST              37 ('[')
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               78 (now)
+                FORMAT_SIMPLE
+                LOAD_CONST              38 ('] ')
+                LOAD_GLOBAL             81 (str + NULL)
+                LOAD_FAST               10 (e)
+                CALL                     1
+                FORMAT_SIMPLE
+                LOAD_CONST              39 ('\n')
+                BUILD_STRING             5
+                CALL                     1
+                POP_TOP
+
+ 286   L25:     LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                CALL                     2
+                POP_TOP
+                JUMP_FORWARD            17 (to L30)
+       L26:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L27)
+                RERAISE                  2
+       L27:     POP_TOP
+       L28:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+                JUMP_FORWARD             3 (to L30)
+
+  --   L29:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+
+ 288   L30:     LOAD_FAST                0 (self)
+                LOAD_ATTR               16 (login_button)
+                LOAD_ATTR               19 (setText + NULL|self)
+                LOAD_CONST              14 ('Đăng nhập')
+                CALL                     1
+                POP_TOP
+       L31:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RETURN_CONST             0 (None)
+
+  --   L32:     LOAD_CONST               0 (None)
+                STORE_FAST              10 (e)
+                DELETE_FAST             10 (e)
+                RERAISE                  1
+
+ 283   L33:     RERAISE                  0
+
+  --   L34:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L1 to L3 -> L22 [0]
+  L4 to L5 -> L22 [0]
+  L6 to L10 -> L22 [0]
+  L11 to L12 -> L16 [0]
+  L12 to L15 -> L22 [0]
+  L16 to L17 -> L21 [1] lasti
+  L17 to L18 -> L19 [1] lasti
+  L18 to L19 -> L22 [0]
+  L19 to L21 -> L21 [1] lasti
+  L21 to L22 -> L22 [0]
+  L22 to L23 -> L34 [1] lasti
+  L23 to L24 -> L32 [1] lasti
+  L24 to L25 -> L26 [2] lasti
+  L25 to L26 -> L32 [1] lasti
+  L26 to L28 -> L29 [4] lasti
+  L28 to L31 -> L32 [1] lasti
+  L32 to L34 -> L34 [1] lasti

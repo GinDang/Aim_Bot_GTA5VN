@@ -1,0 +1,1918 @@
+### MODULE: sell_thread
+# co_names: ('pynput.keyboard', 'Controller', 'Key', 'keyboard', 'time', 'cv2', 'mss', 'numpy', 'np', 'pyautogui', 'settings_window', 'load_settings', 'utils', 'resource_path', 'SCREEN_ID', 'capture_full_screen', 'click_open_shop', 'sell_tool')
+# co_consts (top-level strings): 
+
+========== FULL DISASSEMBLY (recursive) ==========
+
+----- code: <module> (argcount=0, vars=()) -----
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (('Controller', 'Key'))
+              IMPORT_NAME              0 (pynput.keyboard)
+              IMPORT_FROM              1 (Controller)
+              STORE_NAME               1 (Controller)
+              IMPORT_FROM              2 (Key)
+              STORE_NAME               2 (Key)
+              POP_TOP
+
+  2           LOAD_NAME                1 (Controller)
+              PUSH_NULL
+              CALL                     0
+              STORE_NAME               3 (keyboard)
+
+  3           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (None)
+              IMPORT_NAME              4 (time)
+              STORE_NAME               4 (time)
+
+  4           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (None)
+              IMPORT_NAME              5 (cv2)
+              STORE_NAME               5 (cv2)
+
+  5           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (None)
+              IMPORT_NAME              6 (mss)
+              STORE_NAME               6 (mss)
+
+  6           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (None)
+              IMPORT_NAME              7 (numpy)
+              STORE_NAME               8 (np)
+
+  7           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (None)
+              IMPORT_NAME              9 (pyautogui)
+              STORE_NAME               9 (pyautogui)
+
+  8           LOAD_CONST               0 (0)
+              LOAD_CONST               3 (('load_settings',))
+              IMPORT_NAME             10 (settings_window)
+              IMPORT_FROM             11 (load_settings)
+              STORE_NAME              11 (load_settings)
+              POP_TOP
+
+  9           LOAD_CONST               0 (0)
+              LOAD_CONST               4 (('resource_path', 'SCREEN_ID'))
+              IMPORT_NAME             12 (utils)
+              IMPORT_FROM             13 (resource_path)
+              STORE_NAME              13 (resource_path)
+              IMPORT_FROM             14 (SCREEN_ID)
+              STORE_NAME              14 (SCREEN_ID)
+              POP_TOP
+
+ 11           LOAD_CONST               5 (<code object capture_full_screen at 0x7f0bbab388f0, file "sell_thread.py", line 11>)
+              MAKE_FUNCTION
+              STORE_NAME              15 (capture_full_screen)
+
+ 19           LOAD_CONST               6 (<code object click_open_shop at 0x56067eca9af0, file "sell_thread.py", line 19>)
+              MAKE_FUNCTION
+              STORE_NAME              16 (click_open_shop)
+
+ 53           LOAD_CONST               7 (<code object sell_tool at 0x56067eccac30, file "sell_thread.py", line 53>)
+              MAKE_FUNCTION
+              STORE_NAME              17 (sell_tool)
+              RETURN_CONST             2 (None)
+
+Disassembly of <code object capture_full_screen at 0x7f0bbab388f0, file "sell_thread.py", line 11>:
+  11           RESUME                   0
+
+  12           LOAD_GLOBAL              0 (mss)
+               LOAD_ATTR                0 (mss)
+               PUSH_NULL
+               CALL                     0
+               BEFORE_WITH
+       L1:     STORE_FAST               0 (sct)
+
+  13           LOAD_FAST                0 (sct)
+               LOAD_ATTR                2 (monitors)
+               STORE_FAST               1 (monitors)
+
+  14           LOAD_FAST                1 (monitors)
+               LOAD_GLOBAL              4 (CURRENT_SCREEN)
+               BINARY_SUBSCR
+               STORE_FAST               2 (screen)
+
+  15           LOAD_FAST                0 (sct)
+               LOAD_ATTR                7 (grab + NULL|self)
+               LOAD_FAST                2 (screen)
+               CALL                     1
+               STORE_FAST               3 (screenshot)
+
+  16           LOAD_GLOBAL              8 (np)
+               LOAD_ATTR               10 (array)
+               PUSH_NULL
+               LOAD_FAST                3 (screenshot)
+               CALL                     1
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               1 (3)
+               BUILD_SLICE              2
+               BUILD_TUPLE              3
+               BINARY_SUBSCR
+               STORE_FAST               4 (img)
+
+  17           LOAD_FAST                4 (img)
+
+  12   L2:     SWAP                     2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_VALUE
+       L3:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L4)
+               RERAISE                  2
+       L4:     POP_TOP
+       L5:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L6:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L3 [1] lasti
+  L3 to L5 -> L6 [3] lasti
+
+Disassembly of <code object click_open_shop at 0x56067eca9af0, file "sell_thread.py", line 19>:
+ 19           RESUME                   0
+
+ 20           NOP
+
+ 22   L1:     LOAD_FAST                0 (sell_log)
+              TO_BOOL
+              POP_JUMP_IF_TRUE        14 (to L2)
+              LOAD_FAST                1 (sell_plank)
+              TO_BOOL
+              POP_JUMP_IF_TRUE         7 (to L2)
+              LOAD_FAST                2 (sell_firewood)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       87 (to L3)
+
+ 23   L2:     LOAD_GLOBAL              0 (keyboard)
+              LOAD_ATTR                3 (press + NULL|self)
+              LOAD_CONST               1 ('e')
+              CALL                     1
+              POP_TOP
+
+ 24           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               2 (0.1)
+              CALL                     1
+              POP_TOP
+
+ 25           LOAD_GLOBAL              0 (keyboard)
+              LOAD_ATTR                9 (release + NULL|self)
+              LOAD_CONST               1 ('e')
+              CALL                     1
+              POP_TOP
+
+ 26           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+              JUMP_FORWARD             1 (to L4)
+
+ 28   L3:     RETURN_CONST             0 (None)
+
+ 30   L4:     LOAD_GLOBAL             11 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               3 (screen)
+
+ 31           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               14 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                3 (screen)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               16 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               4 (gray_screen)
+
+ 32           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               18 (imread)
+              PUSH_NULL
+              LOAD_GLOBAL             21 (resource_path + NULL)
+              LOAD_CONST               4 ('templates/button_open_shop.png')
+              CALL                     1
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               22 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_FAST               5 (button_template)
+
+ 34           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               24 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     69 (gray_screen, button_template)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               26 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               6 (match)
+
+ 35           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               28 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                6 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST  120 (min_val, max_val)
+              STORE_FAST_STORE_FAST  154 (min_loc, max_loc)
+
+ 36           LOAD_FAST                8 (max_val)
+              LOAD_CONST               5 (0.8)
+              COMPARE_OP             188 (bool(>=))
+              EXTENDED_ARG             1
+              POP_JUMP_IF_FALSE      264 (to L5)
+
+ 37           LOAD_GLOBAL             30 (pyautogui)
+              LOAD_ATTR               32 (click)
+              PUSH_NULL
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               6 (0)
+              BINARY_SUBSCR
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               3 (1)
+              BINARY_SUBSCR
+              CALL                     2
+              POP_TOP
+
+ 38           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+
+ 40           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               18 (imread)
+              PUSH_NULL
+              LOAD_GLOBAL             21 (resource_path + NULL)
+              LOAD_CONST               7 ('templates/tab_sell_button.png')
+              CALL                     1
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               22 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_FAST              11 (tab_sell_button_template)
+
+ 41           LOAD_GLOBAL             11 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               3 (screen)
+
+ 42           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               14 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                3 (screen)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               16 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               4 (gray_screen)
+
+ 43           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               24 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     75 (gray_screen, tab_sell_button_template)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               26 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               6 (match)
+
+ 44           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               28 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                6 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST  120 (min_val, max_val)
+              STORE_FAST_STORE_FAST  154 (min_loc, max_loc)
+
+ 45           LOAD_FAST                8 (max_val)
+              LOAD_CONST               5 (0.8)
+              COMPARE_OP             188 (bool(>=))
+              POP_JUMP_IF_FALSE       52 (to L5)
+
+ 46           LOAD_GLOBAL             30 (pyautogui)
+              LOAD_ATTR               32 (click)
+              PUSH_NULL
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               6 (0)
+              BINARY_SUBSCR
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               3 (1)
+              BINARY_SUBSCR
+              CALL                     2
+              POP_TOP
+
+ 47           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+
+ 49           RETURN_CONST             0 (None)
+
+ 51   L5:     LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+
+ 20           EXTENDED_ARG             2
+              JUMP_BACKWARD          560 (to L1)
+
+Disassembly of <code object sell_tool at 0x56067eccac30, file "sell_thread.py", line 53>:
+  53            RESUME                   0
+
+  56            LOAD_CONST               1 (0)
+                LOAD_CONST               2 (('get_dynamic_screen_id',))
+                IMPORT_NAME              0 (utils)
+                IMPORT_FROM              1 (get_dynamic_screen_id)
+                STORE_FAST               0 (get_dynamic_screen_id)
+                POP_TOP
+
+  57            LOAD_CONST               1 (0)
+                LOAD_CONST               0 (None)
+                IMPORT_NAME              0 (utils)
+                STORE_FAST               1 (utils)
+
+  61            LOAD_FAST                0 (get_dynamic_screen_id)
+                PUSH_NULL
+                LOAD_FAST                1 (utils)
+                LOAD_ATTR                4 (PID)
+                CALL                     1
+                STORE_GLOBAL             3 (CURRENT_SCREEN)
+
+  63            LOAD_GLOBAL              9 (load_settings + NULL)
+                CALL                     0
+                STORE_FAST               2 (settings)
+
+  65            LOAD_FAST                2 (settings)
+                LOAD_CONST               3 ('sell')
+                BINARY_SUBSCR
+                LOAD_CONST               4 ('log')
+                BINARY_SUBSCR
+                STORE_FAST               3 (sell_log)
+
+  66            LOAD_FAST                2 (settings)
+                LOAD_CONST               3 ('sell')
+                BINARY_SUBSCR
+                LOAD_CONST               5 ('plank')
+                BINARY_SUBSCR
+                STORE_FAST               4 (sell_plank)
+
+  67            LOAD_FAST                2 (settings)
+                LOAD_CONST               3 ('sell')
+                BINARY_SUBSCR
+                LOAD_CONST               6 ('firewood')
+                BINARY_SUBSCR
+                STORE_FAST               5 (sell_firewood)
+
+  70            LOAD_FAST                2 (settings)
+                LOAD_ATTR               11 (get + NULL|self)
+                LOAD_CONST               7 ('wood_loops')
+                LOAD_CONST               8 (1)
+                CALL                     2
+                STORE_FAST               6 (wood_loops)
+
+  72            LOAD_FAST                6 (wood_loops)
+                STORE_FAST               7 (amount_log)
+
+  73            LOAD_FAST                6 (wood_loops)
+                LOAD_CONST               9 (2)
+                BINARY_OP                5 (*)
+                STORE_FAST               8 (amount_plank)
+
+  74            LOAD_FAST                6 (wood_loops)
+                LOAD_CONST              10 (6)
+                BINARY_OP                5 (*)
+                STORE_FAST               9 (amount_firewood)
+
+  76            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+  78            LOAD_GLOBAL             17 (click_open_shop + NULL)
+                LOAD_FAST_LOAD_FAST     52 (sell_log, sell_plank)
+                LOAD_FAST                5 (sell_firewood)
+                CALL                     3
+                POP_TOP
+
+  80            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+  83            LOAD_FAST                3 (sell_log)
+                TO_BOOL
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      496 (to L6)
+
+  84            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              11 ('templates/sell_log.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              10 (log_template)
+
+  85            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+  86            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+  88            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST_LOAD_FAST    202 (gray_screen, log_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+  89            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+  90            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      299 (to L4)
+
+  91            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+  92            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+  94            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+  95            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+  97            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              13 ('templates/sell_button.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              18 (button_sell_template)
+
+  99            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               18 (button_sell_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 100            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 101            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_FALSE       84 (to L3)
+
+ 102            LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              14 ('Đang bán ')
+                LOAD_FAST                7 (amount_log)
+                FORMAT_SIMPLE
+                LOAD_CONST              15 (' Gỗ Thô...')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 103            LOAD_GLOBAL             45 (range + NULL)
+                LOAD_FAST                7 (amount_log)
+                CALL                     1
+                GET_ITER
+        L1:     FOR_ITER                54 (to L2)
+                STORE_FAST              19 (i)
+
+ 104            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 105            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           56 (to L1)
+
+ 103    L2:     END_FOR
+                POP_TOP
+
+  --    L3:     JUMP_FORWARD            11 (to L5)
+
+ 107    L4:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              17 ('Không tìm thấy Gỗ Thô trong cửa hàng')
+                CALL                     1
+                POP_TOP
+
+ 108    L5:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+                JUMP_FORWARD            11 (to L7)
+
+ 110    L6:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              18 ('Cài đặt: Không bán Gỗ Thô')
+                CALL                     1
+                POP_TOP
+
+ 113    L7:     LOAD_FAST                4 (sell_plank)
+                TO_BOOL
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      497 (to L13)
+
+ 114            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              19 ('templates/sell_plank.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              20 (plank_template)
+
+ 115            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 116            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 118            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               20 (plank_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 119            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 120            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      299 (to L11)
+
+ 121            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 122            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+ 124            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 125            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 127            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              13 ('templates/sell_button.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              18 (button_sell_template)
+
+ 129            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               18 (button_sell_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 130            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 131            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_FALSE       84 (to L10)
+
+ 132            LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              14 ('Đang bán ')
+                LOAD_FAST                8 (amount_plank)
+                FORMAT_SIMPLE
+                LOAD_CONST              20 (' Ván Gỗ...')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 133            LOAD_GLOBAL             45 (range + NULL)
+                LOAD_FAST                8 (amount_plank)
+                CALL                     1
+                GET_ITER
+        L8:     FOR_ITER                54 (to L9)
+                STORE_FAST              19 (i)
+
+ 134            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 135            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           56 (to L8)
+
+ 133    L9:     END_FOR
+                POP_TOP
+
+  --   L10:     JUMP_FORWARD            11 (to L12)
+
+ 137   L11:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              21 ('Không tìm thấy Ván Gỗ trong cửa hàng')
+                CALL                     1
+                POP_TOP
+
+ 138   L12:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+                JUMP_FORWARD            11 (to L14)
+
+ 140   L13:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              22 ('Cài đặt: Không bán Ván Gỗ')
+                CALL                     1
+                POP_TOP
+
+ 143   L14:     LOAD_FAST                5 (sell_firewood)
+                TO_BOOL
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      497 (to L20)
+
+ 144            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              23 ('templates/sell_firewood.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              21 (firewood_template)
+
+ 145            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 146            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 148            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               21 (firewood_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 149            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 150            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      299 (to L18)
+
+ 151            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 152            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+ 154            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 155            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 157            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              13 ('templates/sell_button.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              18 (button_sell_template)
+
+ 159            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               18 (button_sell_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 160            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 161            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_FALSE       84 (to L17)
+
+ 162            LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              14 ('Đang bán ')
+                LOAD_FAST                9 (amount_firewood)
+                FORMAT_SIMPLE
+                LOAD_CONST              24 (' Củi...')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 163            LOAD_GLOBAL             45 (range + NULL)
+                LOAD_FAST                9 (amount_firewood)
+                CALL                     1
+                GET_ITER
+       L15:     FOR_ITER                54 (to L16)
+                STORE_FAST              19 (i)
+
+ 164            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 165            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           56 (to L15)
+
+ 163   L16:     END_FOR
+                POP_TOP
+
+  --   L17:     JUMP_FORWARD            11 (to L19)
+
+ 167   L18:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              25 ('Không tìm thấy Củi trong cửa hàng')
+                CALL                     1
+                POP_TOP
+
+ 168   L19:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+                JUMP_FORWARD            11 (to L21)
+
+ 170   L20:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              26 ('Cài đặt: Không bán Củi')
+                CALL                     1
+                POP_TOP
+
+ 174   L21:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               9 (2)
+                CALL                     1
+                POP_TOP
+
+ 175            LOAD_GLOBAL             46 (keyboard)
+                LOAD_ATTR               49 (press + NULL|self)
+                LOAD_GLOBAL             50 (Key)
+                LOAD_ATTR               52 (esc)
+                CALL                     1
+                POP_TOP
+
+ 176            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+
+ 177            LOAD_GLOBAL             46 (keyboard)
+                LOAD_ATTR               55 (release + NULL|self)
+                LOAD_GLOBAL             50 (Key)
+                LOAD_ATTR               52 (esc)
+                CALL                     1
+                POP_TOP
+
+ 179            RETURN_CONST            27 (True)
+
+----- code: capture_full_screen (argcount=0, vars=('sct', 'monitors', 'screen', 'screenshot', 'img')) -----
+  11           RESUME                   0
+
+  12           LOAD_GLOBAL              0 (mss)
+               LOAD_ATTR                0 (mss)
+               PUSH_NULL
+               CALL                     0
+               BEFORE_WITH
+       L1:     STORE_FAST               0 (sct)
+
+  13           LOAD_FAST                0 (sct)
+               LOAD_ATTR                2 (monitors)
+               STORE_FAST               1 (monitors)
+
+  14           LOAD_FAST                1 (monitors)
+               LOAD_GLOBAL              4 (CURRENT_SCREEN)
+               BINARY_SUBSCR
+               STORE_FAST               2 (screen)
+
+  15           LOAD_FAST                0 (sct)
+               LOAD_ATTR                7 (grab + NULL|self)
+               LOAD_FAST                2 (screen)
+               CALL                     1
+               STORE_FAST               3 (screenshot)
+
+  16           LOAD_GLOBAL              8 (np)
+               LOAD_ATTR               10 (array)
+               PUSH_NULL
+               LOAD_FAST                3 (screenshot)
+               CALL                     1
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               1 (3)
+               BUILD_SLICE              2
+               BUILD_TUPLE              3
+               BINARY_SUBSCR
+               STORE_FAST               4 (img)
+
+  17           LOAD_FAST                4 (img)
+
+  12   L2:     SWAP                     2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_VALUE
+       L3:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L4)
+               RERAISE                  2
+       L4:     POP_TOP
+       L5:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L6:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L3 [1] lasti
+  L3 to L5 -> L6 [3] lasti
+
+----- code: click_open_shop (argcount=3, vars=('sell_log', 'sell_plank', 'sell_firewood', 'screen', 'gray_screen', 'button_template', 'match', 'min_val', 'max_val', 'min_loc', 'max_loc', 'tab_sell_button_template')) -----
+ 19           RESUME                   0
+
+ 20           NOP
+
+ 22   L1:     LOAD_FAST                0 (sell_log)
+              TO_BOOL
+              POP_JUMP_IF_TRUE        14 (to L2)
+              LOAD_FAST                1 (sell_plank)
+              TO_BOOL
+              POP_JUMP_IF_TRUE         7 (to L2)
+              LOAD_FAST                2 (sell_firewood)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       87 (to L3)
+
+ 23   L2:     LOAD_GLOBAL              0 (keyboard)
+              LOAD_ATTR                3 (press + NULL|self)
+              LOAD_CONST               1 ('e')
+              CALL                     1
+              POP_TOP
+
+ 24           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               2 (0.1)
+              CALL                     1
+              POP_TOP
+
+ 25           LOAD_GLOBAL              0 (keyboard)
+              LOAD_ATTR                9 (release + NULL|self)
+              LOAD_CONST               1 ('e')
+              CALL                     1
+              POP_TOP
+
+ 26           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+              JUMP_FORWARD             1 (to L4)
+
+ 28   L3:     RETURN_CONST             0 (None)
+
+ 30   L4:     LOAD_GLOBAL             11 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               3 (screen)
+
+ 31           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               14 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                3 (screen)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               16 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               4 (gray_screen)
+
+ 32           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               18 (imread)
+              PUSH_NULL
+              LOAD_GLOBAL             21 (resource_path + NULL)
+              LOAD_CONST               4 ('templates/button_open_shop.png')
+              CALL                     1
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               22 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_FAST               5 (button_template)
+
+ 34           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               24 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     69 (gray_screen, button_template)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               26 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               6 (match)
+
+ 35           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               28 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                6 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST  120 (min_val, max_val)
+              STORE_FAST_STORE_FAST  154 (min_loc, max_loc)
+
+ 36           LOAD_FAST                8 (max_val)
+              LOAD_CONST               5 (0.8)
+              COMPARE_OP             188 (bool(>=))
+              EXTENDED_ARG             1
+              POP_JUMP_IF_FALSE      264 (to L5)
+
+ 37           LOAD_GLOBAL             30 (pyautogui)
+              LOAD_ATTR               32 (click)
+              PUSH_NULL
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               6 (0)
+              BINARY_SUBSCR
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               3 (1)
+              BINARY_SUBSCR
+              CALL                     2
+              POP_TOP
+
+ 38           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+
+ 40           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               18 (imread)
+              PUSH_NULL
+              LOAD_GLOBAL             21 (resource_path + NULL)
+              LOAD_CONST               7 ('templates/tab_sell_button.png')
+              CALL                     1
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               22 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_FAST              11 (tab_sell_button_template)
+
+ 41           LOAD_GLOBAL             11 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               3 (screen)
+
+ 42           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               14 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                3 (screen)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               16 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               4 (gray_screen)
+
+ 43           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               24 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     75 (gray_screen, tab_sell_button_template)
+              LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               26 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               6 (match)
+
+ 44           LOAD_GLOBAL             12 (cv2)
+              LOAD_ATTR               28 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                6 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST  120 (min_val, max_val)
+              STORE_FAST_STORE_FAST  154 (min_loc, max_loc)
+
+ 45           LOAD_FAST                8 (max_val)
+              LOAD_CONST               5 (0.8)
+              COMPARE_OP             188 (bool(>=))
+              POP_JUMP_IF_FALSE       52 (to L5)
+
+ 46           LOAD_GLOBAL             30 (pyautogui)
+              LOAD_ATTR               32 (click)
+              PUSH_NULL
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               6 (0)
+              BINARY_SUBSCR
+              LOAD_FAST               10 (max_loc)
+              LOAD_CONST               3 (1)
+              BINARY_SUBSCR
+              CALL                     2
+              POP_TOP
+
+ 47           LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+
+ 49           RETURN_CONST             0 (None)
+
+ 51   L5:     LOAD_GLOBAL              4 (time)
+              LOAD_ATTR                6 (sleep)
+              PUSH_NULL
+              LOAD_CONST               3 (1)
+              CALL                     1
+              POP_TOP
+
+ 20           EXTENDED_ARG             2
+              JUMP_BACKWARD          560 (to L1)
+
+----- code: sell_tool (argcount=0, vars=('get_dynamic_screen_id', 'utils', 'settings', 'sell_log', 'sell_plank', 'sell_firewood', 'wood_loops', 'amount_log', 'amount_plank', 'amount_firewood', 'log_template', 'screen', 'gray_screen', 'match', 'min_val', 'max_val', 'min_loc', 'max_loc', 'button_sell_template', 'i', 'plank_template', 'firewood_template')) -----
+  53            RESUME                   0
+
+  56            LOAD_CONST               1 (0)
+                LOAD_CONST               2 (('get_dynamic_screen_id',))
+                IMPORT_NAME              0 (utils)
+                IMPORT_FROM              1 (get_dynamic_screen_id)
+                STORE_FAST               0 (get_dynamic_screen_id)
+                POP_TOP
+
+  57            LOAD_CONST               1 (0)
+                LOAD_CONST               0 (None)
+                IMPORT_NAME              0 (utils)
+                STORE_FAST               1 (utils)
+
+  61            LOAD_FAST                0 (get_dynamic_screen_id)
+                PUSH_NULL
+                LOAD_FAST                1 (utils)
+                LOAD_ATTR                4 (PID)
+                CALL                     1
+                STORE_GLOBAL             3 (CURRENT_SCREEN)
+
+  63            LOAD_GLOBAL              9 (load_settings + NULL)
+                CALL                     0
+                STORE_FAST               2 (settings)
+
+  65            LOAD_FAST                2 (settings)
+                LOAD_CONST               3 ('sell')
+                BINARY_SUBSCR
+                LOAD_CONST               4 ('log')
+                BINARY_SUBSCR
+                STORE_FAST               3 (sell_log)
+
+  66            LOAD_FAST                2 (settings)
+                LOAD_CONST               3 ('sell')
+                BINARY_SUBSCR
+                LOAD_CONST               5 ('plank')
+                BINARY_SUBSCR
+                STORE_FAST               4 (sell_plank)
+
+  67            LOAD_FAST                2 (settings)
+                LOAD_CONST               3 ('sell')
+                BINARY_SUBSCR
+                LOAD_CONST               6 ('firewood')
+                BINARY_SUBSCR
+                STORE_FAST               5 (sell_firewood)
+
+  70            LOAD_FAST                2 (settings)
+                LOAD_ATTR               11 (get + NULL|self)
+                LOAD_CONST               7 ('wood_loops')
+                LOAD_CONST               8 (1)
+                CALL                     2
+                STORE_FAST               6 (wood_loops)
+
+  72            LOAD_FAST                6 (wood_loops)
+                STORE_FAST               7 (amount_log)
+
+  73            LOAD_FAST                6 (wood_loops)
+                LOAD_CONST               9 (2)
+                BINARY_OP                5 (*)
+                STORE_FAST               8 (amount_plank)
+
+  74            LOAD_FAST                6 (wood_loops)
+                LOAD_CONST              10 (6)
+                BINARY_OP                5 (*)
+                STORE_FAST               9 (amount_firewood)
+
+  76            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+  78            LOAD_GLOBAL             17 (click_open_shop + NULL)
+                LOAD_FAST_LOAD_FAST     52 (sell_log, sell_plank)
+                LOAD_FAST                5 (sell_firewood)
+                CALL                     3
+                POP_TOP
+
+  80            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+  83            LOAD_FAST                3 (sell_log)
+                TO_BOOL
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      496 (to L6)
+
+  84            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              11 ('templates/sell_log.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              10 (log_template)
+
+  85            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+  86            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+  88            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST_LOAD_FAST    202 (gray_screen, log_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+  89            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+  90            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      299 (to L4)
+
+  91            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+  92            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+  94            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+  95            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+  97            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              13 ('templates/sell_button.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              18 (button_sell_template)
+
+  99            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               18 (button_sell_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 100            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 101            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_FALSE       84 (to L3)
+
+ 102            LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              14 ('Đang bán ')
+                LOAD_FAST                7 (amount_log)
+                FORMAT_SIMPLE
+                LOAD_CONST              15 (' Gỗ Thô...')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 103            LOAD_GLOBAL             45 (range + NULL)
+                LOAD_FAST                7 (amount_log)
+                CALL                     1
+                GET_ITER
+        L1:     FOR_ITER                54 (to L2)
+                STORE_FAST              19 (i)
+
+ 104            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 105            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           56 (to L1)
+
+ 103    L2:     END_FOR
+                POP_TOP
+
+  --    L3:     JUMP_FORWARD            11 (to L5)
+
+ 107    L4:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              17 ('Không tìm thấy Gỗ Thô trong cửa hàng')
+                CALL                     1
+                POP_TOP
+
+ 108    L5:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+                JUMP_FORWARD            11 (to L7)
+
+ 110    L6:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              18 ('Cài đặt: Không bán Gỗ Thô')
+                CALL                     1
+                POP_TOP
+
+ 113    L7:     LOAD_FAST                4 (sell_plank)
+                TO_BOOL
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      497 (to L13)
+
+ 114            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              19 ('templates/sell_plank.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              20 (plank_template)
+
+ 115            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 116            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 118            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               20 (plank_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 119            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 120            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      299 (to L11)
+
+ 121            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 122            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+ 124            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 125            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 127            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              13 ('templates/sell_button.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              18 (button_sell_template)
+
+ 129            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               18 (button_sell_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 130            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 131            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_FALSE       84 (to L10)
+
+ 132            LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              14 ('Đang bán ')
+                LOAD_FAST                8 (amount_plank)
+                FORMAT_SIMPLE
+                LOAD_CONST              20 (' Ván Gỗ...')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 133            LOAD_GLOBAL             45 (range + NULL)
+                LOAD_FAST                8 (amount_plank)
+                CALL                     1
+                GET_ITER
+        L8:     FOR_ITER                54 (to L9)
+                STORE_FAST              19 (i)
+
+ 134            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 135            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           56 (to L8)
+
+ 133    L9:     END_FOR
+                POP_TOP
+
+  --   L10:     JUMP_FORWARD            11 (to L12)
+
+ 137   L11:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              21 ('Không tìm thấy Ván Gỗ trong cửa hàng')
+                CALL                     1
+                POP_TOP
+
+ 138   L12:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+                JUMP_FORWARD            11 (to L14)
+
+ 140   L13:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              22 ('Cài đặt: Không bán Ván Gỗ')
+                CALL                     1
+                POP_TOP
+
+ 143   L14:     LOAD_FAST                5 (sell_firewood)
+                TO_BOOL
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      497 (to L20)
+
+ 144            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              23 ('templates/sell_firewood.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              21 (firewood_template)
+
+ 145            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 146            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 148            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               21 (firewood_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 149            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 150            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                EXTENDED_ARG             1
+                POP_JUMP_IF_FALSE      299 (to L18)
+
+ 151            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 152            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+
+ 154            LOAD_GLOBAL             27 (capture_full_screen + NULL)
+                CALL                     0
+                STORE_FAST              11 (screen)
+
+ 155            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               28 (cvtColor)
+                PUSH_NULL
+                LOAD_FAST               11 (screen)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               30 (COLOR_BGR2GRAY)
+                CALL                     2
+                STORE_FAST              12 (gray_screen)
+
+ 157            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               20 (imread)
+                PUSH_NULL
+                LOAD_GLOBAL             23 (resource_path + NULL)
+                LOAD_CONST              13 ('templates/sell_button.png')
+                CALL                     1
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               24 (IMREAD_GRAYSCALE)
+                CALL                     2
+                STORE_FAST              18 (button_sell_template)
+
+ 159            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               32 (matchTemplate)
+                PUSH_NULL
+                LOAD_FAST               12 (gray_screen)
+                LOAD_FAST               18 (button_sell_template)
+                LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               34 (TM_CCOEFF_NORMED)
+                CALL                     3
+                STORE_FAST              13 (match)
+
+ 160            LOAD_GLOBAL             18 (cv2)
+                LOAD_ATTR               36 (minMaxLoc)
+                PUSH_NULL
+                LOAD_FAST               13 (match)
+                CALL                     1
+                UNPACK_SEQUENCE          4
+                STORE_FAST_STORE_FAST  239 (min_val, max_val)
+                STORE_FAST              16 (min_loc)
+                STORE_FAST              17 (max_loc)
+
+ 161            LOAD_FAST               15 (max_val)
+                LOAD_CONST              12 (0.8)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_FALSE       84 (to L17)
+
+ 162            LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              14 ('Đang bán ')
+                LOAD_FAST                9 (amount_firewood)
+                FORMAT_SIMPLE
+                LOAD_CONST              24 (' Củi...')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 163            LOAD_GLOBAL             45 (range + NULL)
+                LOAD_FAST                9 (amount_firewood)
+                CALL                     1
+                GET_ITER
+       L15:     FOR_ITER                54 (to L16)
+                STORE_FAST              19 (i)
+
+ 164            LOAD_GLOBAL             38 (pyautogui)
+                LOAD_ATTR               40 (click)
+                PUSH_NULL
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               1 (0)
+                BINARY_SUBSCR
+                LOAD_FAST               17 (max_loc)
+                LOAD_CONST               8 (1)
+                BINARY_SUBSCR
+                CALL                     2
+                POP_TOP
+
+ 165            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           56 (to L15)
+
+ 163   L16:     END_FOR
+                POP_TOP
+
+  --   L17:     JUMP_FORWARD            11 (to L19)
+
+ 167   L18:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              25 ('Không tìm thấy Củi trong cửa hàng')
+                CALL                     1
+                POP_TOP
+
+ 168   L19:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               8 (1)
+                CALL                     1
+                POP_TOP
+                JUMP_FORWARD            11 (to L21)
+
+ 170   L20:     LOAD_GLOBAL             43 (print + NULL)
+                LOAD_CONST              26 ('Cài đặt: Không bán Củi')
+                CALL                     1
+                POP_TOP
+
+ 174   L21:     LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST               9 (2)
+                CALL                     1
+                POP_TOP
+
+ 175            LOAD_GLOBAL             46 (keyboard)
+                LOAD_ATTR               49 (press + NULL|self)
+                LOAD_GLOBAL             50 (Key)
+                LOAD_ATTR               52 (esc)
+                CALL                     1
+                POP_TOP
+
+ 176            LOAD_GLOBAL             12 (time)
+                LOAD_ATTR               14 (sleep)
+                PUSH_NULL
+                LOAD_CONST              16 (0.1)
+                CALL                     1
+                POP_TOP
+
+ 177            LOAD_GLOBAL             46 (keyboard)
+                LOAD_ATTR               55 (release + NULL|self)
+                LOAD_GLOBAL             50 (Key)
+                LOAD_ATTR               52 (esc)
+                CALL                     1
+                POP_TOP
+
+ 179            RETURN_CONST            27 (True)

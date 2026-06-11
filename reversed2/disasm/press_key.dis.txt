@@ -1,0 +1,483 @@
+### MODULE: press_key
+# co_names: ('ctypes', 'random', 'time', 'typing', 'Optional', 'Tuple', 'KEYEVENTF_KEYUP', 'VK_CODES', 'str', 'int', '_key_to_vk', '_press_vk_keybd', '_release_vk_keybd', 'bool', 'press_key', 'hold_key', 'release_key')
+# co_consts (top-level strings): 
+#   STR: 'key'
+#   STR: 'return'
+#   STR: 'vk'
+#   STR: 'seed'
+#   STR: 'fast_mode'
+
+========== FULL DISASSEMBLY (recursive) ==========
+
+----- code: <module> (argcount=0, vars=()) -----
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (ctypes)
+              STORE_NAME               0 (ctypes)
+
+  2           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              1 (random)
+              STORE_NAME               1 (random)
+
+  3           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              2 (time)
+              STORE_NAME               2 (time)
+
+  4           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (('Optional', 'Tuple'))
+              IMPORT_NAME              3 (typing)
+              IMPORT_FROM              4 (Optional)
+              STORE_NAME               4 (Optional)
+              IMPORT_FROM              5 (Tuple)
+              STORE_NAME               5 (Tuple)
+              POP_TOP
+
+ 10           LOAD_CONST               3 (2)
+              STORE_NAME               6 (KEYEVENTF_KEYUP)
+
+ 14           LOAD_CONST               4 (13)
+              LOAD_CONST               5 (9)
+              LOAD_CONST               6 (27)
+              LOAD_CONST               7 (8)
+              LOAD_CONST               8 (32)
+
+ 15           LOAD_CONST               9 (16)
+              LOAD_CONST              10 (17)
+              LOAD_CONST              11 (18)
+              LOAD_CONST              12 (20)
+
+ 16           LOAD_CONST              13 (38)
+              LOAD_CONST              14 (40)
+              LOAD_CONST              15 (37)
+              LOAD_CONST              16 (39)
+
+ 13           LOAD_CONST              17 (('enter', 'tab', 'esc', 'backspace', 'space', 'shift', 'ctrl', 'alt', 'caps', 'up', 'down', 'left', 'right'))
+              BUILD_CONST_KEY_MAP     13
+              STORE_NAME               7 (VK_CODES)
+
+ 19           LOAD_CONST              18 ('key')
+              LOAD_NAME                8 (str)
+              LOAD_CONST              19 ('return')
+              LOAD_NAME                9 (int)
+              BUILD_TUPLE              4
+              LOAD_CONST              20 (<code object _key_to_vk at 0x7f0bbb201530, file "press_key.py", line 19>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              10 (_key_to_vk)
+
+ 29           LOAD_CONST              21 ('vk')
+              LOAD_NAME                9 (int)
+              BUILD_TUPLE              2
+              LOAD_CONST              22 (<code object _press_vk_keybd at 0x7f0bbb1d90d0, file "press_key.py", line 29>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              11 (_press_vk_keybd)
+
+ 33           LOAD_CONST              21 ('vk')
+              LOAD_NAME                9 (int)
+              BUILD_TUPLE              2
+              LOAD_CONST              23 (<code object _release_vk_keybd at 0x7f0bbb1d9920, file "press_key.py", line 33>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              12 (_release_vk_keybd)
+
+ 41           NOP
+
+ 42           NOP
+
+ 40           LOAD_CONST              29 ((None, False))
+              LOAD_CONST              18 ('key')
+              LOAD_NAME                8 (str)
+              LOAD_CONST              24 ('seed')
+
+ 41           LOAD_NAME                4 (Optional)
+              LOAD_NAME                9 (int)
+              BINARY_SUBSCR
+
+ 40           LOAD_CONST              25 ('fast_mode')
+
+ 42           LOAD_NAME               13 (bool)
+
+ 40           BUILD_TUPLE              6
+              LOAD_CONST              26 (<code object press_key at 0x56067e57c0e0, file "press_key.py", line 40>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              SET_FUNCTION_ATTRIBUTE   1 (defaults)
+              STORE_NAME              14 (press_key)
+
+ 71           LOAD_CONST              18 ('key')
+              LOAD_NAME                8 (str)
+              BUILD_TUPLE              2
+              LOAD_CONST              27 (<code object hold_key at 0x7f0bbb1f9930, file "press_key.py", line 71>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              15 (hold_key)
+
+ 76           LOAD_CONST              18 ('key')
+              LOAD_NAME                8 (str)
+              BUILD_TUPLE              2
+              LOAD_CONST              28 (<code object release_key at 0x7f0bbb1f9a30, file "press_key.py", line 76>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              16 (release_key)
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object _key_to_vk at 0x7f0bbb201530, file "press_key.py", line 19>:
+ 19           RESUME                   0
+
+ 21           LOAD_FAST                0 (key)
+              LOAD_ATTR                1 (lower + NULL|self)
+              CALL                     0
+              STORE_FAST               1 (k)
+
+ 22           LOAD_FAST                1 (k)
+              LOAD_GLOBAL              2 (VK_CODES)
+              CONTAINS_OP              0
+              POP_JUMP_IF_FALSE        9 (to L1)
+
+ 23           LOAD_GLOBAL              2 (VK_CODES)
+              LOAD_FAST                1 (k)
+              BINARY_SUBSCR
+              RETURN_VALUE
+
+ 24   L1:     LOAD_GLOBAL              5 (len + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              LOAD_CONST               1 (1)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       25 (to L2)
+
+ 26           LOAD_GLOBAL              7 (ord + NULL)
+              LOAD_FAST                0 (key)
+              LOAD_ATTR                9 (upper + NULL|self)
+              CALL                     0
+              CALL                     1
+              RETURN_VALUE
+
+ 27   L2:     LOAD_GLOBAL             11 (ValueError + NULL)
+              LOAD_CONST               2 ('Unknown key: ')
+              LOAD_FAST                0 (key)
+              FORMAT_SIMPLE
+              BUILD_STRING             2
+              CALL                     1
+              RAISE_VARARGS            1
+
+Disassembly of <code object _press_vk_keybd at 0x7f0bbb1d90d0, file "press_key.py", line 29>:
+ 29           RESUME                   0
+
+ 31           LOAD_GLOBAL              0 (ctypes)
+              LOAD_ATTR                2 (windll)
+              LOAD_ATTR                4 (user32)
+              LOAD_ATTR                7 (keybd_event + NULL|self)
+              LOAD_FAST                0 (vk)
+              LOAD_CONST               1 (0)
+              LOAD_CONST               1 (0)
+              LOAD_CONST               1 (0)
+              CALL                     4
+              POP_TOP
+              RETURN_CONST             2 (None)
+
+Disassembly of <code object _release_vk_keybd at 0x7f0bbb1d9920, file "press_key.py", line 33>:
+ 33           RESUME                   0
+
+ 35           LOAD_GLOBAL              0 (ctypes)
+              LOAD_ATTR                2 (windll)
+              LOAD_ATTR                4 (user32)
+              LOAD_ATTR                7 (keybd_event + NULL|self)
+              LOAD_FAST                0 (vk)
+              LOAD_CONST               1 (0)
+              LOAD_GLOBAL              8 (KEYEVENTF_KEYUP)
+              LOAD_CONST               1 (0)
+              CALL                     4
+              POP_TOP
+              RETURN_CONST             2 (None)
+
+Disassembly of <code object press_key at 0x56067e57c0e0, file "press_key.py", line 40>:
+ 40           RESUME                   0
+
+ 48           LOAD_FAST                1 (seed)
+              POP_JUMP_IF_NONE        22 (to L1)
+
+ 49           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                2 (seed)
+              PUSH_NULL
+              LOAD_FAST                1 (seed)
+              CALL                     1
+              POP_TOP
+
+ 51   L1:     LOAD_FAST                2 (fast_mode)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       47 (to L2)
+
+ 53           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               2 (0.01)
+              LOAD_CONST               3 (0.02)
+              CALL                     2
+              STORE_FAST               3 (hold)
+
+ 54           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               4 (0.005)
+              LOAD_CONST               5 (0.015)
+              CALL                     2
+              STORE_FAST               4 (pre)
+              JUMP_FORWARD            46 (to L3)
+
+ 57   L2:     LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               6 (0.077)
+              LOAD_CONST               7 (0.106)
+              CALL                     2
+              STORE_FAST               3 (hold)
+
+ 59           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               8 (0.082)
+              LOAD_CONST               9 (0.131)
+              CALL                     2
+              STORE_FAST               4 (pre)
+
+ 61   L3:     LOAD_GLOBAL              6 (time)
+              LOAD_ATTR                8 (sleep)
+              PUSH_NULL
+              LOAD_FAST                4 (pre)
+              CALL                     1
+              POP_TOP
+
+ 63           LOAD_GLOBAL             11 (_key_to_vk + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              STORE_FAST               5 (vk)
+
+ 64           LOAD_GLOBAL             13 (_press_vk_keybd + NULL)
+              LOAD_FAST                5 (vk)
+              CALL                     1
+              POP_TOP
+
+ 65           LOAD_GLOBAL              6 (time)
+              LOAD_ATTR                8 (sleep)
+              PUSH_NULL
+              LOAD_FAST                3 (hold)
+              CALL                     1
+              POP_TOP
+
+ 66           LOAD_GLOBAL             15 (_release_vk_keybd + NULL)
+              LOAD_FAST                5 (vk)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object hold_key at 0x7f0bbb1f9930, file "press_key.py", line 71>:
+ 71           RESUME                   0
+
+ 73           LOAD_GLOBAL              1 (_key_to_vk + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              STORE_FAST               1 (vk)
+
+ 74           LOAD_GLOBAL              3 (_press_vk_keybd + NULL)
+              LOAD_FAST                1 (vk)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object release_key at 0x7f0bbb1f9a30, file "press_key.py", line 76>:
+ 76           RESUME                   0
+
+ 78           LOAD_GLOBAL              1 (_key_to_vk + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              STORE_FAST               1 (vk)
+
+ 79           LOAD_GLOBAL              3 (_release_vk_keybd + NULL)
+              LOAD_FAST                1 (vk)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+----- code: _key_to_vk (argcount=1, vars=('key', 'k')) -----
+ 19           RESUME                   0
+
+ 21           LOAD_FAST                0 (key)
+              LOAD_ATTR                1 (lower + NULL|self)
+              CALL                     0
+              STORE_FAST               1 (k)
+
+ 22           LOAD_FAST                1 (k)
+              LOAD_GLOBAL              2 (VK_CODES)
+              CONTAINS_OP              0
+              POP_JUMP_IF_FALSE        9 (to L1)
+
+ 23           LOAD_GLOBAL              2 (VK_CODES)
+              LOAD_FAST                1 (k)
+              BINARY_SUBSCR
+              RETURN_VALUE
+
+ 24   L1:     LOAD_GLOBAL              5 (len + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              LOAD_CONST               1 (1)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       25 (to L2)
+
+ 26           LOAD_GLOBAL              7 (ord + NULL)
+              LOAD_FAST                0 (key)
+              LOAD_ATTR                9 (upper + NULL|self)
+              CALL                     0
+              CALL                     1
+              RETURN_VALUE
+
+ 27   L2:     LOAD_GLOBAL             11 (ValueError + NULL)
+              LOAD_CONST               2 ('Unknown key: ')
+              LOAD_FAST                0 (key)
+              FORMAT_SIMPLE
+              BUILD_STRING             2
+              CALL                     1
+              RAISE_VARARGS            1
+
+----- code: _press_vk_keybd (argcount=1, vars=('vk',)) -----
+ 29           RESUME                   0
+
+ 31           LOAD_GLOBAL              0 (ctypes)
+              LOAD_ATTR                2 (windll)
+              LOAD_ATTR                4 (user32)
+              LOAD_ATTR                7 (keybd_event + NULL|self)
+              LOAD_FAST                0 (vk)
+              LOAD_CONST               1 (0)
+              LOAD_CONST               1 (0)
+              LOAD_CONST               1 (0)
+              CALL                     4
+              POP_TOP
+              RETURN_CONST             2 (None)
+
+----- code: _release_vk_keybd (argcount=1, vars=('vk',)) -----
+ 33           RESUME                   0
+
+ 35           LOAD_GLOBAL              0 (ctypes)
+              LOAD_ATTR                2 (windll)
+              LOAD_ATTR                4 (user32)
+              LOAD_ATTR                7 (keybd_event + NULL|self)
+              LOAD_FAST                0 (vk)
+              LOAD_CONST               1 (0)
+              LOAD_GLOBAL              8 (KEYEVENTF_KEYUP)
+              LOAD_CONST               1 (0)
+              CALL                     4
+              POP_TOP
+              RETURN_CONST             2 (None)
+
+----- code: press_key (argcount=3, vars=('key', 'seed', 'fast_mode', 'hold', 'pre', 'vk')) -----
+ 40           RESUME                   0
+
+ 48           LOAD_FAST                1 (seed)
+              POP_JUMP_IF_NONE        22 (to L1)
+
+ 49           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                2 (seed)
+              PUSH_NULL
+              LOAD_FAST                1 (seed)
+              CALL                     1
+              POP_TOP
+
+ 51   L1:     LOAD_FAST                2 (fast_mode)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       47 (to L2)
+
+ 53           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               2 (0.01)
+              LOAD_CONST               3 (0.02)
+              CALL                     2
+              STORE_FAST               3 (hold)
+
+ 54           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               4 (0.005)
+              LOAD_CONST               5 (0.015)
+              CALL                     2
+              STORE_FAST               4 (pre)
+              JUMP_FORWARD            46 (to L3)
+
+ 57   L2:     LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               6 (0.077)
+              LOAD_CONST               7 (0.106)
+              CALL                     2
+              STORE_FAST               3 (hold)
+
+ 59           LOAD_GLOBAL              0 (random)
+              LOAD_ATTR                4 (uniform)
+              PUSH_NULL
+              LOAD_CONST               8 (0.082)
+              LOAD_CONST               9 (0.131)
+              CALL                     2
+              STORE_FAST               4 (pre)
+
+ 61   L3:     LOAD_GLOBAL              6 (time)
+              LOAD_ATTR                8 (sleep)
+              PUSH_NULL
+              LOAD_FAST                4 (pre)
+              CALL                     1
+              POP_TOP
+
+ 63           LOAD_GLOBAL             11 (_key_to_vk + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              STORE_FAST               5 (vk)
+
+ 64           LOAD_GLOBAL             13 (_press_vk_keybd + NULL)
+              LOAD_FAST                5 (vk)
+              CALL                     1
+              POP_TOP
+
+ 65           LOAD_GLOBAL              6 (time)
+              LOAD_ATTR                8 (sleep)
+              PUSH_NULL
+              LOAD_FAST                3 (hold)
+              CALL                     1
+              POP_TOP
+
+ 66           LOAD_GLOBAL             15 (_release_vk_keybd + NULL)
+              LOAD_FAST                5 (vk)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+----- code: hold_key (argcount=1, vars=('key', 'vk')) -----
+ 71           RESUME                   0
+
+ 73           LOAD_GLOBAL              1 (_key_to_vk + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              STORE_FAST               1 (vk)
+
+ 74           LOAD_GLOBAL              3 (_press_vk_keybd + NULL)
+              LOAD_FAST                1 (vk)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+----- code: release_key (argcount=1, vars=('key', 'vk')) -----
+ 76           RESUME                   0
+
+ 78           LOAD_GLOBAL              1 (_key_to_vk + NULL)
+              LOAD_FAST                0 (key)
+              CALL                     1
+              STORE_FAST               1 (vk)
+
+ 79           LOAD_GLOBAL              3 (_release_vk_keybd + NULL)
+              LOAD_FAST                1 (vk)
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)

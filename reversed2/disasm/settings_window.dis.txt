@@ -1,0 +1,2003 @@
+### MODULE: settings_window
+# co_names: ('os', 'json', 'PySide6.QtWidgets', 'QDialog', 'QVBoxLayout', 'QHBoxLayout', 'QLabel', 'QPushButton', 'QSpinBox', 'QRadioButton', 'QGroupBox', 'QButtonGroup', 'QCheckBox', 'PySide6.QtCore', 'Qt', 'utils', 'config_path_AppData', 'DEFAULT_SETTINGS', 'dict', 'merge_settings', 'load_settings', 'save_settings', 'SettingsWindow')
+# co_consts (top-level strings): 
+#   STR: 'none'
+#   STR: 'default'
+#   STR: 'user'
+#   STR: 'settings'
+#   STR: 'SettingsWindow'
+
+========== FULL DISASSEMBLY (recursive) ==========
+
+----- code: <module> (argcount=0, vars=()) -----
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (os)
+              STORE_NAME               0 (os)
+
+  2           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              1 (json)
+              STORE_NAME               1 (json)
+
+  4           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (('QDialog', 'QVBoxLayout', 'QHBoxLayout', 'QLabel', 'QPushButton', 'QSpinBox', 'QRadioButton', 'QGroupBox', 'QButtonGroup', 'QCheckBox'))
+              IMPORT_NAME              2 (PySide6.QtWidgets)
+              IMPORT_FROM              3 (QDialog)
+              STORE_NAME               3 (QDialog)
+              IMPORT_FROM              4 (QVBoxLayout)
+              STORE_NAME               4 (QVBoxLayout)
+              IMPORT_FROM              5 (QHBoxLayout)
+              STORE_NAME               5 (QHBoxLayout)
+              IMPORT_FROM              6 (QLabel)
+              STORE_NAME               6 (QLabel)
+              IMPORT_FROM              7 (QPushButton)
+              STORE_NAME               7 (QPushButton)
+              IMPORT_FROM              8 (QSpinBox)
+              STORE_NAME               8 (QSpinBox)
+              IMPORT_FROM              9 (QRadioButton)
+              STORE_NAME               9 (QRadioButton)
+              IMPORT_FROM             10 (QGroupBox)
+              STORE_NAME              10 (QGroupBox)
+              IMPORT_FROM             11 (QButtonGroup)
+              STORE_NAME              11 (QButtonGroup)
+              IMPORT_FROM             12 (QCheckBox)
+              STORE_NAME              12 (QCheckBox)
+              POP_TOP
+
+  8           LOAD_CONST               0 (0)
+              LOAD_CONST               3 (('Qt',))
+              IMPORT_NAME             13 (PySide6.QtCore)
+              IMPORT_FROM             14 (Qt)
+              STORE_NAME              14 (Qt)
+              POP_TOP
+
+  9           LOAD_CONST               0 (0)
+              LOAD_CONST               4 (('config_path_AppData',))
+              IMPORT_NAME             15 (utils)
+              IMPORT_FROM             16 (config_path_AppData)
+              STORE_NAME              16 (config_path_AppData)
+              POP_TOP
+
+ 15           LOAD_CONST               5 (3)
+
+ 16           LOAD_CONST               6 ('none')
+
+ 18           LOAD_CONST               7 (True)
+
+ 19           LOAD_CONST               7 (True)
+
+ 20           LOAD_CONST               7 (True)
+
+ 17           LOAD_CONST               8 (('log', 'plank', 'firewood'))
+              BUILD_CONST_KEY_MAP      3
+
+ 14           LOAD_CONST               9 (('wood_loops', 'craft_target', 'sell'))
+              BUILD_CONST_KEY_MAP      3
+              STORE_NAME              17 (DEFAULT_SETTINGS)
+
+ 24           LOAD_CONST              10 ('default')
+              LOAD_NAME               18 (dict)
+              LOAD_CONST              11 ('user')
+              LOAD_NAME               18 (dict)
+              BUILD_TUPLE              4
+              LOAD_CONST              12 (<code object merge_settings at 0x7f0bbab38ab0, file "settings_window.py", line 24>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              19 (merge_settings)
+
+ 34           LOAD_CONST              13 (<code object load_settings at 0x56067eca8ed0, file "settings_window.py", line 34>)
+              MAKE_FUNCTION
+              STORE_NAME              20 (load_settings)
+
+ 45           LOAD_CONST              14 ('settings')
+              LOAD_NAME               18 (dict)
+              BUILD_TUPLE              2
+              LOAD_CONST              15 (<code object save_settings at 0x7f0bbac8eef0, file "settings_window.py", line 45>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              21 (save_settings)
+
+ 50           LOAD_BUILD_CLASS
+              PUSH_NULL
+              LOAD_CONST              16 (<code object SettingsWindow at 0x7f0bbab35b30, file "settings_window.py", line 50>)
+              MAKE_FUNCTION
+              LOAD_CONST              17 ('SettingsWindow')
+              LOAD_NAME                3 (QDialog)
+              CALL                     3
+              STORE_NAME              22 (SettingsWindow)
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object merge_settings at 0x7f0bbab38ab0, file "settings_window.py", line 24>:
+ 24           RESUME                   0
+
+ 25           LOAD_FAST                0 (default)
+              LOAD_ATTR                1 (copy + NULL|self)
+              CALL                     0
+              STORE_FAST               2 (result)
+
+ 26           LOAD_FAST                0 (default)
+              LOAD_ATTR                3 (items + NULL|self)
+              CALL                     0
+              GET_ITER
+      L1:     FOR_ITER                80 (to L4)
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   52 (key, value)
+
+ 27           LOAD_FAST_LOAD_FAST     49 (key, user)
+              CONTAINS_OP              0
+              POP_JUMP_IF_TRUE         2 (to L2)
+              JUMP_BACKWARD           12 (to L1)
+
+ 28   L2:     LOAD_GLOBAL              5 (isinstance + NULL)
+              LOAD_FAST                4 (value)
+              LOAD_GLOBAL              6 (dict)
+              CALL                     2
+              TO_BOOL
+              POP_JUMP_IF_FALSE       41 (to L3)
+              LOAD_GLOBAL              5 (isinstance + NULL)
+              LOAD_FAST_LOAD_FAST     19 (user, key)
+              BINARY_SUBSCR
+              LOAD_GLOBAL              6 (dict)
+              CALL                     2
+              TO_BOOL
+              POP_JUMP_IF_FALSE       18 (to L3)
+
+ 29           LOAD_GLOBAL              9 (merge_settings + NULL)
+              LOAD_FAST_LOAD_FAST     65 (value, user)
+              LOAD_FAST                3 (key)
+              BINARY_SUBSCR
+              CALL                     2
+              LOAD_FAST_LOAD_FAST     35 (result, key)
+              STORE_SUBSCR
+              JUMP_BACKWARD           74 (to L1)
+
+ 31   L3:     LOAD_FAST_LOAD_FAST     19 (user, key)
+              BINARY_SUBSCR
+              LOAD_FAST_LOAD_FAST     35 (result, key)
+              STORE_SUBSCR
+              JUMP_BACKWARD           82 (to L1)
+
+ 26   L4:     END_FOR
+              POP_TOP
+
+ 32           LOAD_FAST                2 (result)
+              RETURN_VALUE
+
+Disassembly of <code object load_settings at 0x56067eca8ed0, file "settings_window.py", line 34>:
+  34            RESUME                   0
+
+  35            LOAD_GLOBAL              1 (config_path_AppData + NULL)
+                LOAD_CONST               1 ('settings_woodcutting_gta5vn.json')
+                CALL                     1
+                STORE_FAST               0 (path)
+
+  36            LOAD_GLOBAL              2 (os)
+                LOAD_ATTR                4 (path)
+                LOAD_ATTR                7 (exists + NULL|self)
+                LOAD_FAST                0 (path)
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        20 (to L1)
+
+  37            LOAD_GLOBAL              8 (DEFAULT_SETTINGS)
+                LOAD_ATTR               11 (copy + NULL|self)
+                CALL                     0
+                RETURN_VALUE
+
+  38    L1:     NOP
+
+  39    L2:     LOAD_GLOBAL             13 (open + NULL)
+                LOAD_FAST                0 (path)
+                LOAD_CONST               2 ('r')
+                LOAD_CONST               3 ('utf-8')
+                LOAD_CONST               4 (('encoding',))
+                CALL_KW                  3
+                BEFORE_WITH
+        L3:     STORE_FAST               1 (f)
+
+  40            LOAD_GLOBAL             14 (json)
+                LOAD_ATTR               16 (load)
+                PUSH_NULL
+                LOAD_FAST                1 (f)
+                CALL                     1
+                STORE_FAST               2 (data)
+
+  39    L4:     LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                CALL                     2
+                POP_TOP
+
+  43    L5:     LOAD_GLOBAL             21 (merge_settings + NULL)
+                LOAD_GLOBAL              8 (DEFAULT_SETTINGS)
+                LOAD_FAST_CHECK          2 (data)
+                CALL                     2
+                RETURN_VALUE
+
+  39    L6:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L7)
+                RERAISE                  2
+        L7:     POP_TOP
+        L8:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+        L9:     JUMP_BACKWARD_NO_INTERRUPT 30 (to L5)
+
+  --   L10:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+       L11:     PUSH_EXC_INFO
+
+  41            LOAD_GLOBAL             18 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE       23 (to L13)
+                POP_TOP
+
+  42            LOAD_GLOBAL              8 (DEFAULT_SETTINGS)
+                LOAD_ATTR               11 (copy + NULL|self)
+                CALL                     0
+                SWAP                     2
+       L12:     POP_EXCEPT
+                RETURN_VALUE
+
+  41   L13:     RERAISE                  0
+
+  --   L14:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L2 to L3 -> L11 [0]
+  L3 to L4 -> L6 [1] lasti
+  L4 to L5 -> L11 [0]
+  L6 to L8 -> L10 [3] lasti
+  L8 to L9 -> L11 [0]
+  L10 to L11 -> L11 [0]
+  L11 to L12 -> L14 [1] lasti
+  L13 to L14 -> L14 [1] lasti
+
+Disassembly of <code object save_settings at 0x7f0bbac8eef0, file "settings_window.py", line 45>:
+  45           RESUME                   0
+
+  46           LOAD_GLOBAL              1 (config_path_AppData + NULL)
+               LOAD_CONST               1 ('settings_woodcutting_gta5vn.json')
+               CALL                     1
+               STORE_FAST               1 (path)
+
+  47           LOAD_GLOBAL              3 (open + NULL)
+               LOAD_FAST                1 (path)
+               LOAD_CONST               2 ('w')
+               LOAD_CONST               3 ('utf-8')
+               LOAD_CONST               4 (('encoding',))
+               CALL_KW                  3
+               BEFORE_WITH
+       L1:     STORE_FAST               2 (f)
+
+  48           LOAD_GLOBAL              4 (json)
+               LOAD_ATTR                6 (dump)
+               PUSH_NULL
+               LOAD_FAST_LOAD_FAST      2 (settings, f)
+               LOAD_CONST               5 (4)
+               LOAD_CONST               6 (False)
+               LOAD_CONST               7 (('indent', 'ensure_ascii'))
+               CALL_KW                  4
+               POP_TOP
+
+  47   L2:     LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_CONST             0 (None)
+       L3:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L4)
+               RERAISE                  2
+       L4:     POP_TOP
+       L5:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L6:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L3 [1] lasti
+  L3 to L5 -> L6 [3] lasti
+
+Disassembly of <code object SettingsWindow at 0x7f0bbab35b30, file "settings_window.py", line 50>:
+  --           MAKE_CELL                0 (__class__)
+
+  50           RESUME                   0
+               LOAD_NAME                0 (__name__)
+               STORE_NAME               1 (__module__)
+               LOAD_CONST               0 ('SettingsWindow')
+               STORE_NAME               2 (__qualname__)
+               LOAD_CONST               1 (50)
+               STORE_NAME               3 (__firstlineno__)
+
+  51           LOAD_CONST               6 ((None,))
+               LOAD_FAST                0 (__class__)
+               BUILD_TUPLE              1
+               LOAD_CONST               2 (<code object __init__ at 0x56067ecc35f0, file "settings_window.py", line 51>)
+               MAKE_FUNCTION
+               SET_FUNCTION_ATTRIBUTE   8 (closure)
+               SET_FUNCTION_ATTRIBUTE   1 (defaults)
+               STORE_NAME               4 (__init__)
+
+ 138           LOAD_CONST               3 (<code object on_save at 0x56067ecca9a0, file "settings_window.py", line 138>)
+               MAKE_FUNCTION
+               STORE_NAME               5 (on_save)
+
+ 155           LOAD_CONST               4 (<code object get_settings at 0x7f0bbab0aa60, file "settings_window.py", line 155>)
+               MAKE_FUNCTION
+               STORE_NAME               6 (get_settings)
+               LOAD_CONST               5 (('cancel_button', 'chk_firewood', 'chk_log', 'chk_plank', 'craft_group_btn', 'mining_spin', 'radio_firewood', 'radio_none', 'radio_plank', 'save_button', 'settings'))
+               STORE_NAME               7 (__static_attributes__)
+               LOAD_FAST                0 (__class__)
+               COPY                     1
+               STORE_NAME               8 (__classcell__)
+               RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x56067ecc35f0, file "settings_window.py", line 51>:
+  --           COPY_FREE_VARS           1
+
+  51           RESUME                   0
+
+  52           LOAD_GLOBAL              0 (super)
+               LOAD_DEREF              11 (__class__)
+               LOAD_FAST                0 (self)
+               LOAD_SUPER_ATTR          5 (__init__ + NULL|self)
+               LOAD_FAST                1 (parent)
+               CALL                     1
+               POP_TOP
+
+  53           LOAD_GLOBAL              5 (load_settings + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR               3 (settings)
+
+  55           LOAD_FAST                0 (self)
+               LOAD_ATTR                9 (setWindowTitle + NULL|self)
+               LOAD_CONST               1 ('Cài đặt Nghề Gỗ')
+               CALL                     1
+               POP_TOP
+
+  56           LOAD_FAST                0 (self)
+               LOAD_ATTR               11 (setFixedSize + NULL|self)
+               LOAD_CONST               2 (380)
+               LOAD_CONST               3 (350)
+               CALL                     2
+               POP_TOP
+
+  57           LOAD_FAST                0 (self)
+               LOAD_ATTR               13 (setModal + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+
+  59           LOAD_FAST                0 (self)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               5 ('\n            QDialog { background-color: #1E1E1E; color: white; }\n            QGroupBox { border: 1px solid #444; border-radius: 6px; margin-top: 10px; font-weight: bold; }\n            QGroupBox::title { subcontrol-origin: margin; subcontrol-position: top left; padding: 0 6px; color: #03A9F4; }\n            QLabel, QRadioButton, QCheckBox { font-size: 13px; color: white; }\n            QSpinBox { background-color: #2C2F33; border: 1px solid #555; border-radius: 4px; padding: 4px; color: white; }\n            QPushButton { background-color: #2C2F33; border: 1px solid #555; border-radius: 6px; padding: 6px 14px; color: white; }\n            QPushButton:hover { background-color: #03A9F4; color: black; }\n        ')
+               CALL                     1
+               POP_TOP
+
+  69           LOAD_GLOBAL             17 (QVBoxLayout + NULL)
+               LOAD_FAST                0 (self)
+               CALL                     1
+               STORE_FAST               2 (main_layout)
+
+  72           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST               6 ('Chặt cây')
+               CALL                     1
+               STORE_FAST               3 (mining_group)
+
+  73           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               4 (mining_layout)
+
+  74           LOAD_GLOBAL             23 (QSpinBox + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              12 (mining_spin)
+
+  75           LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               LOAD_ATTR               27 (setRange + NULL|self)
+               LOAD_CONST               7 (1)
+               LOAD_CONST               8 (999)
+               CALL                     2
+               POP_TOP
+
+  76           LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               LOAD_ATTR               29 (setValue + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST               9 ('wood_loops')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+  77           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_GLOBAL             33 (QLabel + NULL)
+               LOAD_CONST              10 ('Số vòng lặp chặt cây:')
+               CALL                     1
+               CALL                     1
+               POP_TOP
+
+  78           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  79           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               CALL                     1
+               POP_TOP
+
+  80           LOAD_FAST                3 (mining_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                4 (mining_layout)
+               CALL                     1
+               POP_TOP
+
+  81           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                3 (mining_group)
+               CALL                     1
+               POP_TOP
+
+  84           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST              11 ('Máy cưa')
+               CALL                     1
+               STORE_FAST               5 (craft_group)
+
+  85           LOAD_GLOBAL             17 (QVBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               6 (craft_layout)
+
+  87           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              12 ('Bỏ qua máy cưa (Chỉ bán Gỗ Thô)')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              20 (radio_none)
+
+  88           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              13 ('Cưa Ván Gỗ')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              21 (radio_plank)
+
+  89           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              14 ('Cưa Củi (Gỗ -> Ván -> Củi)')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              22 (radio_firewood)
+
+  91           LOAD_GLOBAL             47 (QButtonGroup + NULL)
+               LOAD_FAST                0 (self)
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              24 (craft_group_btn)
+
+  92           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               CALL                     1
+               POP_TOP
+
+  93           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               CALL                     1
+               POP_TOP
+
+  94           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               CALL                     1
+               POP_TOP
+
+  96           LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              15 ('craft_target')
+               BINARY_SUBSCR
+               STORE_FAST               7 (t)
+
+  97           LOAD_FAST                7 (t)
+               LOAD_CONST              16 ('plank')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE       28 (to L1)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            61 (to L3)
+
+  98   L1:     LOAD_FAST                7 (t)
+               LOAD_CONST              17 ('firewood')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE       28 (to L2)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            27 (to L3)
+
+  99   L2:     LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+
+ 101   L3:     LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               CALL                     1
+               POP_TOP
+
+ 102           LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               CALL                     1
+               POP_TOP
+
+ 103           LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               CALL                     1
+               POP_TOP
+
+ 104           LOAD_FAST                5 (craft_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                6 (craft_layout)
+               CALL                     1
+               POP_TOP
+
+ 105           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                5 (craft_group)
+               CALL                     1
+               POP_TOP
+
+ 108           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST              18 ('Thiết lập Bán (Shop)')
+               CALL                     1
+               STORE_FAST               8 (sell_group)
+
+ 109           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               9 (sell_layout)
+
+ 111           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              19 ('Bán Gỗ Thô')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              28 (chk_log)
+
+ 112           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              20 ('Bán Ván Gỗ')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              29 (chk_plank)
+
+ 113           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              21 ('Bán Củi')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              30 (chk_firewood)
+
+ 115           LOAD_FAST                0 (self)
+               LOAD_ATTR               56 (chk_log)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              23 ('log')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 116           LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (chk_plank)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              16 ('plank')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 117           LOAD_FAST                0 (self)
+               LOAD_ATTR               60 (chk_firewood)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              17 ('firewood')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 119           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               56 (chk_log)
+               CALL                     1
+               POP_TOP
+
+ 120           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (chk_plank)
+               CALL                     1
+               POP_TOP
+
+ 121           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               60 (chk_firewood)
+               CALL                     1
+               POP_TOP
+
+ 122           LOAD_FAST                8 (sell_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                9 (sell_layout)
+               CALL                     1
+               POP_TOP
+
+ 123           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                8 (sell_group)
+               CALL                     1
+               POP_TOP
+
+ 126           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST              10 (button_layout)
+
+ 127           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 128           LOAD_GLOBAL             63 (QPushButton + NULL)
+               LOAD_CONST              24 ('Lưu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              32 (save_button)
+
+ 129           LOAD_GLOBAL             63 (QPushButton + NULL)
+               LOAD_CONST              25 ('Hủy')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              33 (cancel_button)
+
+ 130           LOAD_FAST                0 (self)
+               LOAD_ATTR               64 (save_button)
+               LOAD_ATTR               68 (clicked)
+               LOAD_ATTR               71 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               72 (on_save)
+               CALL                     1
+               POP_TOP
+
+ 131           LOAD_FAST                0 (self)
+               LOAD_ATTR               66 (cancel_button)
+               LOAD_ATTR               68 (clicked)
+               LOAD_ATTR               71 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (reject)
+               CALL                     1
+               POP_TOP
+
+ 132           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               64 (save_button)
+               CALL                     1
+               POP_TOP
+
+ 133           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               66 (cancel_button)
+               CALL                     1
+               POP_TOP
+
+ 135           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 136           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               77 (addLayout + NULL|self)
+               LOAD_FAST               10 (button_layout)
+               CALL                     1
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+Disassembly of <code object on_save at 0x56067ecca9a0, file "settings_window.py", line 138>:
+138           RESUME                   0
+
+139           LOAD_CONST               1 ('none')
+              STORE_FAST               1 (target)
+
+140           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (radio_plank)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE        3 (to L1)
+              LOAD_CONST               2 ('plank')
+              STORE_FAST               1 (target)
+              JUMP_FORWARD            33 (to L2)
+
+141   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (radio_firewood)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              LOAD_CONST               3 ('firewood')
+              STORE_FAST               1 (target)
+
+144   L2:     LOAD_FAST                0 (self)
+              LOAD_ATTR                6 (mining_spin)
+              LOAD_ATTR                9 (value + NULL|self)
+              CALL                     0
+
+145           LOAD_FAST                1 (target)
+
+147           LOAD_FAST                0 (self)
+              LOAD_ATTR               10 (chk_log)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+148           LOAD_FAST                0 (self)
+              LOAD_ATTR               12 (chk_plank)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+149           LOAD_FAST                0 (self)
+              LOAD_ATTR               14 (chk_firewood)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+146           LOAD_CONST               4 (('log', 'plank', 'firewood'))
+              BUILD_CONST_KEY_MAP      3
+
+143           LOAD_CONST               5 (('wood_loops', 'craft_target', 'sell'))
+              BUILD_CONST_KEY_MAP      3
+              LOAD_FAST                0 (self)
+              STORE_ATTR               8 (settings)
+
+152           LOAD_GLOBAL             19 (save_settings + NULL)
+              LOAD_FAST                0 (self)
+              LOAD_ATTR               16 (settings)
+              CALL                     1
+              POP_TOP
+
+153           LOAD_FAST                0 (self)
+              LOAD_ATTR               21 (accept + NULL|self)
+              CALL                     0
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+Disassembly of <code object get_settings at 0x7f0bbab0aa60, file "settings_window.py", line 155>:
+155           RESUME                   0
+
+156           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (settings)
+              RETURN_VALUE
+
+----- code: merge_settings (argcount=2, vars=('default', 'user', 'result', 'key', 'value')) -----
+ 24           RESUME                   0
+
+ 25           LOAD_FAST                0 (default)
+              LOAD_ATTR                1 (copy + NULL|self)
+              CALL                     0
+              STORE_FAST               2 (result)
+
+ 26           LOAD_FAST                0 (default)
+              LOAD_ATTR                3 (items + NULL|self)
+              CALL                     0
+              GET_ITER
+      L1:     FOR_ITER                80 (to L4)
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   52 (key, value)
+
+ 27           LOAD_FAST_LOAD_FAST     49 (key, user)
+              CONTAINS_OP              0
+              POP_JUMP_IF_TRUE         2 (to L2)
+              JUMP_BACKWARD           12 (to L1)
+
+ 28   L2:     LOAD_GLOBAL              5 (isinstance + NULL)
+              LOAD_FAST                4 (value)
+              LOAD_GLOBAL              6 (dict)
+              CALL                     2
+              TO_BOOL
+              POP_JUMP_IF_FALSE       41 (to L3)
+              LOAD_GLOBAL              5 (isinstance + NULL)
+              LOAD_FAST_LOAD_FAST     19 (user, key)
+              BINARY_SUBSCR
+              LOAD_GLOBAL              6 (dict)
+              CALL                     2
+              TO_BOOL
+              POP_JUMP_IF_FALSE       18 (to L3)
+
+ 29           LOAD_GLOBAL              9 (merge_settings + NULL)
+              LOAD_FAST_LOAD_FAST     65 (value, user)
+              LOAD_FAST                3 (key)
+              BINARY_SUBSCR
+              CALL                     2
+              LOAD_FAST_LOAD_FAST     35 (result, key)
+              STORE_SUBSCR
+              JUMP_BACKWARD           74 (to L1)
+
+ 31   L3:     LOAD_FAST_LOAD_FAST     19 (user, key)
+              BINARY_SUBSCR
+              LOAD_FAST_LOAD_FAST     35 (result, key)
+              STORE_SUBSCR
+              JUMP_BACKWARD           82 (to L1)
+
+ 26   L4:     END_FOR
+              POP_TOP
+
+ 32           LOAD_FAST                2 (result)
+              RETURN_VALUE
+
+----- code: load_settings (argcount=0, vars=('path', 'f', 'data')) -----
+  34            RESUME                   0
+
+  35            LOAD_GLOBAL              1 (config_path_AppData + NULL)
+                LOAD_CONST               1 ('settings_woodcutting_gta5vn.json')
+                CALL                     1
+                STORE_FAST               0 (path)
+
+  36            LOAD_GLOBAL              2 (os)
+                LOAD_ATTR                4 (path)
+                LOAD_ATTR                7 (exists + NULL|self)
+                LOAD_FAST                0 (path)
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        20 (to L1)
+
+  37            LOAD_GLOBAL              8 (DEFAULT_SETTINGS)
+                LOAD_ATTR               11 (copy + NULL|self)
+                CALL                     0
+                RETURN_VALUE
+
+  38    L1:     NOP
+
+  39    L2:     LOAD_GLOBAL             13 (open + NULL)
+                LOAD_FAST                0 (path)
+                LOAD_CONST               2 ('r')
+                LOAD_CONST               3 ('utf-8')
+                LOAD_CONST               4 (('encoding',))
+                CALL_KW                  3
+                BEFORE_WITH
+        L3:     STORE_FAST               1 (f)
+
+  40            LOAD_GLOBAL             14 (json)
+                LOAD_ATTR               16 (load)
+                PUSH_NULL
+                LOAD_FAST                1 (f)
+                CALL                     1
+                STORE_FAST               2 (data)
+
+  39    L4:     LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                CALL                     2
+                POP_TOP
+
+  43    L5:     LOAD_GLOBAL             21 (merge_settings + NULL)
+                LOAD_GLOBAL              8 (DEFAULT_SETTINGS)
+                LOAD_FAST_CHECK          2 (data)
+                CALL                     2
+                RETURN_VALUE
+
+  39    L6:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L7)
+                RERAISE                  2
+        L7:     POP_TOP
+        L8:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+        L9:     JUMP_BACKWARD_NO_INTERRUPT 30 (to L5)
+
+  --   L10:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+       L11:     PUSH_EXC_INFO
+
+  41            LOAD_GLOBAL             18 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE       23 (to L13)
+                POP_TOP
+
+  42            LOAD_GLOBAL              8 (DEFAULT_SETTINGS)
+                LOAD_ATTR               11 (copy + NULL|self)
+                CALL                     0
+                SWAP                     2
+       L12:     POP_EXCEPT
+                RETURN_VALUE
+
+  41   L13:     RERAISE                  0
+
+  --   L14:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L2 to L3 -> L11 [0]
+  L3 to L4 -> L6 [1] lasti
+  L4 to L5 -> L11 [0]
+  L6 to L8 -> L10 [3] lasti
+  L8 to L9 -> L11 [0]
+  L10 to L11 -> L11 [0]
+  L11 to L12 -> L14 [1] lasti
+  L13 to L14 -> L14 [1] lasti
+
+----- code: save_settings (argcount=1, vars=('settings', 'path', 'f')) -----
+  45           RESUME                   0
+
+  46           LOAD_GLOBAL              1 (config_path_AppData + NULL)
+               LOAD_CONST               1 ('settings_woodcutting_gta5vn.json')
+               CALL                     1
+               STORE_FAST               1 (path)
+
+  47           LOAD_GLOBAL              3 (open + NULL)
+               LOAD_FAST                1 (path)
+               LOAD_CONST               2 ('w')
+               LOAD_CONST               3 ('utf-8')
+               LOAD_CONST               4 (('encoding',))
+               CALL_KW                  3
+               BEFORE_WITH
+       L1:     STORE_FAST               2 (f)
+
+  48           LOAD_GLOBAL              4 (json)
+               LOAD_ATTR                6 (dump)
+               PUSH_NULL
+               LOAD_FAST_LOAD_FAST      2 (settings, f)
+               LOAD_CONST               5 (4)
+               LOAD_CONST               6 (False)
+               LOAD_CONST               7 (('indent', 'ensure_ascii'))
+               CALL_KW                  4
+               POP_TOP
+
+  47   L2:     LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_CONST             0 (None)
+       L3:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L4)
+               RERAISE                  2
+       L4:     POP_TOP
+       L5:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L6:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L3 [1] lasti
+  L3 to L5 -> L6 [3] lasti
+
+----- code: SettingsWindow (argcount=0, vars=()) -----
+  --           MAKE_CELL                0 (__class__)
+
+  50           RESUME                   0
+               LOAD_NAME                0 (__name__)
+               STORE_NAME               1 (__module__)
+               LOAD_CONST               0 ('SettingsWindow')
+               STORE_NAME               2 (__qualname__)
+               LOAD_CONST               1 (50)
+               STORE_NAME               3 (__firstlineno__)
+
+  51           LOAD_CONST               6 ((None,))
+               LOAD_FAST                0 (__class__)
+               BUILD_TUPLE              1
+               LOAD_CONST               2 (<code object __init__ at 0x56067ecc35f0, file "settings_window.py", line 51>)
+               MAKE_FUNCTION
+               SET_FUNCTION_ATTRIBUTE   8 (closure)
+               SET_FUNCTION_ATTRIBUTE   1 (defaults)
+               STORE_NAME               4 (__init__)
+
+ 138           LOAD_CONST               3 (<code object on_save at 0x56067ecca9a0, file "settings_window.py", line 138>)
+               MAKE_FUNCTION
+               STORE_NAME               5 (on_save)
+
+ 155           LOAD_CONST               4 (<code object get_settings at 0x7f0bbab0aa60, file "settings_window.py", line 155>)
+               MAKE_FUNCTION
+               STORE_NAME               6 (get_settings)
+               LOAD_CONST               5 (('cancel_button', 'chk_firewood', 'chk_log', 'chk_plank', 'craft_group_btn', 'mining_spin', 'radio_firewood', 'radio_none', 'radio_plank', 'save_button', 'settings'))
+               STORE_NAME               7 (__static_attributes__)
+               LOAD_FAST                0 (__class__)
+               COPY                     1
+               STORE_NAME               8 (__classcell__)
+               RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x56067ecc35f0, file "settings_window.py", line 51>:
+  --           COPY_FREE_VARS           1
+
+  51           RESUME                   0
+
+  52           LOAD_GLOBAL              0 (super)
+               LOAD_DEREF              11 (__class__)
+               LOAD_FAST                0 (self)
+               LOAD_SUPER_ATTR          5 (__init__ + NULL|self)
+               LOAD_FAST                1 (parent)
+               CALL                     1
+               POP_TOP
+
+  53           LOAD_GLOBAL              5 (load_settings + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR               3 (settings)
+
+  55           LOAD_FAST                0 (self)
+               LOAD_ATTR                9 (setWindowTitle + NULL|self)
+               LOAD_CONST               1 ('Cài đặt Nghề Gỗ')
+               CALL                     1
+               POP_TOP
+
+  56           LOAD_FAST                0 (self)
+               LOAD_ATTR               11 (setFixedSize + NULL|self)
+               LOAD_CONST               2 (380)
+               LOAD_CONST               3 (350)
+               CALL                     2
+               POP_TOP
+
+  57           LOAD_FAST                0 (self)
+               LOAD_ATTR               13 (setModal + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+
+  59           LOAD_FAST                0 (self)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               5 ('\n            QDialog { background-color: #1E1E1E; color: white; }\n            QGroupBox { border: 1px solid #444; border-radius: 6px; margin-top: 10px; font-weight: bold; }\n            QGroupBox::title { subcontrol-origin: margin; subcontrol-position: top left; padding: 0 6px; color: #03A9F4; }\n            QLabel, QRadioButton, QCheckBox { font-size: 13px; color: white; }\n            QSpinBox { background-color: #2C2F33; border: 1px solid #555; border-radius: 4px; padding: 4px; color: white; }\n            QPushButton { background-color: #2C2F33; border: 1px solid #555; border-radius: 6px; padding: 6px 14px; color: white; }\n            QPushButton:hover { background-color: #03A9F4; color: black; }\n        ')
+               CALL                     1
+               POP_TOP
+
+  69           LOAD_GLOBAL             17 (QVBoxLayout + NULL)
+               LOAD_FAST                0 (self)
+               CALL                     1
+               STORE_FAST               2 (main_layout)
+
+  72           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST               6 ('Chặt cây')
+               CALL                     1
+               STORE_FAST               3 (mining_group)
+
+  73           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               4 (mining_layout)
+
+  74           LOAD_GLOBAL             23 (QSpinBox + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              12 (mining_spin)
+
+  75           LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               LOAD_ATTR               27 (setRange + NULL|self)
+               LOAD_CONST               7 (1)
+               LOAD_CONST               8 (999)
+               CALL                     2
+               POP_TOP
+
+  76           LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               LOAD_ATTR               29 (setValue + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST               9 ('wood_loops')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+  77           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_GLOBAL             33 (QLabel + NULL)
+               LOAD_CONST              10 ('Số vòng lặp chặt cây:')
+               CALL                     1
+               CALL                     1
+               POP_TOP
+
+  78           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  79           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               CALL                     1
+               POP_TOP
+
+  80           LOAD_FAST                3 (mining_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                4 (mining_layout)
+               CALL                     1
+               POP_TOP
+
+  81           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                3 (mining_group)
+               CALL                     1
+               POP_TOP
+
+  84           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST              11 ('Máy cưa')
+               CALL                     1
+               STORE_FAST               5 (craft_group)
+
+  85           LOAD_GLOBAL             17 (QVBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               6 (craft_layout)
+
+  87           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              12 ('Bỏ qua máy cưa (Chỉ bán Gỗ Thô)')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              20 (radio_none)
+
+  88           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              13 ('Cưa Ván Gỗ')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              21 (radio_plank)
+
+  89           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              14 ('Cưa Củi (Gỗ -> Ván -> Củi)')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              22 (radio_firewood)
+
+  91           LOAD_GLOBAL             47 (QButtonGroup + NULL)
+               LOAD_FAST                0 (self)
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              24 (craft_group_btn)
+
+  92           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               CALL                     1
+               POP_TOP
+
+  93           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               CALL                     1
+               POP_TOP
+
+  94           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               CALL                     1
+               POP_TOP
+
+  96           LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              15 ('craft_target')
+               BINARY_SUBSCR
+               STORE_FAST               7 (t)
+
+  97           LOAD_FAST                7 (t)
+               LOAD_CONST              16 ('plank')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE       28 (to L1)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            61 (to L3)
+
+  98   L1:     LOAD_FAST                7 (t)
+               LOAD_CONST              17 ('firewood')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE       28 (to L2)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            27 (to L3)
+
+  99   L2:     LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+
+ 101   L3:     LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               CALL                     1
+               POP_TOP
+
+ 102           LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               CALL                     1
+               POP_TOP
+
+ 103           LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               CALL                     1
+               POP_TOP
+
+ 104           LOAD_FAST                5 (craft_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                6 (craft_layout)
+               CALL                     1
+               POP_TOP
+
+ 105           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                5 (craft_group)
+               CALL                     1
+               POP_TOP
+
+ 108           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST              18 ('Thiết lập Bán (Shop)')
+               CALL                     1
+               STORE_FAST               8 (sell_group)
+
+ 109           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               9 (sell_layout)
+
+ 111           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              19 ('Bán Gỗ Thô')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              28 (chk_log)
+
+ 112           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              20 ('Bán Ván Gỗ')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              29 (chk_plank)
+
+ 113           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              21 ('Bán Củi')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              30 (chk_firewood)
+
+ 115           LOAD_FAST                0 (self)
+               LOAD_ATTR               56 (chk_log)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              23 ('log')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 116           LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (chk_plank)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              16 ('plank')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 117           LOAD_FAST                0 (self)
+               LOAD_ATTR               60 (chk_firewood)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              17 ('firewood')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 119           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               56 (chk_log)
+               CALL                     1
+               POP_TOP
+
+ 120           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (chk_plank)
+               CALL                     1
+               POP_TOP
+
+ 121           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               60 (chk_firewood)
+               CALL                     1
+               POP_TOP
+
+ 122           LOAD_FAST                8 (sell_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                9 (sell_layout)
+               CALL                     1
+               POP_TOP
+
+ 123           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                8 (sell_group)
+               CALL                     1
+               POP_TOP
+
+ 126           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST              10 (button_layout)
+
+ 127           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 128           LOAD_GLOBAL             63 (QPushButton + NULL)
+               LOAD_CONST              24 ('Lưu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              32 (save_button)
+
+ 129           LOAD_GLOBAL             63 (QPushButton + NULL)
+               LOAD_CONST              25 ('Hủy')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              33 (cancel_button)
+
+ 130           LOAD_FAST                0 (self)
+               LOAD_ATTR               64 (save_button)
+               LOAD_ATTR               68 (clicked)
+               LOAD_ATTR               71 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               72 (on_save)
+               CALL                     1
+               POP_TOP
+
+ 131           LOAD_FAST                0 (self)
+               LOAD_ATTR               66 (cancel_button)
+               LOAD_ATTR               68 (clicked)
+               LOAD_ATTR               71 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (reject)
+               CALL                     1
+               POP_TOP
+
+ 132           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               64 (save_button)
+               CALL                     1
+               POP_TOP
+
+ 133           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               66 (cancel_button)
+               CALL                     1
+               POP_TOP
+
+ 135           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 136           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               77 (addLayout + NULL|self)
+               LOAD_FAST               10 (button_layout)
+               CALL                     1
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+Disassembly of <code object on_save at 0x56067ecca9a0, file "settings_window.py", line 138>:
+138           RESUME                   0
+
+139           LOAD_CONST               1 ('none')
+              STORE_FAST               1 (target)
+
+140           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (radio_plank)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE        3 (to L1)
+              LOAD_CONST               2 ('plank')
+              STORE_FAST               1 (target)
+              JUMP_FORWARD            33 (to L2)
+
+141   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (radio_firewood)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              LOAD_CONST               3 ('firewood')
+              STORE_FAST               1 (target)
+
+144   L2:     LOAD_FAST                0 (self)
+              LOAD_ATTR                6 (mining_spin)
+              LOAD_ATTR                9 (value + NULL|self)
+              CALL                     0
+
+145           LOAD_FAST                1 (target)
+
+147           LOAD_FAST                0 (self)
+              LOAD_ATTR               10 (chk_log)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+148           LOAD_FAST                0 (self)
+              LOAD_ATTR               12 (chk_plank)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+149           LOAD_FAST                0 (self)
+              LOAD_ATTR               14 (chk_firewood)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+146           LOAD_CONST               4 (('log', 'plank', 'firewood'))
+              BUILD_CONST_KEY_MAP      3
+
+143           LOAD_CONST               5 (('wood_loops', 'craft_target', 'sell'))
+              BUILD_CONST_KEY_MAP      3
+              LOAD_FAST                0 (self)
+              STORE_ATTR               8 (settings)
+
+152           LOAD_GLOBAL             19 (save_settings + NULL)
+              LOAD_FAST                0 (self)
+              LOAD_ATTR               16 (settings)
+              CALL                     1
+              POP_TOP
+
+153           LOAD_FAST                0 (self)
+              LOAD_ATTR               21 (accept + NULL|self)
+              CALL                     0
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+Disassembly of <code object get_settings at 0x7f0bbab0aa60, file "settings_window.py", line 155>:
+155           RESUME                   0
+
+156           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (settings)
+              RETURN_VALUE
+
+----- code: __init__ (argcount=2, vars=('self', 'parent', 'main_layout', 'mining_group', 'mining_layout', 'craft_group', 'craft_layout', 't', 'sell_group', 'sell_layout', 'button_layout')) -----
+  --           COPY_FREE_VARS           1
+
+  51           RESUME                   0
+
+  52           LOAD_GLOBAL              0 (super)
+               LOAD_DEREF              11 (__class__)
+               LOAD_FAST                0 (self)
+               LOAD_SUPER_ATTR          5 (__init__ + NULL|self)
+               LOAD_FAST                1 (parent)
+               CALL                     1
+               POP_TOP
+
+  53           LOAD_GLOBAL              5 (load_settings + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR               3 (settings)
+
+  55           LOAD_FAST                0 (self)
+               LOAD_ATTR                9 (setWindowTitle + NULL|self)
+               LOAD_CONST               1 ('Cài đặt Nghề Gỗ')
+               CALL                     1
+               POP_TOP
+
+  56           LOAD_FAST                0 (self)
+               LOAD_ATTR               11 (setFixedSize + NULL|self)
+               LOAD_CONST               2 (380)
+               LOAD_CONST               3 (350)
+               CALL                     2
+               POP_TOP
+
+  57           LOAD_FAST                0 (self)
+               LOAD_ATTR               13 (setModal + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+
+  59           LOAD_FAST                0 (self)
+               LOAD_ATTR               15 (setStyleSheet + NULL|self)
+               LOAD_CONST               5 ('\n            QDialog { background-color: #1E1E1E; color: white; }\n            QGroupBox { border: 1px solid #444; border-radius: 6px; margin-top: 10px; font-weight: bold; }\n            QGroupBox::title { subcontrol-origin: margin; subcontrol-position: top left; padding: 0 6px; color: #03A9F4; }\n            QLabel, QRadioButton, QCheckBox { font-size: 13px; color: white; }\n            QSpinBox { background-color: #2C2F33; border: 1px solid #555; border-radius: 4px; padding: 4px; color: white; }\n            QPushButton { background-color: #2C2F33; border: 1px solid #555; border-radius: 6px; padding: 6px 14px; color: white; }\n            QPushButton:hover { background-color: #03A9F4; color: black; }\n        ')
+               CALL                     1
+               POP_TOP
+
+  69           LOAD_GLOBAL             17 (QVBoxLayout + NULL)
+               LOAD_FAST                0 (self)
+               CALL                     1
+               STORE_FAST               2 (main_layout)
+
+  72           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST               6 ('Chặt cây')
+               CALL                     1
+               STORE_FAST               3 (mining_group)
+
+  73           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               4 (mining_layout)
+
+  74           LOAD_GLOBAL             23 (QSpinBox + NULL)
+               CALL                     0
+               LOAD_FAST                0 (self)
+               STORE_ATTR              12 (mining_spin)
+
+  75           LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               LOAD_ATTR               27 (setRange + NULL|self)
+               LOAD_CONST               7 (1)
+               LOAD_CONST               8 (999)
+               CALL                     2
+               POP_TOP
+
+  76           LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               LOAD_ATTR               29 (setValue + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST               9 ('wood_loops')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+  77           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_GLOBAL             33 (QLabel + NULL)
+               LOAD_CONST              10 ('Số vòng lặp chặt cây:')
+               CALL                     1
+               CALL                     1
+               POP_TOP
+
+  78           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+  79           LOAD_FAST                4 (mining_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               24 (mining_spin)
+               CALL                     1
+               POP_TOP
+
+  80           LOAD_FAST                3 (mining_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                4 (mining_layout)
+               CALL                     1
+               POP_TOP
+
+  81           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                3 (mining_group)
+               CALL                     1
+               POP_TOP
+
+  84           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST              11 ('Máy cưa')
+               CALL                     1
+               STORE_FAST               5 (craft_group)
+
+  85           LOAD_GLOBAL             17 (QVBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               6 (craft_layout)
+
+  87           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              12 ('Bỏ qua máy cưa (Chỉ bán Gỗ Thô)')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              20 (radio_none)
+
+  88           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              13 ('Cưa Ván Gỗ')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              21 (radio_plank)
+
+  89           LOAD_GLOBAL             39 (QRadioButton + NULL)
+               LOAD_CONST              14 ('Cưa Củi (Gỗ -> Ván -> Củi)')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              22 (radio_firewood)
+
+  91           LOAD_GLOBAL             47 (QButtonGroup + NULL)
+               LOAD_FAST                0 (self)
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              24 (craft_group_btn)
+
+  92           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               CALL                     1
+               POP_TOP
+
+  93           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               CALL                     1
+               POP_TOP
+
+  94           LOAD_FAST                0 (self)
+               LOAD_ATTR               48 (craft_group_btn)
+               LOAD_ATTR               51 (addButton + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               CALL                     1
+               POP_TOP
+
+  96           LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              15 ('craft_target')
+               BINARY_SUBSCR
+               STORE_FAST               7 (t)
+
+  97           LOAD_FAST                7 (t)
+               LOAD_CONST              16 ('plank')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE       28 (to L1)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            61 (to L3)
+
+  98   L1:     LOAD_FAST                7 (t)
+               LOAD_CONST              17 ('firewood')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE       28 (to L2)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            27 (to L3)
+
+  99   L2:     LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_CONST               4 (True)
+               CALL                     1
+               POP_TOP
+
+ 101   L3:     LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               40 (radio_none)
+               CALL                     1
+               POP_TOP
+
+ 102           LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               42 (radio_plank)
+               CALL                     1
+               POP_TOP
+
+ 103           LOAD_FAST                6 (craft_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               44 (radio_firewood)
+               CALL                     1
+               POP_TOP
+
+ 104           LOAD_FAST                5 (craft_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                6 (craft_layout)
+               CALL                     1
+               POP_TOP
+
+ 105           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                5 (craft_group)
+               CALL                     1
+               POP_TOP
+
+ 108           LOAD_GLOBAL             19 (QGroupBox + NULL)
+               LOAD_CONST              18 ('Thiết lập Bán (Shop)')
+               CALL                     1
+               STORE_FAST               8 (sell_group)
+
+ 109           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST               9 (sell_layout)
+
+ 111           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              19 ('Bán Gỗ Thô')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              28 (chk_log)
+
+ 112           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              20 ('Bán Ván Gỗ')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              29 (chk_plank)
+
+ 113           LOAD_GLOBAL             55 (QCheckBox + NULL)
+               LOAD_CONST              21 ('Bán Củi')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              30 (chk_firewood)
+
+ 115           LOAD_FAST                0 (self)
+               LOAD_ATTR               56 (chk_log)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              23 ('log')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 116           LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (chk_plank)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              16 ('plank')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 117           LOAD_FAST                0 (self)
+               LOAD_ATTR               60 (chk_firewood)
+               LOAD_ATTR               53 (setChecked + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (settings)
+               LOAD_CONST              22 ('sell')
+               BINARY_SUBSCR
+               LOAD_CONST              17 ('firewood')
+               BINARY_SUBSCR
+               CALL                     1
+               POP_TOP
+
+ 119           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               56 (chk_log)
+               CALL                     1
+               POP_TOP
+
+ 120           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               58 (chk_plank)
+               CALL                     1
+               POP_TOP
+
+ 121           LOAD_FAST                9 (sell_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               60 (chk_firewood)
+               CALL                     1
+               POP_TOP
+
+ 122           LOAD_FAST                8 (sell_group)
+               LOAD_ATTR               37 (setLayout + NULL|self)
+               LOAD_FAST                9 (sell_layout)
+               CALL                     1
+               POP_TOP
+
+ 123           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                8 (sell_group)
+               CALL                     1
+               POP_TOP
+
+ 126           LOAD_GLOBAL             21 (QHBoxLayout + NULL)
+               CALL                     0
+               STORE_FAST              10 (button_layout)
+
+ 127           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 128           LOAD_GLOBAL             63 (QPushButton + NULL)
+               LOAD_CONST              24 ('Lưu')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              32 (save_button)
+
+ 129           LOAD_GLOBAL             63 (QPushButton + NULL)
+               LOAD_CONST              25 ('Hủy')
+               CALL                     1
+               LOAD_FAST                0 (self)
+               STORE_ATTR              33 (cancel_button)
+
+ 130           LOAD_FAST                0 (self)
+               LOAD_ATTR               64 (save_button)
+               LOAD_ATTR               68 (clicked)
+               LOAD_ATTR               71 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               72 (on_save)
+               CALL                     1
+               POP_TOP
+
+ 131           LOAD_FAST                0 (self)
+               LOAD_ATTR               66 (cancel_button)
+               LOAD_ATTR               68 (clicked)
+               LOAD_ATTR               71 (connect + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               74 (reject)
+               CALL                     1
+               POP_TOP
+
+ 132           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               64 (save_button)
+               CALL                     1
+               POP_TOP
+
+ 133           LOAD_FAST               10 (button_layout)
+               LOAD_ATTR               31 (addWidget + NULL|self)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               66 (cancel_button)
+               CALL                     1
+               POP_TOP
+
+ 135           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               35 (addStretch + NULL|self)
+               CALL                     0
+               POP_TOP
+
+ 136           LOAD_FAST                2 (main_layout)
+               LOAD_ATTR               77 (addLayout + NULL|self)
+               LOAD_FAST               10 (button_layout)
+               CALL                     1
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+----- code: on_save (argcount=1, vars=('self', 'target')) -----
+138           RESUME                   0
+
+139           LOAD_CONST               1 ('none')
+              STORE_FAST               1 (target)
+
+140           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (radio_plank)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE        3 (to L1)
+              LOAD_CONST               2 ('plank')
+              STORE_FAST               1 (target)
+              JUMP_FORWARD            33 (to L2)
+
+141   L1:     LOAD_FAST                0 (self)
+              LOAD_ATTR                4 (radio_firewood)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              LOAD_CONST               3 ('firewood')
+              STORE_FAST               1 (target)
+
+144   L2:     LOAD_FAST                0 (self)
+              LOAD_ATTR                6 (mining_spin)
+              LOAD_ATTR                9 (value + NULL|self)
+              CALL                     0
+
+145           LOAD_FAST                1 (target)
+
+147           LOAD_FAST                0 (self)
+              LOAD_ATTR               10 (chk_log)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+148           LOAD_FAST                0 (self)
+              LOAD_ATTR               12 (chk_plank)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+149           LOAD_FAST                0 (self)
+              LOAD_ATTR               14 (chk_firewood)
+              LOAD_ATTR                3 (isChecked + NULL|self)
+              CALL                     0
+
+146           LOAD_CONST               4 (('log', 'plank', 'firewood'))
+              BUILD_CONST_KEY_MAP      3
+
+143           LOAD_CONST               5 (('wood_loops', 'craft_target', 'sell'))
+              BUILD_CONST_KEY_MAP      3
+              LOAD_FAST                0 (self)
+              STORE_ATTR               8 (settings)
+
+152           LOAD_GLOBAL             19 (save_settings + NULL)
+              LOAD_FAST                0 (self)
+              LOAD_ATTR               16 (settings)
+              CALL                     1
+              POP_TOP
+
+153           LOAD_FAST                0 (self)
+              LOAD_ATTR               21 (accept + NULL|self)
+              CALL                     0
+              POP_TOP
+              RETURN_CONST             0 (None)
+
+----- code: get_settings (argcount=1, vars=('self',)) -----
+155           RESUME                   0
+
+156           LOAD_FAST                0 (self)
+              LOAD_ATTR                0 (settings)
+              RETURN_VALUE

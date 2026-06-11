@@ -1,0 +1,945 @@
+### MODULE: cut_thread
+# co_names: ('mss', 'numpy', 'np', 'cv2', 'pyautogui', 'time', 'pynput.keyboard', 'Controller', 'Key', 'utils', 'resource_path', 'SCREEN_ID', 'settings_window', 'load_settings', 'keyboard', 'imread', 'IMREAD_GRAYSCALE', 'recipe_plank', 'recipe_firewood', 'mat_log', 'mat_plank', 'btn_craft', 'capture_full_screen', 'click_template', 'check_template', 'cut_tool')
+# co_consts (top-level strings): 
+#   STR: 'templates/recipe_plank.png'
+#   STR: 'templates/recipe_firewood.png'
+#   STR: 'templates/mat_log.png'
+#   STR: 'templates/mat_plank.png'
+#   STR: 'templates/btn_craft.png'
+
+========== FULL DISASSEMBLY (recursive) ==========
+
+----- code: <module> (argcount=0, vars=()) -----
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (mss)
+              STORE_NAME               0 (mss)
+
+  2           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              1 (numpy)
+              STORE_NAME               2 (np)
+
+  3           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              3 (cv2)
+              STORE_NAME               3 (cv2)
+
+  4           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              4 (pyautogui)
+              STORE_NAME               4 (pyautogui)
+
+  5           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              5 (time)
+              STORE_NAME               5 (time)
+
+  6           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (('Controller', 'Key'))
+              IMPORT_NAME              6 (pynput.keyboard)
+              IMPORT_FROM              7 (Controller)
+              STORE_NAME               7 (Controller)
+              IMPORT_FROM              8 (Key)
+              STORE_NAME               8 (Key)
+              POP_TOP
+
+  7           LOAD_CONST               0 (0)
+              LOAD_CONST               3 (('resource_path', 'SCREEN_ID'))
+              IMPORT_NAME              9 (utils)
+              IMPORT_FROM             10 (resource_path)
+              STORE_NAME              10 (resource_path)
+              IMPORT_FROM             11 (SCREEN_ID)
+              STORE_NAME              11 (SCREEN_ID)
+              POP_TOP
+
+  8           LOAD_CONST               0 (0)
+              LOAD_CONST               4 (('load_settings',))
+              IMPORT_NAME             12 (settings_window)
+              IMPORT_FROM             13 (load_settings)
+              STORE_NAME              13 (load_settings)
+              POP_TOP
+
+ 10           LOAD_NAME                7 (Controller)
+              PUSH_NULL
+              CALL                     0
+              STORE_NAME              14 (keyboard)
+
+ 13           LOAD_NAME                3 (cv2)
+              LOAD_ATTR               30 (imread)
+              PUSH_NULL
+              LOAD_NAME               10 (resource_path)
+              PUSH_NULL
+              LOAD_CONST               5 ('templates/recipe_plank.png')
+              CALL                     1
+              LOAD_NAME                3 (cv2)
+              LOAD_ATTR               32 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_NAME              17 (recipe_plank)
+
+ 14           LOAD_NAME                3 (cv2)
+              LOAD_ATTR               30 (imread)
+              PUSH_NULL
+              LOAD_NAME               10 (resource_path)
+              PUSH_NULL
+              LOAD_CONST               6 ('templates/recipe_firewood.png')
+              CALL                     1
+              LOAD_NAME                3 (cv2)
+              LOAD_ATTR               32 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_NAME              18 (recipe_firewood)
+
+ 15           LOAD_NAME                3 (cv2)
+              LOAD_ATTR               30 (imread)
+              PUSH_NULL
+              LOAD_NAME               10 (resource_path)
+              PUSH_NULL
+              LOAD_CONST               7 ('templates/mat_log.png')
+              CALL                     1
+              LOAD_NAME                3 (cv2)
+              LOAD_ATTR               32 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_NAME              19 (mat_log)
+
+ 16           LOAD_NAME                3 (cv2)
+              LOAD_ATTR               30 (imread)
+              PUSH_NULL
+              LOAD_NAME               10 (resource_path)
+              PUSH_NULL
+              LOAD_CONST               8 ('templates/mat_plank.png')
+              CALL                     1
+              LOAD_NAME                3 (cv2)
+              LOAD_ATTR               32 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_NAME              20 (mat_plank)
+
+ 17           LOAD_NAME                3 (cv2)
+              LOAD_ATTR               30 (imread)
+              PUSH_NULL
+              LOAD_NAME               10 (resource_path)
+              PUSH_NULL
+              LOAD_CONST               9 ('templates/btn_craft.png')
+              CALL                     1
+              LOAD_NAME                3 (cv2)
+              LOAD_ATTR               32 (IMREAD_GRAYSCALE)
+              CALL                     2
+              STORE_NAME              21 (btn_craft)
+
+ 19           LOAD_CONST              14 ((1,))
+              LOAD_CONST              10 (<code object capture_full_screen at 0x7f0bbc036830, file "cut_thread.py", line 19>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   1 (defaults)
+              STORE_NAME              22 (capture_full_screen)
+
+ 29           LOAD_CONST              15 ((0.8,))
+              LOAD_CONST              11 (<code object click_template at 0x56067d7a2f60, file "cut_thread.py", line 29>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   1 (defaults)
+              STORE_NAME              23 (click_template)
+
+ 45           LOAD_CONST              15 ((0.8,))
+              LOAD_CONST              12 (<code object check_template at 0x7f0bbbf00a50, file "cut_thread.py", line 45>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   1 (defaults)
+              STORE_NAME              24 (check_template)
+
+ 53           LOAD_CONST              13 (<code object cut_tool at 0x56067d7a0520, file "cut_thread.py", line 53>)
+              MAKE_FUNCTION
+              STORE_NAME              25 (cut_tool)
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object capture_full_screen at 0x7f0bbc036830, file "cut_thread.py", line 19>:
+  19           RESUME                   0
+
+  20           LOAD_GLOBAL              0 (mss)
+               LOAD_ATTR                0 (mss)
+               PUSH_NULL
+               CALL                     0
+               BEFORE_WITH
+       L1:     STORE_FAST               1 (sct)
+
+  21           LOAD_FAST                1 (sct)
+               LOAD_ATTR                2 (monitors)
+               STORE_FAST               2 (monitors)
+
+  23           LOAD_GLOBAL              4 (SCREEN_ID)
+               LOAD_GLOBAL              7 (len + NULL)
+               LOAD_FAST                2 (monitors)
+               CALL                     1
+               COMPARE_OP              18 (bool(<))
+               POP_JUMP_IF_FALSE        6 (to L2)
+               LOAD_GLOBAL              4 (SCREEN_ID)
+               JUMP_FORWARD             1 (to L3)
+       L2:     LOAD_CONST               1 (0)
+       L3:     STORE_FAST               0 (screen_id)
+
+  24           LOAD_FAST                2 (monitors)
+               LOAD_GLOBAL              8 (CURRENT_SCREEN)
+               BINARY_SUBSCR
+               STORE_FAST               3 (screen)
+
+  25           LOAD_FAST                1 (sct)
+               LOAD_ATTR               11 (grab + NULL|self)
+               LOAD_FAST                3 (screen)
+               CALL                     1
+               STORE_FAST               4 (screenshot)
+
+  26           LOAD_GLOBAL             12 (np)
+               LOAD_ATTR               14 (array)
+               PUSH_NULL
+               LOAD_FAST                4 (screenshot)
+               CALL                     1
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               2 (3)
+               BUILD_SLICE              2
+               BUILD_TUPLE              3
+               BINARY_SUBSCR
+               STORE_FAST               5 (img)
+
+  27           LOAD_FAST                5 (img)
+
+  20   L4:     SWAP                     2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_VALUE
+       L5:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L6)
+               RERAISE                  2
+       L6:     POP_TOP
+       L7:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L8:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L4 -> L5 [1] lasti
+  L5 to L7 -> L8 [3] lasti
+
+Disassembly of <code object click_template at 0x56067d7a2f60, file "cut_thread.py", line 29>:
+ 29           RESUME                   0
+
+ 31           LOAD_GLOBAL              1 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               2 (screen)
+
+ 32           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                4 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                2 (screen)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                6 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               3 (gray_screen)
+
+ 33           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                8 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     48 (gray_screen, template_img)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               10 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               4 (match)
+
+ 34           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               12 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                4 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST   86 (min_val, max_val)
+              STORE_FAST_STORE_FAST  120 (min_loc, max_loc)
+
+ 36           LOAD_FAST_LOAD_FAST     97 (max_val, threshold)
+              COMPARE_OP             188 (bool(>=))
+              POP_JUMP_IF_FALSE       59 (to L1)
+
+ 38           LOAD_FAST                0 (template_img)
+              LOAD_ATTR               14 (shape)
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST  154 (h, w)
+
+ 39           LOAD_FAST                8 (max_loc)
+              LOAD_CONST               1 (0)
+              BINARY_SUBSCR
+              LOAD_FAST               10 (w)
+              LOAD_CONST               2 (2)
+              BINARY_OP                2 (//)
+              BINARY_OP                0 (+)
+              STORE_FAST              11 (center_x)
+
+ 40           LOAD_FAST                8 (max_loc)
+              LOAD_CONST               3 (1)
+              BINARY_SUBSCR
+              LOAD_FAST                9 (h)
+              LOAD_CONST               2 (2)
+              BINARY_OP                2 (//)
+              BINARY_OP                0 (+)
+              STORE_FAST              12 (center_y)
+
+ 41           LOAD_GLOBAL             16 (pyautogui)
+              LOAD_ATTR               18 (click)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST    188 (center_x, center_y)
+              CALL                     2
+              POP_TOP
+
+ 42           RETURN_CONST             4 (True)
+
+ 43   L1:     RETURN_CONST             5 (False)
+
+Disassembly of <code object check_template at 0x7f0bbbf00a50, file "cut_thread.py", line 45>:
+ 45           RESUME                   0
+
+ 47           LOAD_GLOBAL              1 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               2 (screen)
+
+ 48           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                4 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                2 (screen)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                6 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               3 (gray_screen)
+
+ 49           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                8 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     48 (gray_screen, template_img)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               10 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               4 (match)
+
+ 50           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               12 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                4 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST   86 (_, max_val)
+              POP_TOP
+              STORE_FAST               5 (_)
+
+ 51           LOAD_FAST_LOAD_FAST     97 (max_val, threshold)
+              COMPARE_OP             172 (>=)
+              RETURN_VALUE
+
+Disassembly of <code object cut_tool at 0x56067d7a0520, file "cut_thread.py", line 53>:
+ 53            RESUME                   0
+
+ 55            LOAD_CONST               1 (0)
+               LOAD_CONST               2 (('get_dynamic_screen_id',))
+               IMPORT_NAME              0 (utils)
+               IMPORT_FROM              1 (get_dynamic_screen_id)
+               STORE_FAST               0 (get_dynamic_screen_id)
+               POP_TOP
+
+ 56            LOAD_CONST               1 (0)
+               LOAD_CONST               0 (None)
+               IMPORT_NAME              0 (utils)
+               STORE_FAST               1 (utils)
+
+ 60            LOAD_FAST                0 (get_dynamic_screen_id)
+               PUSH_NULL
+               LOAD_FAST                1 (utils)
+               LOAD_ATTR                4 (PID)
+               CALL                     1
+               STORE_GLOBAL             3 (CURRENT_SCREEN)
+
+ 62            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST               3 ('Bắt đầu xử lý Máy Cưa Gỗ...')
+               CALL                     1
+               POP_TOP
+
+ 63            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST               4 (2)
+               CALL                     1
+               POP_TOP
+
+ 65            LOAD_GLOBAL             15 (load_settings + NULL)
+               CALL                     0
+               STORE_FAST               2 (settings)
+
+ 66            LOAD_FAST                2 (settings)
+               LOAD_ATTR               17 (get + NULL|self)
+               LOAD_CONST               5 ('craft_target')
+               LOAD_CONST               6 ('firewood')
+               CALL                     2
+               STORE_FAST               3 (craft_target)
+
+ 71            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST               7 ('Đang chế tạo Ván Gỗ...')
+               CALL                     1
+               POP_TOP
+
+ 72            NOP
+
+ 74    L1:     LOAD_GLOBAL             19 (check_template + NULL)
+               LOAD_GLOBAL             20 (mat_log)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_TRUE        12 (to L2)
+
+ 75            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST               9 ('Đã hết Gỗ Tròn.')
+               CALL                     1
+               POP_TOP
+
+ 76            JUMP_FORWARD           115 (to L5)
+
+ 79    L2:     LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             24 (recipe_plank)
+               CALL                     1
+               POP_TOP
+
+ 80            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              10 (0.5)
+               CALL                     1
+               POP_TOP
+
+ 83            LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             26 (btn_craft)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_FALSE       34 (to L3)
+
+ 84            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              11 ('Đã bấm chế tạo Ván Gỗ. Đợi 27s...')
+               CALL                     1
+               POP_TOP
+
+ 85            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              12 (27)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            22 (to L4)
+
+ 87    L3:     LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              13 (1)
+               CALL                     1
+               POP_TOP
+
+ 72    L4:     JUMP_BACKWARD          147 (to L1)
+
+ 92    L5:     LOAD_FAST                3 (craft_target)
+               LOAD_CONST               6 ('firewood')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE      159 (to L10)
+
+ 93            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              14 ('Mục tiêu là Củi. Đang tiếp tục chế tạo Củi...')
+               CALL                     1
+               POP_TOP
+
+ 94            NOP
+
+ 96    L6:     LOAD_GLOBAL             19 (check_template + NULL)
+               LOAD_GLOBAL             28 (mat_plank)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_TRUE        12 (to L7)
+
+ 97            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              15 ('Đã hết Ván Gỗ. Hoàn thành!')
+               CALL                     1
+               POP_TOP
+
+ 98            JUMP_FORWARD           115 (to L10)
+
+101    L7:     LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             30 (recipe_firewood)
+               CALL                     1
+               POP_TOP
+
+102            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              10 (0.5)
+               CALL                     1
+               POP_TOP
+
+105            LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             26 (btn_craft)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_FALSE       34 (to L8)
+
+106            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              16 ('Đã bấm chế tạo Củi. Đợi 27s...')
+               CALL                     1
+               POP_TOP
+
+107            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              12 (27)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            22 (to L9)
+
+109    L8:     LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              13 (1)
+               CALL                     1
+               POP_TOP
+
+ 94    L9:     JUMP_BACKWARD          147 (to L6)
+
+112   L10:     LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              17 ('Đóng máy cưa.')
+               CALL                     1
+               POP_TOP
+
+113            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              10 (0.5)
+               CALL                     1
+               POP_TOP
+
+114            LOAD_GLOBAL             32 (keyboard)
+               LOAD_ATTR               35 (press + NULL|self)
+               LOAD_GLOBAL             36 (Key)
+               LOAD_ATTR               38 (esc)
+               CALL                     1
+               POP_TOP
+
+115            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              18 (0.1)
+               CALL                     1
+               POP_TOP
+
+116            LOAD_GLOBAL             32 (keyboard)
+               LOAD_ATTR               41 (release + NULL|self)
+               LOAD_GLOBAL             36 (Key)
+               LOAD_ATTR               38 (esc)
+               CALL                     1
+               POP_TOP
+
+118            RETURN_CONST             8 (True)
+
+----- code: capture_full_screen (argcount=1, vars=('screen_id', 'sct', 'monitors', 'screen', 'screenshot', 'img')) -----
+  19           RESUME                   0
+
+  20           LOAD_GLOBAL              0 (mss)
+               LOAD_ATTR                0 (mss)
+               PUSH_NULL
+               CALL                     0
+               BEFORE_WITH
+       L1:     STORE_FAST               1 (sct)
+
+  21           LOAD_FAST                1 (sct)
+               LOAD_ATTR                2 (monitors)
+               STORE_FAST               2 (monitors)
+
+  23           LOAD_GLOBAL              4 (SCREEN_ID)
+               LOAD_GLOBAL              7 (len + NULL)
+               LOAD_FAST                2 (monitors)
+               CALL                     1
+               COMPARE_OP              18 (bool(<))
+               POP_JUMP_IF_FALSE        6 (to L2)
+               LOAD_GLOBAL              4 (SCREEN_ID)
+               JUMP_FORWARD             1 (to L3)
+       L2:     LOAD_CONST               1 (0)
+       L3:     STORE_FAST               0 (screen_id)
+
+  24           LOAD_FAST                2 (monitors)
+               LOAD_GLOBAL              8 (CURRENT_SCREEN)
+               BINARY_SUBSCR
+               STORE_FAST               3 (screen)
+
+  25           LOAD_FAST                1 (sct)
+               LOAD_ATTR               11 (grab + NULL|self)
+               LOAD_FAST                3 (screen)
+               CALL                     1
+               STORE_FAST               4 (screenshot)
+
+  26           LOAD_GLOBAL             12 (np)
+               LOAD_ATTR               14 (array)
+               PUSH_NULL
+               LOAD_FAST                4 (screenshot)
+               CALL                     1
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               BUILD_SLICE              2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               2 (3)
+               BUILD_SLICE              2
+               BUILD_TUPLE              3
+               BINARY_SUBSCR
+               STORE_FAST               5 (img)
+
+  27           LOAD_FAST                5 (img)
+
+  20   L4:     SWAP                     2
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_VALUE
+       L5:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L6)
+               RERAISE                  2
+       L6:     POP_TOP
+       L7:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L8:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L4 -> L5 [1] lasti
+  L5 to L7 -> L8 [3] lasti
+
+----- code: click_template (argcount=2, vars=('template_img', 'threshold', 'screen', 'gray_screen', 'match', 'min_val', 'max_val', 'min_loc', 'max_loc', 'h', 'w', 'center_x', 'center_y')) -----
+ 29           RESUME                   0
+
+ 31           LOAD_GLOBAL              1 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               2 (screen)
+
+ 32           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                4 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                2 (screen)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                6 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               3 (gray_screen)
+
+ 33           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                8 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     48 (gray_screen, template_img)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               10 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               4 (match)
+
+ 34           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               12 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                4 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST   86 (min_val, max_val)
+              STORE_FAST_STORE_FAST  120 (min_loc, max_loc)
+
+ 36           LOAD_FAST_LOAD_FAST     97 (max_val, threshold)
+              COMPARE_OP             188 (bool(>=))
+              POP_JUMP_IF_FALSE       59 (to L1)
+
+ 38           LOAD_FAST                0 (template_img)
+              LOAD_ATTR               14 (shape)
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST  154 (h, w)
+
+ 39           LOAD_FAST                8 (max_loc)
+              LOAD_CONST               1 (0)
+              BINARY_SUBSCR
+              LOAD_FAST               10 (w)
+              LOAD_CONST               2 (2)
+              BINARY_OP                2 (//)
+              BINARY_OP                0 (+)
+              STORE_FAST              11 (center_x)
+
+ 40           LOAD_FAST                8 (max_loc)
+              LOAD_CONST               3 (1)
+              BINARY_SUBSCR
+              LOAD_FAST                9 (h)
+              LOAD_CONST               2 (2)
+              BINARY_OP                2 (//)
+              BINARY_OP                0 (+)
+              STORE_FAST              12 (center_y)
+
+ 41           LOAD_GLOBAL             16 (pyautogui)
+              LOAD_ATTR               18 (click)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST    188 (center_x, center_y)
+              CALL                     2
+              POP_TOP
+
+ 42           RETURN_CONST             4 (True)
+
+ 43   L1:     RETURN_CONST             5 (False)
+
+----- code: check_template (argcount=2, vars=('template_img', 'threshold', 'screen', 'gray_screen', 'match', '_', 'max_val')) -----
+ 45           RESUME                   0
+
+ 47           LOAD_GLOBAL              1 (capture_full_screen + NULL)
+              CALL                     0
+              STORE_FAST               2 (screen)
+
+ 48           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                4 (cvtColor)
+              PUSH_NULL
+              LOAD_FAST                2 (screen)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                6 (COLOR_BGR2GRAY)
+              CALL                     2
+              STORE_FAST               3 (gray_screen)
+
+ 49           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR                8 (matchTemplate)
+              PUSH_NULL
+              LOAD_FAST_LOAD_FAST     48 (gray_screen, template_img)
+              LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               10 (TM_CCOEFF_NORMED)
+              CALL                     3
+              STORE_FAST               4 (match)
+
+ 50           LOAD_GLOBAL              2 (cv2)
+              LOAD_ATTR               12 (minMaxLoc)
+              PUSH_NULL
+              LOAD_FAST                4 (match)
+              CALL                     1
+              UNPACK_SEQUENCE          4
+              STORE_FAST_STORE_FAST   86 (_, max_val)
+              POP_TOP
+              STORE_FAST               5 (_)
+
+ 51           LOAD_FAST_LOAD_FAST     97 (max_val, threshold)
+              COMPARE_OP             172 (>=)
+              RETURN_VALUE
+
+----- code: cut_tool (argcount=0, vars=('get_dynamic_screen_id', 'utils', 'settings', 'craft_target')) -----
+ 53            RESUME                   0
+
+ 55            LOAD_CONST               1 (0)
+               LOAD_CONST               2 (('get_dynamic_screen_id',))
+               IMPORT_NAME              0 (utils)
+               IMPORT_FROM              1 (get_dynamic_screen_id)
+               STORE_FAST               0 (get_dynamic_screen_id)
+               POP_TOP
+
+ 56            LOAD_CONST               1 (0)
+               LOAD_CONST               0 (None)
+               IMPORT_NAME              0 (utils)
+               STORE_FAST               1 (utils)
+
+ 60            LOAD_FAST                0 (get_dynamic_screen_id)
+               PUSH_NULL
+               LOAD_FAST                1 (utils)
+               LOAD_ATTR                4 (PID)
+               CALL                     1
+               STORE_GLOBAL             3 (CURRENT_SCREEN)
+
+ 62            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST               3 ('Bắt đầu xử lý Máy Cưa Gỗ...')
+               CALL                     1
+               POP_TOP
+
+ 63            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST               4 (2)
+               CALL                     1
+               POP_TOP
+
+ 65            LOAD_GLOBAL             15 (load_settings + NULL)
+               CALL                     0
+               STORE_FAST               2 (settings)
+
+ 66            LOAD_FAST                2 (settings)
+               LOAD_ATTR               17 (get + NULL|self)
+               LOAD_CONST               5 ('craft_target')
+               LOAD_CONST               6 ('firewood')
+               CALL                     2
+               STORE_FAST               3 (craft_target)
+
+ 71            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST               7 ('Đang chế tạo Ván Gỗ...')
+               CALL                     1
+               POP_TOP
+
+ 72            NOP
+
+ 74    L1:     LOAD_GLOBAL             19 (check_template + NULL)
+               LOAD_GLOBAL             20 (mat_log)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_TRUE        12 (to L2)
+
+ 75            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST               9 ('Đã hết Gỗ Tròn.')
+               CALL                     1
+               POP_TOP
+
+ 76            JUMP_FORWARD           115 (to L5)
+
+ 79    L2:     LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             24 (recipe_plank)
+               CALL                     1
+               POP_TOP
+
+ 80            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              10 (0.5)
+               CALL                     1
+               POP_TOP
+
+ 83            LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             26 (btn_craft)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_FALSE       34 (to L3)
+
+ 84            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              11 ('Đã bấm chế tạo Ván Gỗ. Đợi 27s...')
+               CALL                     1
+               POP_TOP
+
+ 85            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              12 (27)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            22 (to L4)
+
+ 87    L3:     LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              13 (1)
+               CALL                     1
+               POP_TOP
+
+ 72    L4:     JUMP_BACKWARD          147 (to L1)
+
+ 92    L5:     LOAD_FAST                3 (craft_target)
+               LOAD_CONST               6 ('firewood')
+               COMPARE_OP              88 (bool(==))
+               POP_JUMP_IF_FALSE      159 (to L10)
+
+ 93            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              14 ('Mục tiêu là Củi. Đang tiếp tục chế tạo Củi...')
+               CALL                     1
+               POP_TOP
+
+ 94            NOP
+
+ 96    L6:     LOAD_GLOBAL             19 (check_template + NULL)
+               LOAD_GLOBAL             28 (mat_plank)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_TRUE        12 (to L7)
+
+ 97            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              15 ('Đã hết Ván Gỗ. Hoàn thành!')
+               CALL                     1
+               POP_TOP
+
+ 98            JUMP_FORWARD           115 (to L10)
+
+101    L7:     LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             30 (recipe_firewood)
+               CALL                     1
+               POP_TOP
+
+102            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              10 (0.5)
+               CALL                     1
+               POP_TOP
+
+105            LOAD_GLOBAL             23 (click_template + NULL)
+               LOAD_GLOBAL             26 (btn_craft)
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_FALSE       34 (to L8)
+
+106            LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              16 ('Đã bấm chế tạo Củi. Đợi 27s...')
+               CALL                     1
+               POP_TOP
+
+107            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              12 (27)
+               CALL                     1
+               POP_TOP
+               JUMP_FORWARD            22 (to L9)
+
+109    L8:     LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              13 (1)
+               CALL                     1
+               POP_TOP
+
+ 94    L9:     JUMP_BACKWARD          147 (to L6)
+
+112   L10:     LOAD_GLOBAL              9 (print + NULL)
+               LOAD_CONST              17 ('Đóng máy cưa.')
+               CALL                     1
+               POP_TOP
+
+113            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              10 (0.5)
+               CALL                     1
+               POP_TOP
+
+114            LOAD_GLOBAL             32 (keyboard)
+               LOAD_ATTR               35 (press + NULL|self)
+               LOAD_GLOBAL             36 (Key)
+               LOAD_ATTR               38 (esc)
+               CALL                     1
+               POP_TOP
+
+115            LOAD_GLOBAL             10 (time)
+               LOAD_ATTR               12 (sleep)
+               PUSH_NULL
+               LOAD_CONST              18 (0.1)
+               CALL                     1
+               POP_TOP
+
+116            LOAD_GLOBAL             32 (keyboard)
+               LOAD_ATTR               41 (release + NULL|self)
+               LOAD_GLOBAL             36 (Key)
+               LOAD_ATTR               38 (esc)
+               CALL                     1
+               POP_TOP
+
+118            RETURN_CONST             8 (True)
